@@ -9,6 +9,8 @@ extents = Vector2( 44, 44 )
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 155, 149 )
 script = ExtResource( 1 )
+speed = Vector2( 300, 500 )
+gravity = 500.0
 
 [node name="player" type="Sprite" parent="."]
 position = Vector2( 0, -48 )
