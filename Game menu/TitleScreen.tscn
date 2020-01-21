@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://TitleScreen.gd" type="Script" id=1]
-[ext_resource path="res://cooltext346986428833872.png" type="Texture" id=2]
+[ext_resource path="res://Bilder/PUZZLE BOX LOGO.png" type="Texture" id=2]
 [ext_resource path="res://Bilder/NEW GAME.png" type="Texture" id=3]
-[ext_resource path="res://Bilder/Options.png" type="Texture" id=4]
+[ext_resource path="res://Bilder/level select.png" type="Texture" id=4]
 [ext_resource path="res://Bilder/QUIT.png" type="Texture" id=5]
 
 [node name="TitleScreen" type="Control"]
@@ -33,25 +33,33 @@ margin_right = 959.0
 margin_bottom = 512.0
 size_flags_vertical = 3
 
-[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
-margin_right = 959.0
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow"]
+margin_right = 511.0
 margin_bottom = 354.0
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow/CenterContainer"]
+margin_top = 37.0
+margin_right = 511.0
+margin_bottom = 316.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="newGame" type="Button" parent="Menu/CenterRow/Buttons"]
-margin_right = 959.0
+[node name="newGame" type="Button" parent="Menu/CenterRow/CenterContainer/Buttons"]
+margin_right = 511.0
 margin_bottom = 90.0
 icon = ExtResource( 3 )
 
-[node name="Options" type="Button" parent="Menu/CenterRow/Buttons"]
+[node name="LevelSelect" type="Button" parent="Menu/CenterRow/CenterContainer/Buttons"]
 margin_top = 94.0
-margin_right = 959.0
-margin_bottom = 185.0
+margin_right = 511.0
+margin_bottom = 184.0
 icon = ExtResource( 4 )
 
-[node name="Quit" type="Button" parent="Menu/CenterRow/Buttons"]
-margin_top = 189.0
-margin_right = 959.0
-margin_bottom = 280.0
+[node name="Quit" type="Button" parent="Menu/CenterRow/CenterContainer/Buttons"]
+margin_top = 188.0
+margin_right = 511.0
+margin_bottom = 279.0
 icon = ExtResource( 5 )
+[connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/newGame" to="." method="_on_newGame_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
+[connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/Quit" to="." method="_on_Quit_pressed"]
