@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "box",
+"class": "PhysicsBox",
+"language": "GDScript",
+"path": "res://src/Physics_box/PhysicsBox.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "box",
+"language": "GDScript",
+"path": "res://src/Physics_box/Box.gd"
+} ]
 _global_script_class_icons={
-
+"PhysicsBox": "",
+"box": ""
 }
 
 [application]
