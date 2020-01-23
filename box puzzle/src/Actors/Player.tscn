@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/start-assets/player.png" type="Texture" id=2]
+[ext_resource path="res://assets/characters/player.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 44, 44 )
+extents = Vector2( 39, 34 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 155, 149 )
@@ -13,9 +13,19 @@ speed = Vector2( 300, 500 )
 gravity = 500.0
 
 [node name="player" type="Sprite" parent="."]
-position = Vector2( 0, -48 )
+position = Vector2( -115.287, -66.45 )
+scale = Vector2( 0.397937, 0.351599 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -44 )
+[node name="body" type="CollisionShape2D" parent="."]
+position = Vector2( -115, -58 )
 shape = SubResource( 1 )
+
+[node name="right leg" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -103, -24, -84, 16, -76, 16, -94, -25 )
+
+[node name="left leg" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -147, 16, -154, 16, -138, -24, -130, -24 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -138, -92, -115, -143, -92, -93 )
