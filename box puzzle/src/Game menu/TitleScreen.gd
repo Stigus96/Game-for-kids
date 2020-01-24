@@ -2,8 +2,7 @@
 extends Control
 
 func _on_newGame_pressed():
-	$Menu/CenterRow/CenterContainer/Buttons/newGame.grab_focus()
-	get_tree().change_scene("res://.tscn")
+	get_tree().change_scene("res://src/Levels/DemoMap/DemoWorld.tscn")
 	pass # Replace with function body.
 
 func _on_LevelSelect_pressed():

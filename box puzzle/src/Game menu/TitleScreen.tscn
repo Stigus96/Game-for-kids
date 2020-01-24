@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://TitleScreen.gd" type="Script" id=1]
-[ext_resource path="res://Bilder/PUZZLE BOX LOGO.png" type="Texture" id=2]
-[ext_resource path="res://Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Bilder/Bakgrunn.png" type="Texture" id=4]
+[ext_resource path="res://src/Game menu/TitleScreen.gd" type="Script" id=1]
+[ext_resource path="res://assets/Game menu assets/PUZZLE BOX LOGO.png" type="Texture" id=2]
+[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -37,25 +37,25 @@ margin_right = -0.256042
 margin_bottom = -0.200012
 
 [node name="TextureRect" type="TextureRect" parent="Menu"]
-margin_right = 959.0
+margin_right = 1800.0
 margin_bottom = 154.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 
 [node name="CenterRow" type="HBoxContainer" parent="Menu"]
 margin_top = 158.0
-margin_right = 959.0
-margin_bottom = 512.0
+margin_right = 1800.0
+margin_bottom = 1024.0
 size_flags_vertical = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow"]
 margin_right = 373.0
-margin_bottom = 354.0
+margin_bottom = 866.0
 
 [node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow/CenterContainer"]
-margin_top = 83.0
+margin_top = 339.0
 margin_right = 373.0
-margin_bottom = 271.0
+margin_bottom = 527.0
 focus_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -92,8 +92,8 @@ text = "Quit"
 layer = -1
 
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 512, 300 )
-scale = Vector2( 0.533333, 0.555556 )
+position = Vector2( 1269.73, 603.333 )
+scale = Vector2( 1.31856, 1.12738 )
 texture = ExtResource( 4 )
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/newGame" to="." method="_on_newGame_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
