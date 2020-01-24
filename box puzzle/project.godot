@@ -9,18 +9,24 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody2D",
-"class": "Actor",
+"base": "box",
+"class": "PhysicsBox",
 "language": "GDScript",
-"path": "res://src/Actors/Actor.gd"
+"path": "res://src/Physics_box/PhysicsBox.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "box",
+"language": "GDScript",
+"path": "res://src/Physics_box/Box.gd"
 } ]
 _global_script_class_icons={
-"Actor": ""
+"PhysicsBox": "",
+"box": ""
 }
 
 [application]
 
-config/name="Box puzzle"
+config/name="Box puzzle - GitHub"
 config/icon="res://icon.png"
 
 [input]
