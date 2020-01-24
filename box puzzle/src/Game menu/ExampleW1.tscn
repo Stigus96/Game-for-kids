@@ -1,8 +1,0 @@
-[gd_scene format=2]
-
-[node name="Node" type="Node"]
-
-[node name="TextEdit" type="TextEdit" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "WORLD 1"
