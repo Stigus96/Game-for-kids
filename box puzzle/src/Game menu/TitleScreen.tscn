@@ -37,25 +37,25 @@ margin_right = -0.256042
 margin_bottom = -0.200012
 
 [node name="TextureRect" type="TextureRect" parent="Menu"]
-margin_right = 1800.0
+margin_right = 1200.0
 margin_bottom = 154.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 
 [node name="CenterRow" type="HBoxContainer" parent="Menu"]
 margin_top = 158.0
-margin_right = 1800.0
-margin_bottom = 1024.0
+margin_right = 1200.0
+margin_bottom = 682.0
 size_flags_vertical = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow"]
 margin_right = 373.0
-margin_bottom = 866.0
+margin_bottom = 524.0
 
 [node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow/CenterContainer"]
-margin_top = 339.0
+margin_top = 168.0
 margin_right = 373.0
-margin_bottom = 527.0
+margin_bottom = 356.0
 focus_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -92,8 +92,8 @@ text = "Quit"
 layer = -1
 
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 1269.73, 603.333 )
-scale = Vector2( 1.31856, 1.12738 )
+position = Vector2( 763.763, 419.345 )
+scale = Vector2( 0.799496, 0.786661 )
 texture = ExtResource( 4 )
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/newGame" to="." method="_on_newGame_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
