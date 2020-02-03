@@ -1,16 +1,19 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Physics_box/PhysicsBox.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=2]
+[ext_resource path="res://assets/Backgrounds/tutorialLevelbg.png" type="Texture" id=2]
 [ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=3]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Demolevel assets/environment/background/bg objects/bg_cloud8.png" type="Texture" id=5]
-[ext_resource path="res://assets/Demolevel assets/environment/background/bg objects/bg_cloud6.png" type="Texture" id=6]
+[ext_resource path="res://assets/Demolevel assets/environment/background/bg objects/bg_cloud6.png" type="Texture" id=5]
+[ext_resource path="res://assets/Demolevel assets/environment/background/bg objects/bg_cloud8.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Cloud1"
-length = 30.0
+length = 15.0
 loop = true
+
+[sub_resource type="Animation" id=2]
+length = 300.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("bg_cloud8:position")
 tracks/0/interp = 1
@@ -18,22 +21,22 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( -0.1, 20, 30 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( -0.1, 20, 20.4, 20.7, 20.9, 40.5, 40.7, 41.1, 41.4, 41.6, 60.2, 60.6, 60.9, 61.1, 75.4, 75.8, 76.1, 76.3, 94, 94.4, 94.7, 94.9, 117.6, 118, 118.3, 118.5, 141.8, 142.2, 142.5, 142.7, 181.1, 181.5, 181.8, 182, 204.7, 205.1, 205.4, 205.6, 228.9, 229.3, 229.6, 229.8, 251.4, 251.8, 252.1, 252.3, 275, 275.4, 275.7, 275.9, 299.2, 299.6, 299.9, 300.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -232.211, 307.316 ), Vector2( 2209.89, 259.947 ), Vector2( 2221.02, 337.268 ) ]
+"values": [ Vector2( -232.211, 307.316 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2221.02, 337.268 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ), Vector2( 2209.89, 259.947 ), Vector2( 2244.33, -129.501 ), Vector2( -290.907, -118.005 ), Vector2( -261.614, 516.141 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Position2D2/bg_cloud6:position")
+tracks/1/path = NodePath("../Position2D2/bg_cloud2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 14.1, 30 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 17.4, 18.6, 19.3, 20.1, 46.1, 47.3, 48, 48.8, 96.8, 98, 98.7, 99.5, 134, 135.2, 135.9, 136.7, 164.9, 166.1, 166.8, 167.6, 197.2, 198.4, 199.1, 199.9, 232.6, 233.8, 234.5, 235.3, 295, 296.2, 296.9, 297.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 479.369, 223.277 ), Vector2( 2510.95, 162.224 ), Vector2( 2515.16, 165.382 ) ]
+"values": [ Vector2( 479.369, 223.277 ), Vector2( 2568.8, 186.187 ), Vector2( 2565.71, -308.353 ), Vector2( -518.982, -326.898 ), Vector2( -534.437, 260.367 ), Vector2( 2568.8, 186.187 ), Vector2( 2565.71, -308.353 ), Vector2( -518.982, -326.898 ), Vector2( -534.437, 260.367 ), Vector2( 2568.8, 186.187 ), Vector2( 2565.71, -308.353 ), Vector2( -518.982, -326.898 ), Vector2( -534.437, 260.367 ), Vector2( 2568.8, 186.187 ), Vector2( 2565.71, -308.353 ), Vector2( -518.982, -326.898 ), Vector2( -534.437, 260.367 ), Vector2( 2568.8, 186.187 ), Vector2( 2565.71, -308.353 ), Vector2( -518.982, -326.898 ), Vector2( -534.437, 260.367 ), Vector2( 2568.8, 186.187 ), Vector2( 2565.71, -308.353 ), Vector2( -518.982, -326.898 ), Vector2( -534.437, 260.367 ), Vector2( 2568.8, 186.187 ), Vector2( 2565.71, -308.353 ), Vector2( -518.982, -326.898 ), Vector2( -534.437, 260.367 ), Vector2( 2568.8, 186.187 ), Vector2( 2565.71, -308.353 ), Vector2( -518.982, -326.898 ), Vector2( -534.437, 260.367 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("bg_cloud9:position")
@@ -42,14 +45,25 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 16.6 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 26, 28.1, 29.7, 30.8, 58, 60.1, 61.7, 62.8, 85.7, 87.8, 89.4, 90.5, 121.3, 123.4, 125, 126.1, 143.3, 145.4, 147, 148.1, 165.8, 167.9, 169.5, 170.6, 197.2, 199.3, 200.9, 202, 223.9, 226, 227.6, 228.7, 246.9, 249, 250.6, 251.7, 284.6, 286.7, 288.3, 289.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1326.74, 424.329 ), Vector2( 2219.37, 392.75 ) ]
+"values": [ Vector2( 1326.74, 424.329 ), Vector2( 2303.45, 374.875 ), Vector2( 2303.45, -234.026 ), Vector2( -265.058, -252.571 ), Vector2( -212.513, 81.2425 ), Vector2( 2303.45, 374.875 ), Vector2( 2303.45, -234.026 ), Vector2( -265.058, -252.571 ), Vector2( -212.513, 81.2425 ), Vector2( 2303.45, 374.875 ), Vector2( 2303.45, -234.026 ), Vector2( -265.058, -252.571 ), Vector2( -212.513, 81.2425 ), Vector2( 2303.45, 374.875 ), Vector2( 2303.45, -234.026 ), Vector2( -265.058, -252.571 ), Vector2( -212.513, 81.2425 ), Vector2( 2303.45, 374.875 ), Vector2( 2303.45, -234.026 ), Vector2( -265.058, -252.571 ), Vector2( -212.513, 81.2425 ), Vector2( 2303.45, 374.875 ), Vector2( 2303.45, -234.026 ), Vector2( -265.058, -252.571 ), Vector2( -212.513, 81.2425 ), Vector2( 2303.45, 374.875 ), Vector2( 2303.45, -234.026 ), Vector2( -265.058, -252.571 ), Vector2( -212.513, 81.2425 ), Vector2( 2303.45, 374.875 ), Vector2( 2303.45, -234.026 ), Vector2( -265.058, -252.571 ), Vector2( -212.513, 81.2425 ), Vector2( 2303.45, 374.875 ), Vector2( 2303.45, -234.026 ), Vector2( -265.058, -252.571 ), Vector2( -212.513, 81.2425 ), Vector2( 2303.45, 374.875 ), Vector2( 2303.45, -234.026 ), Vector2( -265.058, -252.571 ), Vector2( -212.513, 81.2425 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Position2D3/bg_cloud6:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 29.9, 30.1, 30.3, 70.2, 71.5, 73.6, 75, 135.8, 139.4, 142.6, 145.2, 189.1, 190.7, 192.8, 195.9, 197.5, 226.3, 228.4, 232.6, 250.4, 300 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 415.193, 227.297 ), Vector2( 2637.53, 168.57 ), Vector2( 2631.35, -251.788 ), Vector2( -660.43, 63.4808 ), Vector2( 2637.53, -23.0635 ), Vector2( 2566.44, -251.788 ), Vector2( -719.156, -202.334 ), Vector2( -669.702, 292.205 ), Vector2( 2628.26, 286.023 ), Vector2( 2625.17, -211.607 ), Vector2( -703.702, -217.788 ), Vector2( -678.975, 276.751 ), Vector2( 2652.98, 273.66 ), Vector2( 2631.35, -257.97 ), Vector2( -620.248, -233.243 ), Vector2( -666.611, 363.295 ), Vector2( 2646.8, 282.932 ), Vector2( 2632.81, 228.273 ), Vector2( 2648.27, -253.903 ), Vector2( -745.51, -226.085 ), Vector2( -671.329, 314.817 ), Vector2( 2651.36, 256.091 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "Cloud1"
+[sub_resource type="Animation" id=3]
 length = 15.0
 loop = true
 
@@ -64,12 +78,9 @@ z_index = 1
 layer = -2
 
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 989.248, 765.769 )
-scale = Vector2( 1.1667, 1.41054 )
+position = Vector2( 1037.84, 789.765 )
+scale = Vector2( 1.1667, 1.70499 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="TileMap4" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
@@ -100,28 +111,39 @@ position = Vector2( 323.032, 885.396 )
 scale = Vector2( 0.3, 0.3 )
 gravity = 800.0
 
+[node name="Position2D3" type="Position2D" parent="."]
+
+[node name="bg_cloud6" type="Sprite" parent="Position2D3"]
+self_modulate = Color( 0.894118, 0.666667, 0.921569, 0.439216 )
+position = Vector2( 1849.68, 189.39 )
+scale = Vector2( 2.04679, 2.18341 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D3"]
+anims/Cloud1 = SubResource( 1 )
+
 [node name="Position2D" type="Position2D" parent="."]
 
 [node name="bg_cloud9" type="Sprite" parent="Position2D"]
-position = Vector2( 1616.91, 414.064 )
+position = Vector2( 1808.85, 399.918 )
 scale = Vector2( 3.36842, 3.362 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="bg_cloud8" type="Sprite" parent="Position2D"]
-position = Vector2( 435.581, 294.363 )
+position = Vector2( 2124.84, 261.597 )
 scale = Vector2( 3.36842, 3.362 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D"]
 autoplay = "Cloud1"
-anims/Cloud1 = SubResource( 1 )
+anims/Cloud1 = SubResource( 2 )
 
 [node name="Position2D2" type="Position2D" parent="."]
 
-[node name="bg_cloud6" type="Sprite" parent="Position2D2"]
-position = Vector2( 1256.89, 199.911 )
+[node name="bg_cloud2" type="Sprite" parent="Position2D2"]
+position = Vector2( -518.982, -326.898 )
 scale = Vector2( 1.58799, 1.43633 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D2"]
-anims/Cloud1 = SubResource( 2 )
+anims/Cloud1 = SubResource( 3 )
