@@ -238,9 +238,12 @@ scale = Vector2( 1, 4.48013 )
 texture = ExtResource( 8 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Pressureplate2/Pressureplate_reader"]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pressureplate2/Pressureplate_reader/KinematicBody2D"]
-position = Vector2( 77.2363, -293.977 )
+position = Vector2( 77.2363, -294.675 )
 shape = SubResource( 9 )
 
 [node name="ScoreInterface" parent="." instance=ExtResource( 9 )]
@@ -253,4 +256,4 @@ margin_bottom = 20.5575
 position = Vector2( 920.047, 717.574 )
 
 [node name="Coin" parent="." instance=ExtResource( 11 )]
-position = Vector2( 779.999, 714.996 )
+position = Vector2( 224.301, 886.14 )
