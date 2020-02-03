@@ -19,7 +19,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Physics_box/PhysicsBox.gd"
 }, {
-"base": "Actor",
+"base": "KinematicBody2D",
 "class": "box",
 "language": "GDScript",
 "path": "res://src/Physics_box/Box.gd"
@@ -32,14 +32,18 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Box puzzle"
+config/name="Box puzzle - Local"
 run/main_scene="res://src/Game menu/TitleScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerData="*res://src/AutoLoad/PlayerData.tscn"
+
 [display]
 
-window/size/width=1280
-window/size/height=800
+window/size/width=1920
+window/size/height=1200
 window/size/test_width=1920
 window/size/test_height=1200
 window/stretch/mode="2d"

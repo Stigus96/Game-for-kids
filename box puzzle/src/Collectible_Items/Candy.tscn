@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Collectible_Items/Candy.gd" type="Script" id=1]
+[ext_resource path="res://assets/Candy/Sprite/Candy.png" type="Texture" id=2]
+
+[node name="Cake" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.945389, 0.630264 )
+scale = Vector2( 0.129788, 0.129317 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 0.380386, -13.0208, 12.332, -24.2013, 16.1874, -16.2336, 23.384, -14.6914, 26.8539, -11.0931, 24.9262, -9.55096, 19.2717, -6.98071, 20.5568, -5.18155, 18.5006, -1.84023, 8.21962, 9.46883, 0.508896, 14.6093, -8.10141, 18.9787, -11.5712, 26.3039, -20.053, 21.549, -22.6233, 12.6816, -11.1857, -5.18155 )
+[connection signal="body_entered" from="." to="." method="_on_Cake_body_entered"]

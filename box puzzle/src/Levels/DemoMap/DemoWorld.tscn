@@ -1,10 +1,16 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/Physics_box/PhysicsBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Demolevel assets/environment/background/jungle background.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/Demolevel assets/environment/tiles/jungle/tile_jungle_ground_brown.png" type="Texture" id=3]
 [ext_resource path="res://assets/Demolevel assets/environment/tiles/jungle/tile_jungle_bottom_brown.png" type="Texture" id=4]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Pressureplate/Pressureplate_reader.tscn" type="PackedScene" id=7]
+[ext_resource path="res://icon.png" type="Texture" id=8]
+[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Collectible_Items/Candy.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -191,6 +197,9 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 11/shapes = [  ]
 11/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 31.2621, 140.916 )
+
 [node name="World" type="Node2D"]
 
 [node name="PhysicsBox" parent="." instance=ExtResource( 1 )]
@@ -216,3 +225,32 @@ position = Vector2( 204.35, 916.829 )
 scale = Vector2( 0.5, 0.5 )
 speed = Vector2( 250, 400 )
 gravity = 800.0
+
+[node name="Pressureplate2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 567.17, 884.059 )
+
+[node name="Pressureplate_reader" parent="Pressureplate2" instance=ExtResource( 7 )]
+position = Vector2( -2.39493, 37.7201 )
+
+[node name="Sprite" type="Sprite" parent="Pressureplate2/Pressureplate_reader"]
+position = Vector2( 77.2363, -295.773 )
+scale = Vector2( 1, 4.48013 )
+texture = ExtResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Pressureplate2/Pressureplate_reader"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pressureplate2/Pressureplate_reader/KinematicBody2D"]
+position = Vector2( 77.2363, -293.977 )
+shape = SubResource( 9 )
+
+[node name="ScoreInterface" parent="." instance=ExtResource( 9 )]
+margin_left = 1898.83
+margin_top = 20.5575
+margin_right = 1898.83
+margin_bottom = 20.5575
+
+[node name="Cake" parent="." instance=ExtResource( 10 )]
+position = Vector2( 920.047, 717.574 )
+
+[node name="Coin" parent="." instance=ExtResource( 11 )]
+position = Vector2( 779.999, 714.996 )
