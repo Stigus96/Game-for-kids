@@ -1,17 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://src/Collectible_Items/Coin.gd" type="Script" id=1]
-[ext_resource path="res://assets/start-assets/coin.png" type="Texture" id=2]
+[ext_resource path="res://src/Collectible_Items/Donut.gd" type="Script" id=1]
+[ext_resource path="res://assets/Candy/Sprite/donnut.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 34.1324
-
-[sub_resource type="Animation" id=2]
-resource_name = "Default"
+[sub_resource type="Animation" id=1]
+resource_name = "Defult"
 length = 1.6
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("CoinSprite:position")
+tracks/0/path = NodePath("DonutSprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -20,10 +17,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -16.8653 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -16.865 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "fade_out"
 length = 0.7
 tracks/0/type = "value"
@@ -53,7 +50,7 @@ tracks/1/keys = {
 } ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("CoinSprite:position")
+tracks/2/path = NodePath("DonutSprite:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -65,18 +62,23 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -50 ) ]
 }
 
-[node name="Coin" type="Area2D"]
+[node name="Donut" type="Area2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CoinSprite" type="Sprite" parent="."]
-position = Vector2( 0, -1.76747 )
+[node name="DonutSprite" type="Sprite" parent="."]
+scale = Vector2( 0.51559, 0.508573 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 1.00734, 1.00422 )
+build_mode = 1
+polygon = PoolVector2Array( 34.2951, -34.014, 42.0978, -25.2359, 47.9499, -14.0195, 51.3636, 1.58592, 47.9499, 15.7283, 42.5855, 26.9448, 34.2951, 35.2352, 25.517, 39.6242, 10.3993, 43.0379, 0.645844, 44.5009, -15.4473, 41.0872, -32.5157, 33.2845, -41.7814, 26.9448, -49.0965, 11.827, -50.5595, -9.14282, -44.2198, -23.2853, -31.5404, -35.477, -11.5459, -43.7674, 8.44858, -44.2551, 22.591, -40.3537 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "Default"
-anims/Default = SubResource( 2 )
-anims/fade_out = SubResource( 3 )
-[connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]
+autoplay = "Defult"
+anims/Defult = SubResource( 1 )
+anims/fade_out = SubResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_Donut_body_entered"]

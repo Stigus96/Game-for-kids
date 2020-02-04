@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://src/Physics_box/PhysicsBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Demolevel assets/environment/background/jungle background.jpg" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Collectible_Items/Candy.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Collectible_Items/Donut.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -257,3 +258,6 @@ position = Vector2( 920.047, 717.574 )
 
 [node name="Coin" parent="." instance=ExtResource( 11 )]
 position = Vector2( 224.301, 886.14 )
+
+[node name="Donut" parent="." instance=ExtResource( 12 )]
+position = Vector2( 416.442, 872.705 )
