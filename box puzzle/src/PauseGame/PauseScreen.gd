@@ -22,7 +22,7 @@ func _on_Continue_pressed():
 
 func _on_Restart_pressed():
 	get_tree().paused = not get_tree().paused
-	get_tree().reload_current_scene()
+	get_tree().change_scene("res://src/Levels/DemoMap/DemoWorld.tscn")
 
 
 func _on_ReturnToMenu_pressed():
