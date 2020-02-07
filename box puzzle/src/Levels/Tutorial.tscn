@@ -16,6 +16,7 @@ loop = true
 
 [sub_resource type="Animation" id=2]
 length = 300.0
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("bg_cloud8:position")
 tracks/0/interp = 1
@@ -153,27 +154,27 @@ anims/Cloud1 = SubResource( 1 )
 
 [node name="bg_cloud6" type="Sprite" parent="Position2D"]
 self_modulate = Color( 0.894118, 0.666667, 0.921569, 0.439216 )
-position = Vector2( 2651.36, 256.091 )
+position = Vector2( 2148.94, 264.971 )
 scale = Vector2( 2.04679, 2.18341 )
 texture = ExtResource( 5 )
 
 [node name="bg_cloud3" type="Sprite" parent="Position2D"]
-position = Vector2( -428.072, -165.769 )
+position = Vector2( 2025.87, 384.463 )
 scale = Vector2( 1.58799, 1.43633 )
 texture = ExtResource( 5 )
 
 [node name="bg_cloud2" type="Sprite" parent="Position2D"]
-position = Vector2( -534.437, 260.367 )
+position = Vector2( 2438.85, 189.293 )
 scale = Vector2( 1.58799, 1.43633 )
 texture = ExtResource( 5 )
 
 [node name="bg_cloud9" type="Sprite" parent="Position2D"]
-position = Vector2( -212.513, 81.2425 )
+position = Vector2( 237.646, 181.579 )
 scale = Vector2( 3.36842, 3.362 )
 texture = ExtResource( 6 )
 
 [node name="bg_cloud8" type="Sprite" parent="Position2D"]
-position = Vector2( -290.907, -118.005 )
+position = Vector2( 1499.2, 333.617 )
 scale = Vector2( 3.36842, 3.362 )
 texture = ExtResource( 6 )
 
