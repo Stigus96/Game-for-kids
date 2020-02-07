@@ -1,7 +1,7 @@
 # DialogBox.gd
 extends RichTextLabel
 
-var dialog = ["Hello and welcome to our game aewjkhbf efawfaf we fw ef ewf aewf awef wf wfe ....guytgtygyguytgftyfuytft ftyf fty futyft ft tuf ....", "This is nice and will work perfectly"]
+var dialog = ["Hello and welcome to our game ", "This is nice and will work perfectly"]
 var page = 0
 
 func _ready():
@@ -16,6 +16,8 @@ func _input(event):
 				page += 1
 				set_bbcode(dialog[page])
 				set_visible_characters(0)
+		else:
+			set_visible_characters(get_total_character_count())
 
 
 func _on_Timer_timeout():
