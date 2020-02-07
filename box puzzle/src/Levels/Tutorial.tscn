@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Physics_box/PhysicsBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Demolevel assets/environment/background/bg objects/bg_cloud6.png" type="Texture" id=5]
 [ext_resource path="res://assets/Demolevel assets/environment/background/bg objects/bg_cloud8.png" type="Texture" id=6]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/KillPlayer/KillFloor.gd" type="Script" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Cloud1"
@@ -91,6 +93,9 @@ tracks/5/keys = {
 length = 15.0
 loop = true
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1866.76, 10 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="PhysicsBox" parent="." instance=ExtResource( 1 )]
@@ -102,7 +107,7 @@ z_index = 1
 layer = -2
 
 [node name="Bakgrunn2" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 967.488, 779.011 )
+position = Vector2( 967.488, 778.011 )
 scale = Vector2( 1.0137, 1.43847 )
 texture = ExtResource( 2 )
 
@@ -128,7 +133,7 @@ format = 1
 tile_data = PoolIntArray( 1441829, 19, 0, 1441830, 15, 0, 1441831, 15, 0, 1441832, 15, 0, 1441833, 15, 0, 1441834, 15, 0, 1441835, 15, 0, 1441836, 16, 0, 1507357, 12, 0, 1507364, 19, 0, 1507365, 15, 0, 1507366, 16, 0, 1572883, 19, 0, 1572884, 15, 0, 1572885, 15, 0, 1572886, 15, 0, 1572887, 15, 0, 1572888, 15, 0, 1572889, 15, 0, 1572890, 15, 0, 1572891, 15, 0, 1572892, 15, 0, 1572893, 16, 0, 1572898, 19, 0, 1572899, 15, 0, 1572900, 15, 0, 1572901, 16, 0, 1572903, 11, 0, 1572904, 11, 0, 1572905, 11, 0, 1572906, 11, 0, 1572907, 11, 0, 1572908, -1073741819, 0, 1638438, -1073741819, 0, 1638439, 11, 0, 1638440, 11, 0, 1638441, 19, 0, 1638442, 15, 0, 1638443, 15, 0, 1638444, 15, 0, 1638445, 15, 0, 1638446, 15, 0, 1638447, 15, 0, 1638448, 15, 0, 1638449, 15, 0, 1638450, 16, 0, 1703955, -1610612731, 0, 1703956, -1073741813, 0, 1703957, -1073741813, 0, 1703958, -1073741813, 0, 1703959, -1073741813, 0, 1703960, -1073741813, 0, 1703961, -1073741813, 0, 1703962, -1073741813, 0, 1703963, -1073741813, 0, 1703964, -1073741813, 0, 1703965, -1073741819, 0, 1703970, -1610612731, 0, 1703971, -1610612725, 0, 1703972, -1610612725, 0, 1703973, -1073741819, 0, 1703974, -1073741819, 0, 1703975, -1610612725, 0, 1703987, 16, 0, 1769491, -1610612731, 0, 1769492, -1073741813, 0, 1769493, -1073741813, 0, 1769494, -1073741813, 0, 1769495, -1073741813, 0, 1769496, -1073741813, 0, 1769497, -1073741813, 0, 1769498, -1073741813, 0, 1769499, -1073741813, 0, 1769500, -1073741813, 0, 1769501, -1073741819, 0, 1769506, -1610612731, 0, 1769507, -1610612725, 0, 1769508, -1610612725, 0, 1769509, -1073741819, 0, 1769510, -1073741819, 0, 1769511, -1610612725, 0, 1769512, -1610612725, 0, 1769513, -1610612731, 0, 1769514, 11, 0, 1769515, 11, 0, 1769516, 11, 0, 1769517, 11, 0, 1769518, 11, 0, 1769519, 11, 0, 1769520, 11, 0, 1769521, 11, 0, 1769522, -1073741819, 0, 1835027, -1610612731, 0, 1835028, -1073741813, 0, 1835029, -1073741813, 0, 1835030, -1073741813, 0, 1835031, -1073741813, 0, 1835032, -1073741813, 0, 1835033, -1073741813, 0, 1835034, -1073741813, 0, 1835035, -1073741813, 0, 1835036, -1073741813, 0, 1835037, -1073741819, 0, 1835042, -1610612731, 0, 1835043, -1610612725, 0, 1835044, -1610612725, 0, 1835045, -1073741819, 0, 1835046, -1073741819, 0, 1835047, -1610612725, 0, 1835048, -1610612725, 0, 1835049, -1610612731, 0, 1835050, 11, 0, 1835051, 11, 0, 1835052, 11, 0, 1835053, 11, 0, 1835054, 11, 0, 1835055, 11, 0, 1835056, 11, 0, 1835057, 11, 0, 1835058, -1073741819, 0, 1835059, -1073741819, 0 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( 2, 0 )
+position = Vector2( 3, 0 )
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -180,3 +185,19 @@ anims/Cloud1 = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D2"]
 anims/Cloud1 = SubResource( 3 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer2" instance=ExtResource( 7 )]
+visible = false
+
+[node name="KillFloor" type="Area2D" parent="."]
+position = Vector2( 1047.26, 1207.87 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillFloor"]
+shape = SubResource( 4 )
+[connection signal="body_entered" from="KillFloor" to="KillFloor" method="_on_KillFloor_body_entered"]
