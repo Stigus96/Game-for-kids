@@ -6,7 +6,11 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	if body.name == "Player" || body.name == "PhysicsBox":
-		get_parent().queue_free()
+	if body.name == "Player" || body.name == "Box":
+		print("hei")
+		queue_free()
 	pass # Replace with function body.
 
+
+func _on_Area2D_body_exited(body):
+	pass # Replace with function body.
