@@ -1,7 +1,12 @@
 # DialogBox.gd
 extends RichTextLabel
 
-var dialog = ["Hello and welcome to our game ", "This is nice and will work perfectly"]
+var dialog = ["Welcome to Puzzle Box!\nWe are very excited to have you here! Before we begin our journey, let's start of with some basic instructions...\nPress Enter to continue...",
+ "For your character to move, press 'A' and 'D' to go left and right and 'W' to jump.\nYou can also use the SPACE bar to jump...\nPress Enter to continue...",
+"As you can see, there is a box in front of you. \nTry pushing it! \nPress Enter to continue...",
+"Down the pit there is a pressure plate, can you find a way to trigger it without jumping down yourself? \nPress Enter to continue...",
+"Pick up the coin to add points to the counter in the top right corner \nPress Enter to continue...",
+"Be aware of the spikes! \n When you are ready, go through the portal to get to the next level!" ]
 var page = 0
 
 func _ready():
@@ -16,6 +21,7 @@ func _input(event):
 				page += 1
 				set_bbcode(dialog[page])
 				set_visible_characters(0)
+				
 		else:
 			set_visible_characters(get_total_character_count())
 
