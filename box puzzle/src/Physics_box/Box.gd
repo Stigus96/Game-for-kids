@@ -12,5 +12,6 @@ func _physics_process(delta):
 
 	motion = move_and_slide(motion, UP)
 	pass
+	
 func push(velocity: Vector2) -> void:
 	print("Push not implemented in %s" % filename)

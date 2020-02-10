@@ -1,6 +1,6 @@
 extends Actor
 
-export var push_speed : = 125.0
+export var push_speed : = 140.0
 onready var AnimatedPlayer = get_node("AnimatedPlayer")
 onready var right_ray = get_node("right_ray")
 onready var left_ray = get_node("left_ray")
@@ -23,6 +23,9 @@ func _physics_process(delta: float) -> void:
 			var box: = get_slide_collision(0).collider as box
 			if box:
 				box.push(push_speed * motion)
+	
+	if Input.is_action_just_pressed("ui_focus_next"):
+		get_tree().reload_current_scene()
 	
 	
 func get_direction () -> Vector2:
