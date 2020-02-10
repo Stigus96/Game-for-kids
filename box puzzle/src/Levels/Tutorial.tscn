@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=2]
@@ -15,14 +15,12 @@
 [ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/DialogBox/DialogBox.tscn" type="PackedScene" id=14]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10.3626, 8.08008 )
-
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
+resource_name = "Cloud1"
 length = 15.0
 loop = true
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 length = 300.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("bg_cloud8:position")
@@ -97,73 +95,17 @@ tracks/5/keys = {
 "values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 length = 15.0
 loop = true
 
 [node name="Node2D" type="Node2D"]
 
-[node name="SpikeArea" type="Area2D" parent="."]
-position = Vector2( -6.31873, 0 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 714.048, 1240.79 )
+scale = Vector2( 0.45, 0.45 )
 
-[node name="Spikes" type="Area2D" parent="SpikeArea"]
-editor/display_folded = true
-position = Vector2( 770.895, 194.537 )
-z_index = 1
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="SpikeArea/Spikes"]
-position = Vector2( 594.331, 722.78 )
-scale = Vector2( 0.158615, 0.155397 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeArea/Spikes"]
-position = Vector2( 591.901, 725.666 )
-shape = SubResource( 1 )
-
-[node name="Spikes2" type="Area2D" parent="SpikeArea"]
-editor/display_folded = true
-position = Vector2( 810.037, 194.537 )
-z_index = 1
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="SpikeArea/Spikes2"]
-position = Vector2( 594.331, 722.78 )
-scale = Vector2( 0.158615, 0.155397 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeArea/Spikes2"]
-position = Vector2( 591.901, 725.666 )
-shape = SubResource( 1 )
-
-[node name="Spikes3" type="Area2D" parent="SpikeArea"]
-editor/display_folded = true
-position = Vector2( 790.797, 194.537 )
-z_index = 1
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="SpikeArea/Spikes3"]
-position = Vector2( 594.331, 722.78 )
-scale = Vector2( 0.158615, 0.155397 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeArea/Spikes3"]
-position = Vector2( 591.901, 725.666 )
-shape = SubResource( 1 )
-
-[node name="PlayerData" parent="." instance=ExtResource( 3 )]
+[node name="PlayerData" parent="." instance=ExtResource( 2 )]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 editor/display_folded = true
@@ -196,6 +138,9 @@ __meta__ = {
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 1037.84, 789.765 )
 scale = Vector2( 1.1667, 1.70499 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TileMap4" type="TileMap" parent="."]
 tile_set = ExtResource( 6 )
@@ -231,7 +176,7 @@ gravity = 830.0
 editor/display_folded = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D3"]
-anims/Cloud1 = SubResource( 2 )
+anims/Cloud1 = SubResource( 1 )
 
 [node name="Position2D" type="Position2D" parent="."]
 editor/display_folded = true
@@ -264,13 +209,13 @@ texture = ExtResource( 9 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D"]
 autoplay = "Cloud1"
-anims/Cloud1 = SubResource( 3 )
+anims/Cloud1 = SubResource( 2 )
 
 [node name="Position2D2" type="Position2D" parent="."]
 editor/display_folded = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D2"]
-anims/Cloud1 = SubResource( 4 )
+anims/Cloud1 = SubResource( 3 )
 
 [node name="Pressureplate2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 933.294, 910.948 )
@@ -300,6 +245,3 @@ margin_bottom = 110.738
 
 [node name="Polygon2D" parent="." instance=ExtResource( 14 )]
 position = Vector2( -230.058, -42.1568 )
-[connection signal="body_entered" from="SpikeArea/Spikes" to="SpikeArea/Spikes" method="_on_Spikes_body_entered"]
-[connection signal="body_entered" from="SpikeArea/Spikes2" to="SpikeArea/Spikes2" method="_on_Spikes_body_entered"]
-[connection signal="body_entered" from="SpikeArea/Spikes3" to="SpikeArea/Spikes3" method="_on_Spikes_body_entered"]
