@@ -238,10 +238,10 @@ position = Vector2( 1216.25, 718.156 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="ScoreInterface" parent="." instance=ExtResource( 13 )]
-margin_left = 1943.6
-margin_top = 110.738
-margin_right = 1943.6
-margin_bottom = 110.738
+margin_left = 1805.58
+margin_top = 18.6575
+margin_right = 1805.58
+margin_bottom = 18.6575
 
 [node name="Polygon2D" parent="." instance=ExtResource( 14 )]
 position = Vector2( -230.058, -42.1568 )
