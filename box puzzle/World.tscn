@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://src/Levels/DemoMap/DemoWorld.tscn" type="PackedScene" id=1]
-
-[node name="World" instance=ExtResource( 1 )]
-
-[node name="Player" parent="." index="3"]
-position = Vector2( 322.077, 279.726 )

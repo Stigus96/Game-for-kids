@@ -14,11 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Actors/Actor.gd"
 }, {
-"base": "KinematicBody2D",
-"class": "BOX",
-"language": "GDScript",
-"path": "res://KinematicBody2D2.gd"
-}, {
 "base": "box",
 "class": "PhysicsBox",
 "language": "GDScript",
@@ -31,7 +26,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Actor": "",
-"BOX": "",
 "PhysicsBox": "",
 "box": ""
 }

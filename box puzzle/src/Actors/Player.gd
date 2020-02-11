@@ -15,7 +15,6 @@ func _physics_process(delta: float) -> void:
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 	
-
 	if left_ray.is_colliding() or right_ray.is_colliding():
 		if abs(motion.x) > 1:
 			return
@@ -25,7 +24,6 @@ func _physics_process(delta: float) -> void:
 				box.push(push_speed * motion)
 	
 	if Input.is_action_just_pressed("ui_focus_next"):
-		PlayerData.score = 0
 		get_tree().reload_current_scene()
 	
 	
