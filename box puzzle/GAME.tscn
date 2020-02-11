@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/start-assets/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Pressureplate/Pressureplate_reader.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 2.36411, 2.20527 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -2.52101, -0.630249 )
+tile_set = ExtResource( 1 )
+collision_layer = 19
+format = 1
+tile_data = PoolIntArray( -327675, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0 )
+
+[node name="Pressureplate2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 397.978, 466.277 )
+
+[node name="Pressureplate_reader" parent="Pressureplate2" instance=ExtResource( 3 )]
+position = Vector2( -2.96741, 36.7436 )
+
+[node name="Sprite" type="Sprite" parent="Pressureplate2/Pressureplate_reader"]
+position = Vector2( -220.457, -84.4364 )
+scale = Vector2( 0.582914, 2.74054 )
+texture = ExtResource( 4 )
+
+[node name="Box" parent="." instance=ExtResource( 5 )]
+position = Vector2( 387.209, 416.708 )

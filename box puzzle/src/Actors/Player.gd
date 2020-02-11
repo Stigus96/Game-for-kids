@@ -25,6 +25,7 @@ func _physics_process(delta: float) -> void:
 				box.push(push_speed * motion)
 	
 	if Input.is_action_just_pressed("ui_focus_next"):
+		PlayerData.score = 0
 		get_tree().reload_current_scene()
 	
 	
