@@ -6,7 +6,7 @@ signal door_updated
 
 var score: = 0 setget set_score
 
-var door = true setget set_door
+var door = true
 
 #PlayerData.score += 1
 
@@ -29,8 +29,7 @@ func coin_collected():
 
 func set_door(value:bool )->void:
 	door = value
-	emit_signal("door_updated")
-	return
+	emit_signal("score_updated")
 	
 	
 func get_door()->bool:

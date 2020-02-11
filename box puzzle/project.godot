@@ -34,7 +34,6 @@ _global_script_class_icons={
 
 config/name="Box puzzle - Local"
 run/main_scene="res://src/Game menu/TitleScreen.tscn"
-config/icon="res://icon.png"
 
 [autoload]
 
