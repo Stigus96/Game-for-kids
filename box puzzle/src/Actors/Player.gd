@@ -84,13 +84,13 @@ func crouch():
 		get_node("body").disabled=true
 		get_node("hat").disabled=true
 		get_node("crouch hat").disabled=false
-		get_node("crouch hat").disabled=false
+		get_node("crouch body").disabled=false
 		speed.x = 150
 	else:
 		get_node("body").disabled=false
 		get_node("hat").disabled=false
 		get_node("crouch hat").disabled=true
-		get_node("crouch hat").disabled=true
+		get_node("crouch body").disabled=true
 		speed.x = 300
 
 

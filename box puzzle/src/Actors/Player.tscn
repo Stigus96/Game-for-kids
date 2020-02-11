@@ -125,12 +125,10 @@ position = Vector2( -115.287, -66.45 )
 scale = Vector2( 0.397937, 0.351599 )
 
 [node name="body" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( -115, -38.2972 )
 shape = SubResource( 2 )
 
 [node name="hat" type="CollisionPolygon2D" parent="."]
-visible = false
 polygon = PoolVector2Array( -138, -92, -115, -143, -92, -93 )
 
 [node name="crouch body" type="CollisionShape2D" parent="."]
