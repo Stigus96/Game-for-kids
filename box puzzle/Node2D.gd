@@ -2,7 +2,11 @@ extends Node
 
 signal score_updated
 
+signal door_updated
+
 var score: = 0 setget set_score
+
+var door = true setget set_door
 
 #PlayerData.score += 1
 
@@ -22,3 +26,12 @@ func _ready():
 func coin_collected():
 	score += 1
 	pass
+
+func set_door(value:bool )->void:
+	door = value
+	emit_signal("door_updated")
+	return
+	
+	
+func get_door()->bool:
+	return door

@@ -7,11 +7,10 @@
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Pressureplate/Pressureplate_reader.tscn" type="PackedScene" id=7]
-[ext_resource path="res://icon.png" type="Texture" id=8]
-[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/Collectible_Items/Candy.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/Collectible_Items/Donut.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Collectible_Items/Candy.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Collectible_Items/Donut.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -228,7 +227,11 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 14/shapes = [  ]
 14/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="StreamTexture" id=9]
+flags = 4
+load_path = "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 31.2621, 140.916 )
 
 [node name="World" type="Node2D"]
@@ -269,7 +272,7 @@ position = Vector2( -2.39493, 37.7201 )
 [node name="Sprite" type="Sprite" parent="Pressureplate2/Pressureplate_reader"]
 position = Vector2( 77.2363, -295.773 )
 scale = Vector2( 1, 4.48013 )
-texture = ExtResource( 8 )
+texture = SubResource( 9 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Pressureplate2/Pressureplate_reader"]
 __meta__ = {
@@ -278,19 +281,19 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pressureplate2/Pressureplate_reader/KinematicBody2D"]
 position = Vector2( 77.2363, -294.675 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
-[node name="ScoreInterface" parent="." instance=ExtResource( 9 )]
+[node name="ScoreInterface" parent="." instance=ExtResource( 8 )]
 margin_left = 1898.83
 margin_top = 20.5575
 margin_right = 1898.83
 margin_bottom = 20.5575
 
-[node name="Cake" parent="." instance=ExtResource( 10 )]
+[node name="Cake" parent="." instance=ExtResource( 9 )]
 position = Vector2( 920.047, 717.574 )
 
-[node name="Coin" parent="." instance=ExtResource( 11 )]
+[node name="Coin" parent="." instance=ExtResource( 10 )]
 position = Vector2( 224.301, 886.14 )
 
-[node name="Donut" parent="." instance=ExtResource( 12 )]
+[node name="Donut" parent="." instance=ExtResource( 11 )]
 position = Vector2( 416.442, 872.705 )
