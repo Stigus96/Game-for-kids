@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bakgrunn.png-79cc151924ee2ad4d07a8e08103d6440.stex"
+path="res://.import/Bakgrunn.png-5a6a5bc379d477531a3d790a6b720092.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bilder/Bakgrunn.png"
-dest_files=[ "res://.import/Bakgrunn.png-79cc151924ee2ad4d07a8e08103d6440.stex" ]
+source_file="res://src/Game menu/Bilder/Bakgrunn.png"
+dest_files=[ "res://.import/Bakgrunn.png-5a6a5bc379d477531a3d790a6b720092.stex" ]
 
 [params]
 
