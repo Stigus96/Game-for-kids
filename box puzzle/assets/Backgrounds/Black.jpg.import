@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/QUIT.png-ee3bef78cff76d14dce638cd0b1e717a.stex"
+path="res://.import/Black.jpg-61cc69d16a41ad4149cfc44f94228926.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Game menu/Bilder/QUIT.png"
-dest_files=[ "res://.import/QUIT.png-ee3bef78cff76d14dce638cd0b1e717a.stex" ]
+source_file="res://assets/Backgrounds/Black.jpg"
+dest_files=[ "res://.import/Black.jpg-61cc69d16a41ad4149cfc44f94228926.stex" ]
 
 [params]
 
