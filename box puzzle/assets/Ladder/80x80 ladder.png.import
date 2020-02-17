@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/QUIT.png-ee3bef78cff76d14dce638cd0b1e717a.stex"
+path="res://.import/80x80 ladder.png-5bae372e92c8e85cb8c40f2b52523aeb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Game menu/Bilder/QUIT.png"
-dest_files=[ "res://.import/QUIT.png-ee3bef78cff76d14dce638cd0b1e717a.stex" ]
+source_file="res://assets/Ladder/80x80 ladder.png"
+dest_files=[ "res://.import/80x80 ladder.png-5bae372e92c8e85cb8c40f2b52523aeb.stex" ]
 
 [params]
 

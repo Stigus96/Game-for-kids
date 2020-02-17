@@ -70,7 +70,7 @@ position = Vector2( -115.287, -66.45 )
 scale = Vector2( 0.397937, 0.351599 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 2
+frame = 17
 playing = true
 
 [node name="player" type="Sprite" parent="."]
