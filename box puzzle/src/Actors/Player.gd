@@ -11,6 +11,7 @@ export var upSpeed = 200
 func _physics_process(delta: float) -> void:
 	var motion : = Vector2()
 	animate_player()
+	crouch()
 	motion.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -105,6 +106,5 @@ func crouch():
 		get_node("crouch hat").disabled=true
 		get_node("crouch body").disabled=true
 		speed.x = 300
-
 
 
