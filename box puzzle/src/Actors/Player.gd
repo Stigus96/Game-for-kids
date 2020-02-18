@@ -5,10 +5,11 @@ onready var AnimatedPlayer = get_node("AnimatedPlayer")
 onready var right_ray = get_node("right_ray")
 onready var left_ray = get_node("left_ray")
 var ladder_on = false
-export var upSpeed = 600
-var motion : = Vector2()
+export var upSpeed = 200
+
 
 func _physics_process(delta: float) -> void:
+	var motion : = Vector2()
 	animate_player()
 	motion.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	
@@ -37,10 +38,15 @@ func get_direction () -> Vector2:
 		
 func CheckLadderAndTakeAction():
 	if ladder_on == true:
-			if Input.is_action_just_pressed("climb_up"):
-				motion.y -= upSpeed
-			elif Input.is_action_just_pressed("climb_down"):
-				motion.y += upSpeed
+		gravity = 0
+		_velocity.y = 0
+		_velocity.x = 0
+		if Input.get_action_strength("climb_up"):
+			_velocity.y -= upSpeed
+		elif Input.get_action_strength("climb_down"):
+			_velocity.y += upSpeed
+	else:
+		 gravity = 500
 		
 		
 		
