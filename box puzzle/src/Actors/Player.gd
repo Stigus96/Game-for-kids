@@ -57,12 +57,36 @@ func check_box_collision(motion : Vector2) -> void:
 		box.push(push_speed * motion)
 		
 func animate_player():
+	var is_crouching = Input.is_action_pressed("crouch")
+	var start_crouching = Input.is_action_just_pressed("crouch")
 	var direction = get_direction()
-	if (direction.x < 0):
+	if (direction.x < 0 && is_crouching == false):
 		AnimatedPlayer.play("walk_left")
-	if (direction.x > 0):
+	if (direction.x > 0 && is_crouching == false):
 		 AnimatedPlayer.play("walk_right")
-	if(direction.x == 0):
+	if(direction.x == 0 && is_crouching == false):
 		AnimatedPlayer.play("idle")
+	if (direction.x < 0 && is_crouching == true):
+		AnimatedPlayer.play("crouch_walk_left")
+	if (direction.x > 0 && is_crouching == true):
+		 AnimatedPlayer.play("crouch_walk_right")
+	if(direction.x == 0 && start_crouching == true):
+		AnimatedPlayer.play("start_crouching")
+	if(direction.x == 0 && is_crouching == true && AnimatedPlayer.is_playing() == false):
+		AnimatedPlayer.play("is_crouching")
 
+func crouch():
+	var is_crouching = Input.is_action_pressed("crouch")
+	if (is_crouching):
+		get_node("body").disabled=true
+		get_node("hat").disabled=true
+		get_node("crouch hat").disabled=false
+		get_node("crouch body").disabled=false
+		speed.x = 150
+	else:
+		get_node("body").disabled=false
+		get_node("hat").disabled=false
+		get_node("crouch hat").disabled=true
+		get_node("crouch body").disabled=true
+		speed.x = 300
 
