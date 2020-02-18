@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/characters/player/player animations/idle animation/player idle0000.png" type="Texture" id=2]
@@ -37,6 +37,31 @@
 [ext_resource path="res://assets/characters/player/player animations/walking left/player move_left0006.png" type="Texture" id=35]
 [ext_resource path="res://assets/characters/player/player animations/walking left/player move_left0007.png" type="Texture" id=36]
 [ext_resource path="res://assets/characters/player/player animations/walking left/player move_left0008.png" type="Texture" id=37]
+[ext_resource path="res://assets/characters/player/player animations/crouch walk left/player crouch walk left.png" type="Texture" id=38]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0000.png" type="Texture" id=39]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0001.png" type="Texture" id=40]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0002.png" type="Texture" id=41]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0003.png" type="Texture" id=42]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0004.png" type="Texture" id=43]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0005.png" type="Texture" id=44]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0006.png" type="Texture" id=45]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0007.png" type="Texture" id=46]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0008.png" type="Texture" id=47]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0009.png" type="Texture" id=48]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0010.png" type="Texture" id=49]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0011.png" type="Texture" id=50]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0012.png" type="Texture" id=51]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0013.png" type="Texture" id=52]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0014.png" type="Texture" id=53]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0015.png" type="Texture" id=54]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0016.png" type="Texture" id=55]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0017.png" type="Texture" id=56]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0018.png" type="Texture" id=57]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0019.png" type="Texture" id=58]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0020.png" type="Texture" id=59]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0021.png" type="Texture" id=60]
+[ext_resource path="res://assets/characters/player/player animations/start crouching/player_crouch0022.png" type="Texture" id=61]
+[ext_resource path="res://assets/characters/player/player animations/crouch walk right/player crouch walk right.png" type="Texture" id=62]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -54,10 +79,33 @@ animations = [ {
 "loop": true,
 "name": "walk_left",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 38 ) ],
+"loop": true,
+"name": "crouch_walk_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ) ],
+"loop": false,
+"name": "start_crouching",
+"speed": 100.0
+}, {
+"frames": [ ExtResource( 61 ) ],
+"loop": true,
+"name": "is_crouching",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 62 ) ],
+"loop": true,
+"name": "crouch_walk_right",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 39, 54.3112 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 39, 35 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 153.216, 149 )
@@ -69,8 +117,7 @@ gravity = 500.0
 position = Vector2( -115.287, -66.45 )
 scale = Vector2( 0.397937, 0.351599 )
 frames = SubResource( 1 )
-animation = "idle"
-frame = 2
+animation = "is_crouching"
 playing = true
 
 [node name="player" type="Sprite" parent="."]
@@ -81,11 +128,16 @@ scale = Vector2( 0.397937, 0.351599 )
 position = Vector2( -115, -38.2972 )
 shape = SubResource( 2 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="hat" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -138, -92, -115, -143, -92, -93 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -115.119, -3.03557 )
+[node name="crouch body" type="CollisionShape2D" parent="."]
+position = Vector2( -115.216, -19 )
+shape = SubResource( 3 )
+
+[node name="crouch hat" type="CollisionPolygon2D" parent="."]
+position = Vector2( -115.216, -19 )
+polygon = PoolVector2Array( -22, -35, 1, -86, 23, -35 )
 
 [node name="left_ray" type="RayCast2D" parent="."]
 position = Vector2( -114.992, -42.5431 )
