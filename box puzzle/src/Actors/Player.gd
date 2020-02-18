@@ -4,6 +4,9 @@ export var push_speed : = 140.0
 onready var AnimatedPlayer = get_node("AnimatedPlayer")
 onready var right_ray = get_node("right_ray")
 onready var left_ray = get_node("left_ray")
+var ladder_on = false
+export var upSpeed = 200
+
 
 func _physics_process(delta: float) -> void:
 	var motion : = Vector2()
@@ -15,6 +18,7 @@ func _physics_process(delta: float) -> void:
 	var direction = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+	CheckLadderAndTakeAction()
 	
 	if left_ray.is_colliding() or right_ray.is_colliding():
 		if abs(motion.x) > 1:
@@ -33,6 +37,18 @@ func get_direction () -> Vector2:
 		return Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
 		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() else 1.0)
+		
+func CheckLadderAndTakeAction():
+	if ladder_on == true:
+		gravity = 0
+		_velocity.y = 0
+		_velocity.x = 0
+		if Input.get_action_strength("climb_up"):
+			_velocity.y -= upSpeed
+		elif Input.get_action_strength("climb_down"):
+			_velocity.y += upSpeed
+	else:
+		 gravity = 500
 		
 		
 		
