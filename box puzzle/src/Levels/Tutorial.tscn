@@ -15,7 +15,7 @@
 [ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/DialogBox/DialogBox.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/Levels/jungleLevel.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/Levels/GrassLevel/GrassLevel.tscn" type="PackedScene" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Cloud1"
@@ -227,9 +227,9 @@ position = Vector2( 1182.75, 723.019 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="ScoreInterface" parent="." instance=ExtResource( 13 )]
-margin_left = 1943.6
+margin_left = 1942.8
 margin_top = 110.738
-margin_right = 1943.6
+margin_right = 1942.8
 margin_bottom = 110.738
 
 [node name="Polygon2D" parent="." instance=ExtResource( 14 )]
