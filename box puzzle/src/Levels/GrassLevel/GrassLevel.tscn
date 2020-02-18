@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://src/Physics_box/PhysicsBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 0, 32, 32, 0, 32, 0, 24, 24, 24, 24, 0 )
@@ -494,7 +495,8 @@ tile_set = SubResource( 21 )
 cell_size = Vector2( 4, 4 )
 collision_layer = 2
 collision_mask = 2
-tile_data = PoolIntArray( 10289552, 0, 0, 11534736, 0, 0, 12779920, 0, 0, 13959568, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 10289552, 0, 0, 12779920, 0, 0 )
 
 [node name="LadderThree" parent="." instance=ExtResource( 6 )]
 visible = false
@@ -802,3 +804,11 @@ scale = Vector2( 0.4, 0.4 )
 [node name="Pressureplate" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1849.88, 201.832 )
 scale = Vector2( 0.55, 1 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -4
+
+[node name="Bakgrunn" type="Sprite" parent="CanvasLayer2"]
+position = Vector2( 1499.52, 1113.89 )
+scale = Vector2( 1.65508, 2.07275 )
+texture = ExtResource( 13 )
