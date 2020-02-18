@@ -109,12 +109,13 @@ extents = Vector2( 39, 35 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 153.216, 149 )
+scale = Vector2( 0.45, 0.45 )
 script = ExtResource( 1 )
-speed = Vector2( 300, 500 )
-gravity = 500.0
+speed = Vector2( 270, 450 )
+gravity = 830.0
 
 [node name="AnimatedPlayer" type="AnimatedSprite" parent="."]
-position = Vector2( -115.287, -66.45 )
+position = Vector2( -115.287, -64.2278 )
 scale = Vector2( 0.397937, 0.351599 )
 frames = SubResource( 1 )
 animation = "is_crouching"

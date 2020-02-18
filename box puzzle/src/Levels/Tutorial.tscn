@@ -169,9 +169,6 @@ tile_data = PoolIntArray( 1507361, 13, 0, 1507362, 13, 0, 1507363, 13, 0, 183500
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 323.032, 885.574 )
-scale = Vector2( 0.45, 0.45 )
-speed = Vector2( 270, 450 )
-gravity = 830.0
 
 [node name="Position2D3" type="Position2D" parent="."]
 editor/display_folded = true
@@ -230,10 +227,10 @@ position = Vector2( 1182.75, 723.019 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="ScoreInterface" parent="." instance=ExtResource( 13 )]
-margin_left = 1805.58
-margin_top = 18.6575
-margin_right = 1805.58
-margin_bottom = 18.6575
+margin_left = 1943.6
+margin_top = 110.738
+margin_right = 1943.6
+margin_bottom = 110.738
 
 [node name="Polygon2D" parent="." instance=ExtResource( 14 )]
 position = Vector2( -230.058, -42.1568 )
