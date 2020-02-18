@@ -25,7 +25,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "fade_out"
-length = 0.7
+length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
@@ -73,7 +73,6 @@ position = Vector2( -4.32288, 3.78253 )
 shape = SubResource( 1 )
 
 [node name="CoinSprite" type="Sprite" parent="."]
-position = Vector2( 1.50973, 1.43675 )
 scale = Vector2( 0.196761, 0.188486 )
 texture = ExtResource( 2 )
 

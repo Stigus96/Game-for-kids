@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/QUIT.png-ee3bef78cff76d14dce638cd0b1e717a.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
-source_file="res://src/Game menu/Bilder/QUIT.png"
-dest_files=[ "res://.import/QUIT.png-ee3bef78cff76d14dce638cd0b1e717a.stex" ]
-
+source_file="res://assets/Portal/Portal_png.png"
 [params]
 
 compress/mode=0

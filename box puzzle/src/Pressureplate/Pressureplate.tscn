@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/Pressure_Plate/Pressureplate_passive.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 55.5723, 4.45581 )
+extents = Vector2( 55.5723, 5.80801 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 46.3446, 1.68964 )
@@ -13,7 +13,7 @@ extents = Vector2( 46.3446, 1.68964 )
 [node name="Pressureplate" type="KinematicBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 15.5885 )
+position = Vector2( 0.166313, 13.967 )
 shape = SubResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
