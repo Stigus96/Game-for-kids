@@ -67,11 +67,11 @@ speed = Vector2( 270, 450 )
 gravity = 830.0
 
 [node name="AnimatedPlayer" type="AnimatedSprite" parent="."]
-position = Vector2( -115.287, -66.45 )
+position = Vector2( -115.287, -64.2278 )
 scale = Vector2( 0.397937, 0.351599 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 12
+frame = 9
 playing = true
 
 [node name="player" type="Sprite" parent="."]

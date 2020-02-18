@@ -46,7 +46,7 @@ func CheckLadderAndTakeAction():
 		elif Input.get_action_strength("climb_down"):
 			_velocity.y += upSpeed
 	else:
-		 gravity = 500
+		 gravity = 830
 		
 		
 		
