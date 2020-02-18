@@ -226,7 +226,7 @@ scale = Vector2( 0.5, 1 )
 position = Vector2( 181.416, -394.53 )
 
 [node name="Coin" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1216.25, 718.156 )
+position = Vector2( 1182.75, 723.019 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="ScoreInterface" parent="." instance=ExtResource( 13 )]

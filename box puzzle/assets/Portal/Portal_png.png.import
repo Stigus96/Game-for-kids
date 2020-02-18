@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PortalPicture.png-73b429647922d299d67a1b9f7f9c9df5.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
-source_file="res://assets/Portal/PortalPicture.png"
-dest_files=[ "res://.import/PortalPicture.png-73b429647922d299d67a1b9f7f9c9df5.stex" ]
-
+source_file="res://assets/Portal/Portal_png.png"
 [params]
 
 compress/mode=0
