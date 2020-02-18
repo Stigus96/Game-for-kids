@@ -3,10 +3,12 @@ extends Node
 signal score_updated
 signal door_updated
 
+
 var score: = 0 setget set_score
 
-#PlayerData.score += 1
 var door = true setget set_door
+
+#PlayerData.score += 1
 
 func set_score(value: int) -> void:
 	score = value

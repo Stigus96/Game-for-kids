@@ -17,4 +17,3 @@ func _on_Area2D_body_exited(body):
 		Plate.show()
 		PlayerData.set_door(true)
 	pass # Replace with function body.
-	

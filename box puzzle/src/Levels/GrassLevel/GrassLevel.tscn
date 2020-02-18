@@ -1,14 +1,12 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Demolevel assets/environment/tiles/jungle/tile_jungle_bottom_brown.png" type="Texture" id=3]
-[ext_resource path="res://assets/Demolevel assets/environment/tiles/jungle/tile_jungle_ground_brown.png" type="Texture" id=4]
-[ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=9]
+[ext_resource path="res://assets/Demolevel assets/environment/tiles/jungle/tile_jungle_bottom_brown.png" type="Texture" id=2]
+[ext_resource path="res://assets/Demolevel assets/environment/tiles/jungle/tile_jungle_ground_brown.png" type="Texture" id=3]
+[ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 0, 32, 32, 0, 32, 0, 24, 24, 24, 24, 0 )
@@ -51,7 +49,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 
 [sub_resource type="TileSet" id=14]
 39/name = "tile_jungle_bottom_brown.png 39"
-39/texture = ExtResource( 3 )
+39/texture = ExtResource( 2 )
 39/tex_offset = Vector2( 0, 0 )
 39/modulate = Color( 1, 1, 1, 1 )
 39/region = Rect2( 64, 0, 32, 32 )
@@ -67,7 +65,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 39/z_index = 0
 40/name = "tile_jungle_bottom_brown.png 40"
-40/texture = ExtResource( 3 )
+40/texture = ExtResource( 2 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
 40/region = Rect2( 0, 0, 32, 32 )
@@ -83,7 +81,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 40/z_index = 0
 41/name = "tile_jungle_bottom_brown.png 41"
-41/texture = ExtResource( 3 )
+41/texture = ExtResource( 2 )
 41/tex_offset = Vector2( 0, 0 )
 41/modulate = Color( 1, 1, 1, 1 )
 41/region = Rect2( 32, 0, 32, 32 )
@@ -99,7 +97,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 41/z_index = 0
 42/name = "tile_jungle_bottom_brown.png 42"
-42/texture = ExtResource( 3 )
+42/texture = ExtResource( 2 )
 42/tex_offset = Vector2( 0, 0 )
 42/modulate = Color( 1, 1, 1, 1 )
 42/region = Rect2( 0, 32, 32, 32 )
@@ -115,7 +113,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 42/z_index = 0
 43/name = "tile_jungle_bottom_brown.png 43"
-43/texture = ExtResource( 3 )
+43/texture = ExtResource( 2 )
 43/tex_offset = Vector2( 0, 0 )
 43/modulate = Color( 1, 1, 1, 1 )
 43/region = Rect2( 32, 32, 32, 32 )
@@ -131,7 +129,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 43/z_index = 0
 44/name = "tile_jungle_bottom_brown.png 44"
-44/texture = ExtResource( 3 )
+44/texture = ExtResource( 2 )
 44/tex_offset = Vector2( 0, 0 )
 44/modulate = Color( 1, 1, 1, 1 )
 44/region = Rect2( 64, 32, 32, 32 )
@@ -147,7 +145,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 44/z_index = 0
 45/name = "tile_jungle_bottom_brown.png 45"
-45/texture = ExtResource( 3 )
+45/texture = ExtResource( 2 )
 45/tex_offset = Vector2( 0, 0 )
 45/modulate = Color( 1, 1, 1, 1 )
 45/region = Rect2( 96, 32, 32, 32 )
@@ -163,7 +161,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 45/z_index = 0
 46/name = "tile_jungle_bottom_brown.png 46"
-46/texture = ExtResource( 3 )
+46/texture = ExtResource( 2 )
 46/tex_offset = Vector2( 0, 0 )
 46/modulate = Color( 1, 1, 1, 1 )
 46/region = Rect2( 96, 0, 32, 32 )
@@ -173,7 +171,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 46/shapes = [  ]
 46/z_index = 0
 47/name = "tile_jungle_ground_brown.png 47"
-47/texture = ExtResource( 4 )
+47/texture = ExtResource( 3 )
 47/tex_offset = Vector2( 0, 0 )
 47/modulate = Color( 1, 1, 1, 1 )
 47/region = Rect2( 0, 32, 32, 32 )
@@ -189,7 +187,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 47/z_index = 0
 48/name = "tile_jungle_ground_brown.png 48"
-48/texture = ExtResource( 4 )
+48/texture = ExtResource( 3 )
 48/tex_offset = Vector2( 0, 0 )
 48/modulate = Color( 1, 1, 1, 1 )
 48/region = Rect2( 32, 32, 32, 32 )
@@ -205,7 +203,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 48/z_index = 0
 49/name = "tile_jungle_ground_brown.png 49"
-49/texture = ExtResource( 4 )
+49/texture = ExtResource( 3 )
 49/tex_offset = Vector2( 0, 0 )
 49/modulate = Color( 1, 1, 1, 1 )
 49/region = Rect2( 64, 32, 32, 32 )
@@ -221,7 +219,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 49/z_index = 0
 50/name = "tile_jungle_ground_brown.png 50"
-50/texture = ExtResource( 4 )
+50/texture = ExtResource( 3 )
 50/tex_offset = Vector2( 0, 0 )
 50/modulate = Color( 1, 1, 1, 1 )
 50/region = Rect2( 0, 0, 32, 32 )
@@ -231,7 +229,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 50/shapes = [  ]
 50/z_index = 0
 51/name = "tile_jungle_ground_brown.png 51"
-51/texture = ExtResource( 4 )
+51/texture = ExtResource( 3 )
 51/tex_offset = Vector2( 0, 0 )
 51/modulate = Color( 1, 1, 1, 1 )
 51/region = Rect2( 32, 0, 32, 32 )
@@ -241,7 +239,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 51/shapes = [  ]
 51/z_index = 0
 52/name = "tile_jungle_ground_brown.png 52"
-52/texture = ExtResource( 4 )
+52/texture = ExtResource( 3 )
 52/tex_offset = Vector2( 0, 0 )
 52/modulate = Color( 1, 1, 1, 1 )
 52/region = Rect2( 64, 0, 32, 32 )
@@ -251,7 +249,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 52/shapes = [  ]
 52/z_index = 0
 53/name = "tile_jungle_ground_brown.png 53"
-53/texture = ExtResource( 4 )
+53/texture = ExtResource( 3 )
 53/tex_offset = Vector2( 0, 0 )
 53/modulate = Color( 1, 1, 1, 1 )
 53/region = Rect2( 96, 32, 32, 32 )
@@ -267,7 +265,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 53/z_index = 0
 54/name = "tile_jungle_ground_brown.png 54"
-54/texture = ExtResource( 4 )
+54/texture = ExtResource( 3 )
 54/tex_offset = Vector2( 0, 0 )
 54/modulate = Color( 1, 1, 1, 1 )
 54/region = Rect2( 128, 32, 32, 32 )
@@ -283,7 +281,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 54/z_index = 0
 55/name = "tile_jungle_ground_brown.png 55"
-55/texture = ExtResource( 4 )
+55/texture = ExtResource( 3 )
 55/tex_offset = Vector2( 0, 0 )
 55/modulate = Color( 1, 1, 1, 1 )
 55/region = Rect2( 160, 32, 32, 32 )
@@ -299,7 +297,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 } ]
 55/z_index = 0
 56/name = "tile_jungle_ground_brown.png 56"
-56/texture = ExtResource( 4 )
+56/texture = ExtResource( 3 )
 56/tex_offset = Vector2( 0, 0 )
 56/modulate = Color( 1, 1, 1, 1 )
 56/region = Rect2( 96, 0, 32, 32 )
@@ -309,7 +307,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 56/shapes = [  ]
 56/z_index = 0
 57/name = "tile_jungle_ground_brown.png 57"
-57/texture = ExtResource( 4 )
+57/texture = ExtResource( 3 )
 57/tex_offset = Vector2( 0, 0 )
 57/modulate = Color( 1, 1, 1, 1 )
 57/region = Rect2( 128, 0, 32, 32 )
@@ -319,7 +317,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 57/shapes = [  ]
 57/z_index = 0
 58/name = "tile_jungle_ground_brown.png 58"
-58/texture = ExtResource( 4 )
+58/texture = ExtResource( 3 )
 58/tex_offset = Vector2( 0, 0 )
 58/modulate = Color( 1, 1, 1, 1 )
 58/region = Rect2( 160, 0, 32, 32 )
@@ -329,7 +327,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 58/shapes = [  ]
 58/z_index = 0
 59/name = "tile_jungle_ground_brown.png 59"
-59/texture = ExtResource( 4 )
+59/texture = ExtResource( 3 )
 59/tex_offset = Vector2( 0, 0 )
 59/modulate = Color( 1, 1, 1, 1 )
 59/region = Rect2( 80, 24, 8, 8 )
@@ -350,7 +348,7 @@ points = PoolVector2Array( 0, 32, 32, 32, 32, 40, 0, 40 )
 
 [sub_resource type="TileSet" id=18]
 0/name = "tile_jungle_ground_brown.png 0"
-0/texture = ExtResource( 4 )
+0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 64 )
@@ -366,7 +364,7 @@ points = PoolVector2Array( 0, 32, 32, 32, 32, 40, 0, 40 )
 } ]
 0/z_index = 0
 1/name = "tile_jungle_ground_brown.png 1"
-1/texture = ExtResource( 4 )
+1/texture = ExtResource( 3 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 32, 0, 32, 64 )
@@ -382,7 +380,7 @@ points = PoolVector2Array( 0, 32, 32, 32, 32, 40, 0, 40 )
 } ]
 1/z_index = 0
 2/name = "tile_jungle_ground_brown.png 2"
-2/texture = ExtResource( 4 )
+2/texture = ExtResource( 3 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 64, 0, 32, 64 )
@@ -403,9 +401,6 @@ points = PoolVector2Array( 0, 32, 32, 32, 32, 40, 0, 40 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 186.102, 316.232 )
 
-[node name="Pressureplate" parent="." instance=ExtResource( 2 )]
-position = Vector2( 693.261, 1034.54 )
-
 [node name="GrassTiles Layer 1" type="TileMap" parent="."]
 tile_set = SubResource( 14 )
 cell_size = Vector2( 32, 32 )
@@ -425,50 +420,44 @@ tile_data = PoolIntArray( 0, 116, 0, 720922, 0, 0, 720923, 1, 0, 720924, 1, 0, 7
 [node name="TileMap" type="TileMap" parent="."]
 format = 1
 
-[node name="Area2D" parent="." instance=ExtResource( 5 )]
+[node name="Area2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 765.874, 1263.31 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 6 )]
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 5 )]
 visible = false
 
-[node name="Portal" parent="." instance=ExtResource( 7 )]
+[node name="Portal" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1790.43, 563.134 )
 
 [node name="Spikes" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 363.958, 1040.36 )
 scale = Vector2( 1.5, 1.5 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Spikes" parent="Spikes" instance=ExtResource( 8 )]
+[node name="Spikes" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( -40.0508, -2.3269 )
 
-[node name="Spikes3" parent="Spikes" instance=ExtResource( 8 )]
+[node name="Spikes3" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 0.319336, -2.38647 )
 
-[node name="Spikes2" parent="Spikes" instance=ExtResource( 8 )]
+[node name="Spikes2" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( -19.692, -2.30835 )
 
-[node name="Spikes5" parent="Spikes" instance=ExtResource( 8 )]
+[node name="Spikes5" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 40.7621, -2.35828 )
 
-[node name="Spikes6" parent="Spikes" instance=ExtResource( 8 )]
+[node name="Spikes6" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 20.5375, -2.3772 )
 
-[node name="Spikes7" parent="Spikes" instance=ExtResource( 8 )]
+[node name="Spikes7" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 81.2048, -2.32465 )
 
-[node name="Spikes4" parent="Spikes" instance=ExtResource( 8 )]
+[node name="Spikes4" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 61.0213, -2.35217 )
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="Background" type="CanvasLayer" parent="."]
 layer = -2
-
-[node name="Bakgrunn" type="Sprite" parent="CanvasLayer2"]
-position = Vector2( 1207.75, 581.099 )
-scale = Vector2( 1.47682, 1.41754 )
-texture = ExtResource( 9 )
