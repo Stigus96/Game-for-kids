@@ -2,7 +2,7 @@ extends Area2D
 
 onready var Plate = get_node("Pressureplate_passive")
 
-onready var childer = self.get_child(3)
+onready var childer = self.get_child(4)
 
 func _ready():
 	pass # Replace with function body.
