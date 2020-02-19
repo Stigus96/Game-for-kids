@@ -13,7 +13,7 @@
 [ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=14]
+[ext_resource path="res://assets/Backgrounds/grass.png" type="Texture" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 0, 32, 32, 0, 32, 0, 24, 24, 24, 24, 0 )
@@ -450,9 +450,10 @@ margin_bottom = -5.40002
 [node name="PhysicsBox" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1423.21, 332.731 )
 scale = Vector2( 0.675, 0.675 )
+z_index = 1
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 190.637, 315.981 )
+position = Vector2( 160.574, 257.601 )
 
 [node name="GrassTiles Layer 1" type="TileMap" parent="."]
 tile_set = SubResource( 14 )
@@ -482,7 +483,6 @@ position = Vector2( 1248, 786.152 )
 scale = Vector2( 0.33, 1.1 )
 
 [node name="Second_Ladder" type="TileMap" parent="."]
-visible = false
 z_index = -1
 tile_set = SubResource( 20 )
 cell_size = Vector2( 4, 4 )
@@ -490,23 +490,20 @@ format = 1
 tile_data = PoolIntArray( 5963968, 0, 0, 7209152, 0, 0, 8454336, 0, 0, 9699520, 0, 0 )
 
 [node name="LadderTwo" parent="." instance=ExtResource( 7 )]
-visible = false
 position = Vector2( 800, 526.041 )
 scale = Vector2( 0.33, 1.2 )
 collision_layer = 2
 collision_mask = 2
 
 [node name="Third_Ladder" type="TileMap" parent="."]
-visible = false
 tile_set = SubResource( 21 )
 cell_size = Vector2( 4, 4 )
 collision_layer = 2
 collision_mask = 2
 format = 1
-tile_data = PoolIntArray( 0, 0, 0, 10289552, 0, 0, 12779920, 0, 0 )
+tile_data = PoolIntArray( 10289552, 0, 0, 11534736, 0, 0, 12779920, 0, 0, 13959568, 0, 0 )
 
 [node name="LadderThree" parent="." instance=ExtResource( 7 )]
-visible = false
 position = Vector2( 1633.49, 779.632 )
 scale = Vector2( 0.33, 1.2 )
 collision_layer = 2
@@ -560,13 +557,14 @@ layer = -2
 [node name="BoxBtn1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 732.942, 626.22 )
 scale = Vector2( 0.5625, 0.5625 )
+z_index = 1
 
 [node name="Pressureplate1" parent="." instance=ExtResource( 12 )]
 position = Vector2( 608.29, 1133.29 )
 scale = Vector2( 0.55, 1 )
 
 [node name="Pressureplate2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 160, 905.146 )
+position = Vector2( 160, 908.873 )
 scale = Vector2( 0.55, 1 )
 
 [node name="Coins" type="Area2D" parent="."]
@@ -816,8 +814,8 @@ scale = Vector2( 0.55, 1 )
 layer = -4
 
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer2"]
-position = Vector2( 1638.84, 1350.56 )
-scale = Vector2( 1.8797, 2.51103 )
+position = Vector2( 943.698, 644 )
+scale = Vector2( 1.25681, 1.32615 )
 texture = ExtResource( 14 )
 __meta__ = {
 "_edit_lock_": true
