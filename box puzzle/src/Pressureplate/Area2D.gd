@@ -8,8 +8,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_Area2D_body_entered(body):
-	if body.name == "Player" || body.name == "PhysicsBox2":
-		print(childer.get_door_value())
+	if body is KinematicBody2D:
 		childer.find_door(true)
 		Plate.hide()
 		PlayerData.set_door(false)
@@ -17,7 +16,7 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_Area2D_body_exited(body):
-	if body.name == "Player" || body.name == "PhysicsBox2":
+	if body is KinematicBody2D:
 		print(childer.get_door_value())
 		Plate.show()
 		PlayerData.set_door(true)

@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Pressureplate/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://assets/Pressure_Plate/Pressureplate_Active (2).png" type="Texture" id=2]
 [ext_resource path="res://assets/Pressure_Plate/Pressureplate_passive.png" type="Texture" id=3]
-[ext_resource path="res://src/Wall.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Walls/Wall1.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 55.5723, 5.80801 )
@@ -15,7 +13,7 @@ extents = Vector2( 46.3446, 1.68964 )
 [node name="Pressureplate" type="KinematicBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.166313, 13.967 )
+position = Vector2( 0.270988, 16.9868 )
 shape = SubResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
@@ -37,9 +35,5 @@ texture = ExtResource( 2 )
 [node name="Pressureplate_passive" type="Sprite" parent="Area2D"]
 scale = Vector2( 0.891267, 0.546616 )
 texture = ExtResource( 3 )
-
-[node name="Wall" parent="Area2D" instance=ExtResource( 4 )]
-position = Vector2( 77.5317, -24.7305 )
-script = ExtResource( 5 )
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]
