@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/clown2.png-362ddcdad4f0ef75b433fe922ca5ad91.stex"
+path="res://.import/clown2.png-8fa06aead71041c90be98aa20f663603.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://opp-assets/wip/sprites/clown2.png"
-dest_files=[ "res://.import/clown2.png-362ddcdad4f0ef75b433fe922ca5ad91.stex" ]
+source_file="res://src/DemoMap/opp-assets/wip/sprites/clown2.png"
+dest_files=[ "res://.import/clown2.png-8fa06aead71041c90be98aa20f663603.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Vampire.png-04c60dd21e3256a5a87e56d4c9b42ff6.stex"
+path="res://.import/Vampire.png-feb049fb4ef32971f713e4066daf2fef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://opp-assets/wip/sprites/Vampire.png"
-dest_files=[ "res://.import/Vampire.png-04c60dd21e3256a5a87e56d4c9b42ff6.stex" ]
+source_file="res://src/DemoMap/opp-assets/wip/sprites/Vampire.png"
+dest_files=[ "res://.import/Vampire.png-feb049fb4ef32971f713e4066daf2fef.stex" ]
 
 [params]
 
