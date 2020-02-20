@@ -1,6 +1,5 @@
 extends Control
 
- 
 onready var score: Label = get_node("Label")
 
 # Called when the node enters the scene tree for the first time.
