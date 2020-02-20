@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bakgrunn.png-79cc151924ee2ad4d07a8e08103d6440.stex"
+path="res://.import/player crouch walk left.png-f9435f0b83c38bd19a6490da7c684086.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bilder/Bakgrunn.png"
-dest_files=[ "res://.import/Bakgrunn.png-79cc151924ee2ad4d07a8e08103d6440.stex" ]
+source_file="res://assets/characters/player/player animations/crouch walk left/player crouch walk left.png"
+dest_files=[ "res://.import/player crouch walk left.png-f9435f0b83c38bd19a6490da7c684086.stex" ]
 
 [params]
 

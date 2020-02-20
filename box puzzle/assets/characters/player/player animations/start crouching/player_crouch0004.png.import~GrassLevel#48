@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bakgrunn.png-79cc151924ee2ad4d07a8e08103d6440.stex"
+path="res://.import/player_crouch0004.png-356175c9be75036703b7ad53ba6b29e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bilder/Bakgrunn.png"
-dest_files=[ "res://.import/Bakgrunn.png-79cc151924ee2ad4d07a8e08103d6440.stex" ]
+source_file="res://assets/characters/player/player animations/start crouching/player_crouch0004.png"
+dest_files=[ "res://.import/player_crouch0004.png-356175c9be75036703b7ad53ba6b29e7.stex" ]
 
 [params]
 
