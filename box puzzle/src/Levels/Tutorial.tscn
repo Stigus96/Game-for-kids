@@ -125,7 +125,6 @@ scale = Vector2( 0.6, 0.6 )
 z_index = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 layer = -2
 
 [node name="Bakgrunn2" type="Sprite" parent="CanvasLayer"]
@@ -171,13 +170,11 @@ tile_data = PoolIntArray( 1507361, 13, 0, 1507362, 13, 0, 1507363, 13, 0, 183500
 position = Vector2( 323.032, 885.574 )
 
 [node name="Position2D3" type="Position2D" parent="."]
-editor/display_folded = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D3"]
 anims/Cloud1 = SubResource( 1 )
 
 [node name="Position2D" type="Position2D" parent="."]
-editor/display_folded = true
 
 [node name="bg_cloud6" type="Sprite" parent="Position2D"]
 self_modulate = Color( 0.894118, 0.666667, 0.921569, 0.439216 )
@@ -210,7 +207,6 @@ autoplay = "Cloud1"
 anims/Cloud1 = SubResource( 2 )
 
 [node name="Position2D2" type="Position2D" parent="."]
-editor/display_folded = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D2"]
 anims/Cloud1 = SubResource( 3 )
