@@ -111,6 +111,7 @@ scale = Vector2( 0.45, 0.45 )
 [node name="PlayerData" parent="." instance=ExtResource( 2 )]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="PauseScreen" parent="CanvasLayer2" instance=ExtResource( 3 )]
 visible = false
@@ -126,6 +127,7 @@ scale = Vector2( 0.6, 0.6 )
 z_index = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 layer = -2
 
 [node name="Bakgrunn2" type="Sprite" parent="CanvasLayer"]
@@ -171,6 +173,7 @@ tile_data = PoolIntArray( 1507361, 13, 0, 1507362, 13, 0, 1507363, 13, 0, 183500
 position = Vector2( 323.032, 885.574 )
 
 [node name="Position2D3" type="Position2D" parent="."]
+editor/display_folded = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D3"]
 anims/Cloud1 = SubResource( 1 )
@@ -214,6 +217,7 @@ anims/Cloud1 = SubResource( 2 )
 anims/Cloud1 = SubResource( 3 )
 
 [node name="Pressureplate2" parent="." instance=ExtResource( 10 )]
+editor/display_folded = true
 position = Vector2( 931.791, 937.349 )
 scale = Vector2( 0.5, 1 )
 
@@ -231,7 +235,7 @@ margin_right = 1943.6
 margin_bottom = 110.738
 
 [node name="Polygon2D" parent="." instance=ExtResource( 14 )]
-position = Vector2( -230.058, -42.1568 )
+position = Vector2( -230.058, -40.64 )
 
 [node name="Portal" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1800.57, 857.646 )
