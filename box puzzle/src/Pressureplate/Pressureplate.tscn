@@ -28,7 +28,7 @@ texture = ExtResource( 3 )
 [node name="Pressureplate" type="KinematicBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pressureplate"]
-position = Vector2( 0.270988, 16.9868 )
+position = Vector2( -0.421517, 16.9868 )
 shape = SubResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pressureplate"]

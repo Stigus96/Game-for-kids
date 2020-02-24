@@ -7,6 +7,13 @@ onready var left_ray = get_node("left_ray")
 var ladder_on = false
 export var upSpeed = 200
 
+onready var i = 0
+
+
+func _ready():
+	PlayerData.connect("ladder_updated", self, "update_ladder_on")
+	pass
+
 
 func _physics_process(delta: float) -> void:
 	var motion : = Vector2()
@@ -107,4 +114,5 @@ func crouch():
 		get_node("crouch body").disabled=true
 		speed.x = 300
 
-
+func update_ladder_on() -> void:
+	ladder_on = PlayerData.get_ladder()
