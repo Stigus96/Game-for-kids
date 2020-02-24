@@ -176,6 +176,7 @@ position = Vector2( 323.032, 885.574 )
 anims/Cloud1 = SubResource( 1 )
 
 [node name="Position2D" type="Position2D" parent="."]
+editor/display_folded = true
 
 [node name="bg_cloud6" type="Sprite" parent="Position2D"]
 self_modulate = Color( 0.894118, 0.666667, 0.921569, 0.439216 )

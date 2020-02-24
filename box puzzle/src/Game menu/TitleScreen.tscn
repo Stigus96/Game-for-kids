@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Game menu/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/Game menu assets/PUZZLE BOX LOGO.png" type="Texture" id=2]
 [ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=4]
+[ext_resource path="res://assets/Game sounds/IntroTheme.ogg" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -30,6 +31,7 @@ __meta__ = {
 }
 
 [node name="Menu" type="VBoxContainer" parent="."]
+editor/display_folded = true
 anchor_left = 0.031
 anchor_top = 0.053
 anchor_right = 0.969
@@ -95,9 +97,14 @@ text = "Quit"
 layer = -1
 
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 1130.39, 638.944 )
-scale = Vector2( 1.1814, 1.19333 )
+position = Vector2( 1196.16, 636.462 )
+scale = Vector2( 1.2525, 1.19333 )
 texture = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -20.0
+autoplay = true
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/newGame" to="." method="_on_newGame_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/Options" to="." method="_on_Options_pressed"]
