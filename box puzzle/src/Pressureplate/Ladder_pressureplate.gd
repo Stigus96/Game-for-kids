@@ -4,24 +4,24 @@ onready var Plate = get_node("Pressureplate_passive")
 
 onready var child = get_child(4)
 
+var pressureplate_child = true
+
 func _ready():
 	pass # Replace with function body.
 
 func _on_Area2D_body_entered(body):
 	if body is KinematicBody2D:
-		child.find_door(true)
-		PlayerData.set_door(false)
+		Plate.hide()
+		child.show_Ladder()
+		print("hei")
 	pass # Replace with function body.
 
 
 func _on_Area2D_body_exited(body):
-	if body is KinematicBody2D:
-		PlayerData.set_door(true)
-		child.find_door(false)
+	if body is KinematicBody2D && pressureplate_child == true:
+		Plate.show()
+		child.hide_Ladder()
 	pass # Replace with function body
-
-func hide_pressurePlate():
-	Plate.hide()
 	
-func show_pressureplate():
-	Plate.show()
+func update_pressureplate_child(value: bool) -> void:
+		pressureplate_child = value
