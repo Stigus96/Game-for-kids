@@ -2,8 +2,10 @@ extends Node
 
 signal score_updated
 signal door_updated
-signal ladder_updated
+signal ladder_update
 
+
+var player_speed = 1
 
 var score: = 0 setget set_score
 
@@ -44,3 +46,15 @@ func set_ladder(value: bool) -> void:
 	
 func get_ladder() -> bool:
 	return ladder
+	
+func get_player_speed() -> float:
+	return player_speed
+	
+func update_player_speed(value: bool) -> void:
+	if value == true:
+		print("candyPickedUp")
+		player_speed += 0.2
+		
+	elif value == false:
+		print("heioghå")
+		player_speed -= 0.2

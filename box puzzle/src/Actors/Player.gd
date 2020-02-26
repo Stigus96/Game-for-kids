@@ -1,6 +1,7 @@
 extends Actor
 
 export var push_speed : = 140.0
+var timer
 onready var AnimatedPlayer = get_node("AnimatedPlayer")
 onready var right_ray = get_node("right_ray")
 onready var left_ray = get_node("left_ray")
@@ -12,6 +13,8 @@ onready var i = 0
 
 func _ready():
 	PlayerData.connect("ladder_updated", self, "update_ladder_on")
+	timer = get_node("Timer")
+	timer.connect("timeout",self,"_on_timer_timeout")
 	pass
 
 
@@ -58,14 +61,18 @@ func CheckLadderAndTakeAction():
 		
 		
 		
+func _on_timer_timeout():
+	PlayerData.update_player_speed(false)
+	
+	
+	
 func calculate_move_velocity(
 	linear_velocity: Vector2,
 	direction: Vector2,
 	speed: Vector2,
-	is_jump_interrupted: bool
-) -> Vector2:
+	is_jump_interrupted: bool) -> Vector2:
 	var out: = linear_velocity
-	out.x = speed.x * direction.x
+	out.x = speed.x * direction.x * PlayerData.get_player_speed()
 	out.y += gravity * get_physics_process_delta_time()
 	if direction.y == -1.0:
 		out.y = speed.y * direction.y

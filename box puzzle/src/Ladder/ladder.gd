@@ -5,7 +5,6 @@ var isLadderHiding = false
 func _on_ladder_body_entered(body):
 	if body.name == "Player":
 		PlayerData.set_ladder(true)
-		print("Hei")
 
 func _on_ladder_body_exited(body):
 	if body.name == "Player":
