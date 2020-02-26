@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://src/Physics_box/PhysicsBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://src/Ladder/ladder.gd" type="Script" id=16]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=18]
+[ext_resource path="res://assets/Game sounds/Grasslevel.ogg" type="AudioStream" id=19]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 0, 32, 32, 0, 32, 0, 24, 24, 24, 24, 0 )
@@ -824,11 +825,11 @@ position = Vector2( 1423.21, 256.088 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin52" parent="Coins" instance=ExtResource( 17 )]
-position = Vector2( 1542.05, 182.427 )
+position = Vector2( 1542.05, 170.938 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin53" parent="Coins" instance=ExtResource( 17 )]
-position = Vector2( 1608.78, 169.425 )
+position = Vector2( 1608.78, 170.938 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin54" parent="Coins" instance=ExtResource( 17 )]
@@ -848,11 +849,11 @@ position = Vector2( 1683.2, 114.79 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin58" parent="Coins" instance=ExtResource( 17 )]
-position = Vector2( 1608.78, 116.303 )
+position = Vector2( 1608.78, 114.79 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin59" parent="Coins" instance=ExtResource( 17 )]
-position = Vector2( 1542.05, 117.816 )
+position = Vector2( 1542.05, 116.303 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin14" parent="Coins" instance=ExtResource( 17 )]
@@ -884,7 +885,7 @@ position = Vector2( -396.258, 736 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Pressureplate" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1849.88, 201.832 )
+position = Vector2( 1850.41, 206.296 )
 scale = Vector2( 0.55, 1 )
 script = ExtResource( 15 )
 
@@ -931,3 +932,7 @@ z_index = 1
 [node name="ladder" parent="." instance=ExtResource( 5 )]
 position = Vector2( 791.097, 76.7912 )
 scale = Vector2( 0.5, 0.7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+autoplay = true
