@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Game menu/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/Game menu assets/PUZZLE BOX LOGO.png" type="Texture" id=2]
 [ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=4]
+[ext_resource path="res://src/CutScenes/CutScene_intro.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -98,6 +99,9 @@ layer = -1
 position = Vector2( 1130.39, 638.944 )
 scale = Vector2( 1.1814, 1.19333 )
 texture = ExtResource( 4 )
+
+[node name="CutScene_intro" parent="." instance=ExtResource( 5 )]
+position = Vector2( 623, 887 )
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/newGame" to="." method="_on_newGame_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/Options" to="." method="_on_Options_pressed"]
