@@ -32,7 +32,6 @@ __meta__ = {
 
 [node name="IntroMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = -20.0
 autoplay = true
 
 [node name="Menu" type="VBoxContainer" parent="."]

@@ -5,18 +5,13 @@ extends Control
 onready var music = get_node("IntroMusic")
 onready var musicVolume = music.volume_db
 
-var t = Timer.new()
-
-
-
-
 func _on_newGame_pressed():
 	var minimumVolume = -80
 	var currentVolume = music.get_volume_db()
 	var myVolume = 0
 	
 	while currentVolume > minimumVolume :
-		currentVolume = currentVolume - 1
+		currentVolume = currentVolume - 5
 		myVolume = music.set_volume_db(currentVolume)
 		print(currentVolume)
 		yield(get_tree().create_timer(0.1), "timeout")
