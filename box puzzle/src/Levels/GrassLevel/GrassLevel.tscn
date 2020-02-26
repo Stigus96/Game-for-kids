@@ -513,13 +513,11 @@ scale = Vector2( 0.5625, 0.5625 )
 z_index = 1
 
 [node name="Pressureplate1" parent="." instance=ExtResource( 11 )]
-editor/display_folded = true
 position = Vector2( 608.29, 1133.29 )
 scale = Vector2( 0.55, 1 )
 script = ExtResource( 12 )
 
 [node name="Multible_Spikes" parent="Pressureplate1" instance=ExtResource( 13 )]
-editor/display_folded = true
 
 [node name="Spikes" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 14 )]
 position = Vector2( -552.351, -96.7277 )
@@ -581,7 +579,6 @@ format = 1
 tile_data = PoolIntArray( 5963968, 0, 0, 7209152, 0, 0, 8454336, 0, 0, 9699520, 0, 0 )
 
 [node name="Coins" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="Coin" parent="Coins" instance=ExtResource( 17 )]
 position = Vector2( -350.792, 813.147 )
