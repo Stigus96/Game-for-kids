@@ -1,14 +1,14 @@
 extends Actor
 
 export var push_speed : = 140.0
+export var upSpeed = 200
+
 onready var AnimatedPlayer = get_node("AnimatedPlayer")
 onready var right_ray = get_node("right_ray")
 onready var left_ray = get_node("left_ray")
-var ladder_on = false
-export var upSpeed = 200
-
 onready var i = 0
 
+var ladder_on = false
 
 func _ready():
 	PlayerData.connect("ladder_updated", self, "update_ladder_on")
@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("ui_focus_next"):
 		get_tree().reload_current_scene()
-	
+		
 	
 func get_direction () -> Vector2:
 		return Vector2(
@@ -55,9 +55,8 @@ func CheckLadderAndTakeAction():
 			_velocity.y += upSpeed
 	else:
 		 gravity = 830
-		
-		
-		
+	
+	
 func calculate_move_velocity(
 	linear_velocity: Vector2,
 	direction: Vector2,
@@ -71,6 +70,8 @@ func calculate_move_velocity(
 		out.y = speed.y * direction.y
 	if is_jump_interrupted:
 		out.y = 0.0
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		$jumpSound.play()
 	return out
 
 func check_box_collision(motion : Vector2) -> void:
