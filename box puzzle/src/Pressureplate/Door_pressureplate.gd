@@ -4,6 +4,7 @@ onready var Plate = get_node("Pressureplate_passive")
 
 onready var child = get_child(4)
 
+
 func _ready():
 	pass # Replace with function body.
 

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Digital button.wav-b7e10f537f8e8f567115d2c44297dc90.sample"
+
+[deps]
+
+source_file="res://assets/Game sounds/Digital button.wav"
+dest_files=[ "res://.import/Digital button.wav-b7e10f537f8e8f567115d2c44297dc90.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
