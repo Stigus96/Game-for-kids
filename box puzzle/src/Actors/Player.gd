@@ -116,3 +116,11 @@ func crouch():
 
 func update_ladder_on() -> void:
 	ladder_on = PlayerData.get_ladder()
+	
+func update_playerAutoMov(value: bool):
+	var ev = InputEventAction.new()
+# set as move_left, pressed
+	ev.action = "move_right"
+	ev.pressed = value
+# feedback
+	Input.parse_input_event(ev)
