@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Tilemaps/CaveTiles.tres" type="TileSet" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://src/Game menu/TitleScreen.tscn" type="PackedScene" id=20]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/Game sounds/CaveLevel.ogg" type="AudioStream" id=22]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0.605103, 30.2492, 0.0603428, 20.8842, 18.1872, 15.4579, 40.5138, 11.2717, 54.1888, 14.0625, 62.5612, 30.2492 )
@@ -444,6 +445,7 @@ z_index = 6
 texture = ExtResource( 13 )
 
 [node name="Jump puzzle spikes" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Spikes7" parent="Jump puzzle spikes" instance=ExtResource( 9 )]
 position = Vector2( 229.834, 521.468 )
@@ -464,6 +466,7 @@ position = Vector2( 209.365, 521.416 )
 rotation = -3.14159
 
 [node name="ladder1" parent="." instance=ExtResource( 14 )]
+editor/display_folded = true
 position = Vector2( 1640.45, 733.92 )
 scale = Vector2( 0.2, 0.16 )
 
@@ -476,6 +479,7 @@ format = 1
 tile_data = PoolIntArray( 3342604, 0, 0 )
 
 [node name="PressurePlate" parent="." instance=ExtResource( 16 )]
+editor/display_folded = true
 position = Vector2( 415.445, 1173.59 )
 scale = Vector2( 0.5, 0.5 )
 
@@ -503,6 +507,7 @@ z_index = 2
 next_scene = ExtResource( 20 )
 
 [node name="Coins" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.241, 178.638 )
@@ -572,4 +577,9 @@ bus = "Background music"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 21 )]
+visible = false
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer2" instance=ExtResource( 23 )]
 visible = false
