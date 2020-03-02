@@ -12,10 +12,11 @@
 [ext_resource path="res://src/CandyLevelObstacles/HesteHinder.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/Portal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/Candy/cake.png" type="Texture" id=14]
 [ext_resource path="res://src/Levels/Energy_Interface.gd" type="Script" id=15]
 [ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=16]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "lollipop orange.png 0"

@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/Ladder/80x80 ladder.png" type="Texture" id=6]
 [ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Portal.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Levels/caveLevel.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Pressureplate/Spike_pressureplate.gd" type="Script" id=12]
@@ -20,6 +20,7 @@
 [ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=18]
 [ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=20]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 0, 32, 32, 0, 32, 0, 24, 24, 24, 24, 0 )
