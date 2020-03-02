@@ -101,7 +101,7 @@ scale = Vector2( 1.1814, 1.19333 )
 texture = ExtResource( 4 )
 
 [node name="CutScene_intro" parent="." instance=ExtResource( 5 )]
-position = Vector2( 635.83, 884.667 )
+position = Vector2( 603.966, 884.353 )
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/newGame" to="." method="_on_newGame_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/Options" to="." method="_on_Options_pressed"]
