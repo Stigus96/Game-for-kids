@@ -21,7 +21,7 @@ func _on_newGame_pressed():
 
 
 func _on_LevelSelect_pressed():
-	get_tree().change_scene("res://.tscn")
+	get_tree().change_scene("res://src/Game menu/LevelSelect.tscn")
 	
 func _on_Options_pressed():
 	get_tree().change_scene("res://.tscn")
