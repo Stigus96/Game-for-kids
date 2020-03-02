@@ -6,7 +6,7 @@ extends Control
 #		$Menu/CenterRow/CenterContainer/Buttons/newGame.grab_focus()
 
 func _on_newGame_pressed():
-	get_tree().change_scene("res://src/Levels/Tutorial.tscn")
+	get_node("CutScene_intro/Player").CutScene_speed = 1
 	
 func _on_LevelSelect_pressed():
 	get_tree().change_scene("res://.tscn")

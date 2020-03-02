@@ -6,6 +6,7 @@ onready var right_ray = get_node("right_ray")
 onready var left_ray = get_node("left_ray")
 var ladder_on = false
 export var upSpeed = 200
+onready var CutScene_speed = 0
 
 onready var i = 0
 
@@ -19,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	var motion : = Vector2()
 	animate_player()
 	crouch()
-	motion.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	motion.x = CutScene_speed
 	
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction = get_direction()
@@ -41,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	
 func get_direction () -> Vector2:
 		return Vector2(
-		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
+		CutScene_speed,
 		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() else 1.0)
 		
 func CheckLadderAndTakeAction():
@@ -84,20 +85,12 @@ func animate_player():
 	var is_crouching = Input.is_action_pressed("crouch")
 	var start_crouching = Input.is_action_just_pressed("crouch")
 	var direction = get_direction()
-	if (direction.x < 0 && is_crouching == false):
+	if (direction.x < 0):
 		AnimatedPlayer.play("walk_left")
 	if (direction.x > 0 && is_crouching == false):
 		 AnimatedPlayer.play("walk_right")
 	if(direction.x == 0 && is_crouching == false):
 		AnimatedPlayer.play("idle")
-	if (direction.x < 0 && is_crouching == true):
-		AnimatedPlayer.play("crouch_walk_left")
-	if (direction.x > 0 && is_crouching == true):
-		 AnimatedPlayer.play("crouch_walk_right")
-	if(direction.x == 0 && start_crouching == true):
-		AnimatedPlayer.play("start_crouching")
-	if(direction.x == 0 && is_crouching == true && AnimatedPlayer.is_playing() == false):
-		AnimatedPlayer.play("is_crouching")
 
 func crouch():
 	var is_crouching = Input.is_action_pressed("crouch")
@@ -116,11 +109,3 @@ func crouch():
 
 func update_ladder_on() -> void:
 	ladder_on = PlayerData.get_ladder()
-	
-func update_playerAutoMov(value: bool):
-	var ev = InputEventAction.new()
-# set as move_left, pressed
-	ev.action = "move_right"
-	ev.pressed = value
-# feedback
-	Input.parse_input_event(ev)
