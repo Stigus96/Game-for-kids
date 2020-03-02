@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Grasslevel.ogg-120f9b7df6a2949eb898cf7dafca9108.oggstr"
+
+[deps]
+
+source_file="res://assets/Game sounds/Grasslevel.ogg"
+dest_files=[ "res://.import/Grasslevel.ogg-120f9b7df6a2949eb898cf7dafca9108.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

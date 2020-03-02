@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Portal/Portal.gd" type="Script" id=1]
 [ext_resource path="res://assets/Portal/Portal_1.png" type="Texture" id=2]
 [ext_resource path="res://assets/Portal/Portal_2.png" type="Texture" id=3]
 [ext_resource path="res://assets/Portal/Portal_3.png" type="Texture" id=4]
 [ext_resource path="res://assets/Portal/Portal_4.png" type="Texture" id=5]
+[ext_resource path="res://assets/Game sounds/TeleportSound.wav" type="AudioStream" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 26.6013
@@ -108,4 +109,8 @@ texture = ExtResource( 4 )
 [node name="Portal_4" type="Sprite" parent="."]
 scale = Vector2( 0.356, 0.356 )
 texture = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+bus = "Player"
 [connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Pressureplate/Door_pressureplate.gd" type="Script" id=1]
 [ext_resource path="res://assets/Pressure_Plate/Pressureplate_Active (2).png" type="Texture" id=2]
 [ext_resource path="res://assets/Pressure_Plate/Pressureplate_passive.png" type="Texture" id=3]
+[ext_resource path="res://assets/Game sounds/Digital button.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 46.3446, 1.68964 )
@@ -35,5 +36,10 @@ shape = SubResource( 2 )
 position = Vector2( -69.1142, 19.9882 )
 scale = Vector2( 2.69725, 1 )
 polygon = PoolVector2Array( 4.93055, -11.8843, -9.94244, 0.247137, -7.51944, 0.228397, 5.00212, -0.18758 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 5.0
+bus = "Player"
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]
