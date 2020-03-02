@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/CandyLandBG3.png-4e7a40980709a6cddc6e10f5116c7fc6.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/Backgrounds/CandyLandBG.jpg"
+source_file="res://assets/Backgrounds/CandyLandBG3.png"
+dest_files=[ "res://.import/CandyLandBG3.png-4e7a40980709a6cddc6e10f5116c7fc6.stex" ]
+
 [params]
 
 compress/mode=0

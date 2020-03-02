@@ -18,8 +18,9 @@
 [ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/Walls/Wall1.gd" type="Script" id=17]
 [ext_resource path="res://assets/Misc assest/shelf.png" type="Texture" id=18]
-[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/Portal.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=20]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0.605103, 30.2492, 0.0603428, 20.8842, 18.1872, 15.4579, 40.5138, 11.2717, 54.1888, 14.0625, 62.5612, 30.2492 )

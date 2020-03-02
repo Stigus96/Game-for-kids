@@ -40,6 +40,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("ui_focus_next"):
 		get_tree().reload_current_scene()
+		PlayerData.reset_player_speed()
 	
 	
 func get_direction () -> Vector2:

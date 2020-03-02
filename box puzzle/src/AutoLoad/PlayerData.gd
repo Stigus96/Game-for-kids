@@ -58,3 +58,6 @@ func update_player_speed(value: bool) -> void:
 	elif value == false:
 		print("heioghå")
 		player_speed -= 0.2
+		
+func reset_player_speed() -> void:
+	player_speed = 1

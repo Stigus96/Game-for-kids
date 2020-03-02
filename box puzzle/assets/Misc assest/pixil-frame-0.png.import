@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/pixil-frame-0.png-0959c6ec38fe564d2b2c4282ceb8ea6c.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/Backgrounds/CandyLandBG.jpg"
+source_file="res://assets/Misc assest/pixil-frame-0.png"
+dest_files=[ "res://.import/pixil-frame-0.png-0959c6ec38fe564d2b2c4282ceb8ea6c.stex" ]
+
 [params]
 
 compress/mode=0
