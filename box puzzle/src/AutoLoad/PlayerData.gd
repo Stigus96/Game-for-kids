@@ -4,6 +4,7 @@ signal score_updated
 signal door_updated
 signal ladder_update
 
+signal energy_updated
 
 var player_speed = 1
 
@@ -54,10 +55,13 @@ func update_player_speed(value: bool) -> void:
 	if value == true:
 		print("candyPickedUp")
 		player_speed += 0.2
+		emit_signal("energy_updated")
 		
 	elif value == false:
-		print("heioghå")
-		player_speed -= 0.2
+		if player_speed > 0.7:
+			player_speed -= 0.2
+			emit_signal("energy_updated")
 		
 func reset_player_speed() -> void:
-	player_speed = 1
+		player_speed = 1
+		emit_signal("energy_updated")

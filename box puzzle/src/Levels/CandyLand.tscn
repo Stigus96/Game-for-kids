@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/Backgrounds/CandyLandBG3.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/Portal.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/Candy/cake.png" type="Texture" id=14]
+[ext_resource path="res://src/Levels/Energy_Interface.gd" type="Script" id=15]
+[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "lollipop orange.png 0"
@@ -50,6 +52,10 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 49.6621, 8.96939 )
 
+[sub_resource type="DynamicFont" id=3]
+size = 39
+font_data = ExtResource( 16 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
@@ -70,7 +76,7 @@ z_index = -1
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 852340, 0, 0, 917954, 1, 0, 1048855, 0, 0, 1114535, 2, 0, 1245816, 2, 0, 1311032, 1, 0, 1507449, 0, 0, 1638641, 1, 0, 1638665, 2, 0, 1704532, 0, 0, 1966266, 0, 0, 2032192, 1, 0, 2097686, 1, 0, 2162755, 1, 0, 2359629, 2, 0, 2359861, 2, 0, 2490868, 2, 0, 2556128, 2, 0, 2621489, 2, 0, 2687084, 2, 0, 3080855, 0, 0, 3145879, 2, 0 )
+tile_data = PoolIntArray( 852340, 0, 0, 917954, 1, 0, 1048855, 0, 0, 1114535, 2, 0, 1245816, 2, 0, 1311032, 1, 0, 1507449, 0, 0, 1638641, 1, 0, 1638665, 2, 0, 1704532, 0, 0, 1966266, 0, 0, 2032192, 1, 0, 2097686, 1, 0, 2097899, 0, 0, 2162755, 1, 0, 2359629, 2, 0, 2359861, 2, 0, 2490868, 2, 0, 2491151, 2, 0, 2556128, 2, 0, 2556616, 1, 0, 2621489, 2, 0, 2687084, 2, 0, 3080855, 0, 0, 3145879, 2, 0, 3539635, 2, 0 )
 
 [node name="TileMap3" type="TileMap" parent="."]
 z_index = -1
@@ -90,7 +96,8 @@ position = Vector2( -4.43213, -585.031 )
 z_index = -3
 script = ExtResource( 4 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
@@ -108,6 +115,31 @@ texture = ExtResource( 5 )
 position = Vector2( 904.432, 585.031 )
 scale = Vector2( 0.5, 0.5 )
 current = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Energy_Interface" type="Control" parent="KinematicBody2D/CollisionShape2D/Camera2D"]
+margin_left = 1706.0
+margin_top = -948.0
+margin_right = 1843.0
+margin_bottom = -893.0
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="KinematicBody2D/CollisionShape2D/Camera2D/Energy_Interface"]
+margin_left = -217.0
+margin_top = -2.0
+margin_right = 199.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "hei"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0.5, 0.5 )
