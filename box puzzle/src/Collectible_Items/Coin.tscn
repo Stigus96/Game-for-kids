@@ -84,5 +84,6 @@ anims/fade_out = SubResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -15.0
+volume_db = -25.0
+bus = "Player"
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]

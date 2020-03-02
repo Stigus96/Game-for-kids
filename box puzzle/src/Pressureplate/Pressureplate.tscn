@@ -39,5 +39,7 @@ polygon = PoolVector2Array( 4.93055, -11.8843, -9.94244, 0.247137, -7.51944, 0.2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = 5.0
+bus = "Player"
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]

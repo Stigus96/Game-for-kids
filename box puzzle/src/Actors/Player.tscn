@@ -153,4 +153,5 @@ cast_to = Vector2( 42, 0 )
 
 [node name="jumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 63 )
-volume_db = -5.288
+volume_db = -10.0
+bus = "Player"

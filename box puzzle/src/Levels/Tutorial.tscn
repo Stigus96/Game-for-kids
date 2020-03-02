@@ -255,3 +255,4 @@ position = Vector2( 1396.62, 918.064 )
 stream = ExtResource( 18 )
 volume_db = -3.0
 autoplay = true
+bus = "Background music"
