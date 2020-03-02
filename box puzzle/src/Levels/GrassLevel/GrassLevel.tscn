@@ -447,7 +447,7 @@ points = PoolVector2Array( 0, 32, 32, 32, 32, 40, 0, 40 )
 [node name="Node2D" type="Node2D"]
 
 [node name="PhysicsBox" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1365.34, 336.628 )
+position = Vector2( 1395.71, 328.078 )
 scale = Vector2( 0.675, 0.675 )
 z_index = 2
 
