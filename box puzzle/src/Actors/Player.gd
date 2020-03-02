@@ -14,7 +14,7 @@ onready var i = 0
 func _ready():
 	PlayerData.connect("ladder_updated", self, "update_ladder_on")
 	timer = get_node("Timer")
-	timer.connect("timeout",self,"_on_timer_timeout")
+	##timer.connect("timeout",self,"_on_timer_timeout")
 	pass
 
 
