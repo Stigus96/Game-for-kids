@@ -17,11 +17,11 @@
 [ext_resource path="res://assets/Ladder/ladder.png" type="Texture" id=15]
 [ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/Walls/Wall1.gd" type="Script" id=17]
-[ext_resource path="res://assets/Misc assest/shelf.png" type="Texture" id=18]
+[ext_resource path="res://assets/Game sounds/CaveLevel.ogg" type="AudioStream" id=22]
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=19]
+[ext_resource path="res://assets/Misc assest/shelf.png" type="Texture" id=18]
 [ext_resource path="res://src/Levels/CandyLand.tscn" type="PackedScene" id=20]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=21]
-[ext_resource path="res://assets/Game sounds/CaveLevel.ogg" type="AudioStream" id=22]
 [ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -302,7 +302,7 @@ blend_mode = 1
 background_mode = 4
 glow_enabled = true
 glow_intensity = 6.28
-glow_strength = 1.59
+glow_strength = 1.49
 glow_blend_mode = 0
 
 [sub_resource type="TileSet" id=5]
@@ -437,7 +437,7 @@ __meta__ = {
 [node name="BlackBG" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="BlackBG"]
-modulate = Color( 0.0235294, 0.0235294, 0.0235294, 0.909804 )
+modulate = Color( 0.0235294, 0.0235294, 0.0235294, 0.85098 )
 self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 917.563, 546.647 )
 scale = Vector2( 1.51548, 1.34406 )
@@ -513,7 +513,11 @@ editor/display_folded = true
 position = Vector2( 334.241, 178.638 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin5" parent="Coins" instance=ExtResource( 21 )]
+[node name="Coin17" parent="Coins" instance=ExtResource( 20 )]
+position = Vector2( 99.5061, 543.898 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 20 )]
 position = Vector2( 791.54, 858.785 )
 scale = Vector2( 0.4, 0.4 )
 
