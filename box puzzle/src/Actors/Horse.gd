@@ -2,8 +2,9 @@ extends "res://src/Actors/Actor.gd"
 
 # Declare member variables here. Examples:
 export var speed_adjust_right: = 150
-export var speed_adjust_left: = 150
+export var speed_adjust_left: = 250
 onready var AnimatedHorse = get_node("AnimatedHorse")
+var timer
 
 func _ready():
 	print("ready")

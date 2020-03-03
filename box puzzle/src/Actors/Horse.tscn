@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/Actors/Horse.gd" type="Script" id=1]
 [ext_resource path="res://assets/characters/Horse/horse.png" type="Texture" id=2]
@@ -35,6 +35,9 @@ animations = [ {
 "speed": 15.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 72.6021, 57.413 )
+
 [node name="Horse" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -42,6 +45,6 @@ script = ExtResource( 1 )
 frames = SubResource( 1 )
 playing = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 3.78149, 3.15121 )
-polygon = PoolVector2Array( -20.5372, 57.7873, 42.8656, 57.7873, 39.2492, 52.4781, 42.6348, 21.3923, 51.6439, -1.23167, 48.5613, -30.0694, 57.9087, -32.6549, 64.6707, -27.0862, 70.836, -29.97, 56.8148, -55.6658, 42.8932, -56.5608, 20.2208, -37.2693, 12.6633, -27.9219, 11.8678, -16.9835, -15.5778, -19.8672, -40.7362, -17.6795, -59.6299, 12.252, -73.7505, 21.9972, -51.6747, 22.8922, -41.4323, 11.0588, -35.9631, -4.75228, -26.2179, -11.2159, -28.4056, 3.70016, -24.5274, 13.8431, -28.9028, 27.9527, -22.6381, 50.3268 )
+shape = SubResource( 2 )
