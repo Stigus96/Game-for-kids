@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CandylandBG2.jpg-2096dbce92f1a48a867d297ac8a66653.stex"
+path="res://.import/horse-bend-00.png-d7d5350341ea7f5e6b19002ac6a00822.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrounds/CandylandBG2.jpg"
-dest_files=[ "res://.import/CandylandBG2.jpg-2096dbce92f1a48a867d297ac8a66653.stex" ]
+source_file="res://assets/characters/Horse/idle/horse-bend-00.png"
+dest_files=[ "res://.import/horse-bend-00.png-d7d5350341ea7f5e6b19002ac6a00822.stex" ]
 
 [params]
 

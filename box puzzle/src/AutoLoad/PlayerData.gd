@@ -52,15 +52,16 @@ func get_player_speed() -> float:
 	
 func update_player_speed(value: bool) -> void:
 	if value == true:
-		print("candyPickedUp")
-		player_speed += 0.2
-		emit_signal("energy_updated")
-		
-	elif value == false:
-		if player_speed > 0.7:
-			player_speed -= 0.2
+		if player_speed < 1.4:
+			print("candyPickedUp")
+			player_speed += 0.1
 			emit_signal("energy_updated")
 		
-func reset_player_speed() -> void:
-		player_speed = 1
+	elif value == false:
+		player_speed -= 0.1
 		emit_signal("energy_updated")
+		
+func reset_player_speed() -> void:
+	print("UU")
+	player_speed = 1
+	emit_signal("energy_updated")

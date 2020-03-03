@@ -1,0 +1,46 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://src/Actors/Horse.gd" type="Script" id=1]
+[ext_resource path="res://assets/characters/Horse/horse.png" type="Texture" id=2]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-00.png" type="Texture" id=3]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-01.png" type="Texture" id=4]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-02.png" type="Texture" id=5]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-03.png" type="Texture" id=6]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-04.png" type="Texture" id=7]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-05.png" type="Texture" id=8]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-06.png" type="Texture" id=9]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-00.png" type="Texture" id=10]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-01.png" type="Texture" id=11]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-02.png" type="Texture" id=12]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-03.png" type="Texture" id=13]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-04.png" type="Texture" id=14]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-05.png" type="Texture" id=15]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-06.png" type="Texture" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "run",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "jump",
+"speed": 15.0
+} ]
+
+[node name="Horse" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedHorse" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -16.7479, 60.8871, 67.8517, 60.5767, 74.3044, -27.2578, 70.4187, -35.8439, 63.274, -49.9475, 56.5681, -55.1493, 35.8862, -46.6258, 24.1039, -33.966, 15.6431, -24.5025, 14.9537, -13.9736, -15.693, -16.1044, -36.5629, -14.663, -45.504, -1.38581, -48.387, 7.13762, -56.6597, 16.2251, -69.6955, 24.6232, -69.0688, 26.4407, -48.575, 26.2527, -37.7327, 14.6583, -32.4682, -1.94986, -22.6287, -7.59037, -24.4462, 5.94684, -20.8112, 15.5357, -25.2609, 31.8305 )

@@ -9,7 +9,7 @@ func _ready():
 
 
 func _on_Spikes_body_entered(body):
-	if body.name == "Player":
+	if body.name == "Player" or body.name == "Horse":
 		get_tree().reload_current_scene()
 	
 	
