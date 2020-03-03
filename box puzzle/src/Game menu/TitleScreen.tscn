@@ -101,8 +101,8 @@ text = "Quit"
 layer = -1
 
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 1196.16, 636.462 )
-scale = Vector2( 1.2525, 1.19333 )
+position = Vector2( 1196, 636 )
+scale = Vector2( 1.25, 1.19 )
 texture = ExtResource( 5 )
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/newGame" to="." method="_on_newGame_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]

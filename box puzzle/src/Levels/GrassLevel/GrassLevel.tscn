@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://src/Physics_box/PhysicsBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -19,8 +19,8 @@
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=18]
 [ext_resource path="res://assets/Game sounds/Grasslevel.ogg" type="AudioStream" id=19]
-[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=21]
 
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -941,8 +941,10 @@ stream = ExtResource( 19 )
 autoplay = true
 bus = "Background music"
 
-[node name="ScoreInterface" parent="." instance=ExtResource( 19 )]
-margin_left = 1863.41
-margin_top = 18.427
-margin_right = 1863.41
-margin_bottom = 18.427
+[node name="PlayerData" parent="." instance=ExtResource( 20 )]
+
+[node name="ScoreInterface" parent="PlayerData" instance=ExtResource( 21 )]
+margin_left = 48.2638
+margin_top = -13.5496
+margin_right = 48.2638
+margin_bottom = -13.5496
