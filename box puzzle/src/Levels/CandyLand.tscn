@@ -171,7 +171,6 @@ __meta__ = {
 }
 
 [node name="Candy" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="Cake" parent="Candy" instance=ExtResource( 11 )]
 position = Vector2( 2511.27, 566.138 )
