@@ -1,7 +1,8 @@
 extends "res://src/Actors/Actor.gd"
 
 # Declare member variables here. Examples:
-export var speed_adjust: = 100
+export var speed_adjust_right: = 150
+export var speed_adjust_left: = 150
 onready var AnimatedHorse = get_node("AnimatedHorse")
 
 func _physics_process(delta: float) -> void:
@@ -26,9 +27,9 @@ direction: Vector2
 ):
 	var current_speed = speed.x
 	if direction.x > 0:
-		current_speed = speed.x + speed_adjust
+		current_speed = speed.x + speed_adjust_right
 	if direction.x < 0:
-		current_speed = speed.x - speed_adjust
+		current_speed = speed.x - speed_adjust_left
 	return current_speed
 	
 	
