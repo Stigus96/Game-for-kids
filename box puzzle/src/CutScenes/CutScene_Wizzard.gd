@@ -15,6 +15,8 @@ onready var lable2 = get_node("Label2")
 onready var lable3 = get_node("Label3")
 onready var lable4 = get_node("Label4")
 
+onready var bird_animation = get_node("Cake/Bird/BirdAnimation")
+
 var state = false
 
 func _ready():
@@ -40,6 +42,7 @@ func _on_Timer_timeout():
 	if numberOfTimeouts == 0:
 		lable1.hide()
 		lable2.show()
+		bird_animation.play("Flying")
 	elif numberOfTimeouts == 1:
 		lable2.hide()
 		lable3.show()

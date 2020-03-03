@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/CutScenes/CutScene_Wizzard.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://src/CutScenes/Wizzard_CutScene_Playerstop.gd" type="Script" id=4]
 [ext_resource path="res://assets/Wizzard/Wizzard.png" type="Texture" id=5]
 [ext_resource path="res://assets/Game menu Fonts/expressway rg.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://src/CutScenes/Cake.gd" type="Script" id=7]
+[ext_resource path="res://assets/Candy/cake.png" type="Texture" id=8]
+[ext_resource path="res://assets/Birds/Flying bird.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1203.73, 10 )
@@ -18,12 +21,71 @@ font_data = ExtResource( 6 )
 
 [sub_resource type="AtlasTexture" id=4]
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 35.5692, 23.8406 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "Flying"
+length = 5.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -708.327, -525.606 ), Vector2( -271.328, -333.707 ), Vector2( 94.4214, -26.8573 ) ]
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("../AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "Fly_Away" ),
+"times": PoolRealArray( 2 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Fly_Away"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 426.592, -349.03 ), Vector2( 1962.91, -470.118 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
 [node name="CutScene_Wizzard" type="Node2D"]
 position = Vector2( 610.112, 680.603 )
 script = ExtResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 7.0
+wait_time = 6.0
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
@@ -150,5 +212,33 @@ margin_top = -7.0
 margin_right = 202.0
 margin_bottom = 54.0
 texture = SubResource( 4 )
+
+[node name="Cake" type="Area2D" parent="."]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Cake"]
+position = Vector2( 94.0011, -13.0186 )
+scale = Vector2( 0.235001, 0.235001 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cake"]
+position = Vector2( 91.8873, -16.2288 )
+shape = SubResource( 5 )
+
+[node name="Bird" type="Sprite" parent="Cake"]
+position = Vector2( -708.327, -525.606 )
+rotation = -3.14159
+scale = Vector2( 0.41667, -0.386222 )
+texture = ExtResource( 9 )
+
+[node name="BirdAnimation" type="AnimationPlayer" parent="Cake/Bird"]
+anims/Flying = SubResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cake"]
+anims/Fly_Away = SubResource( 7 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="StopZone" to="StopZone" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Cake" to="Cake" method="_on_Cake_body_entered"]

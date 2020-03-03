@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/CutScenes/CutScene_Wizzard.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -15,8 +15,7 @@
 [ext_resource path="res://src/CandyLevelObstacles/HesteHinder.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/Candy/cake.png" type="Texture" id=16]
-[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "lollipop orange.png 0"
@@ -56,22 +55,6 @@ extents = Vector2( 49.6621, 8.96939 )
 [sub_resource type="DynamicFont" id=3]
 size = 39
 font_data = ExtResource( 10 )
-
-[sub_resource type="Animation" id=4]
-resource_name = "cake_steal"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2, 4.9 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 523.824, 743.963 ), Vector2( 879.294, 344.121 ), Vector2( 2085.17, 282.241 ) ]
-}
 
 [node name="Node2D" type="Node2D"]
 
@@ -391,14 +374,5 @@ rotation = 1.57079
 position = Vector2( 10400.4, 881.251 )
 rotation = 1.57079
 
-[node name="cake" type="Sprite" parent="."]
-position = Vector2( 2085.17, 282.241 )
-scale = Vector2( 0.323478, 0.251695 )
-texture = ExtResource( 16 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="cake"]
-autoplay = "cake_steal"
-anims/cake_steal = SubResource( 4 )
-
-[node name="Portal" parent="." instance=ExtResource( 17 )]
+[node name="Portal" parent="." instance=ExtResource( 16 )]
 position = Vector2( 12940.1, 661.278 )
