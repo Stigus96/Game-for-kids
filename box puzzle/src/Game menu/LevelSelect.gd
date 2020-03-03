@@ -21,6 +21,6 @@ func _on_TBDBtn2_pressed():
 	pass
 
 func _on_candylandBtn_pressed():
-	get_tree().change_scene("")
+	get_tree().change_scene("res://src/Levels/CandyLand.tscn")
 	pass
 
