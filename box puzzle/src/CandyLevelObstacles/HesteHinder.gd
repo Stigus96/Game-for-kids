@@ -1,16 +1,23 @@
-extends KinematicBody2D
+extends Area2D
+export var player_speed: = 1
+
+onready var hinder_down = get_node("Sprite")
+onready var hinder_up = get_node("pixil-frame-0")
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var playerAnimation = get_node("AnimationPlayer")
+	
+func picked() -> void:
+	PlayerData.update_player_speed(false)
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
+
+func _on_HesteHinder_body_entered(body):
+	if body.name == "Horse":
+		playerAnimation.play("fade_out")
+		player_speed = player_speed + 1
+		picked()
+		
+		hinder_up.hide()
+		hinder_down.show()
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

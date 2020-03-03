@@ -14,9 +14,10 @@
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/DialogBox/DialogBox.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/Portal.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/Levels/GrassLevel/GrassLevel.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=17]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "Cloud1"
