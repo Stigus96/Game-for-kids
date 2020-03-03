@@ -1,21 +1,21 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://src/Physics_box/PhysicsBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Demolevel assets/environment/tiles/jungle/tile_jungle_bottom_brown.png" type="Texture" id=3]
 [ext_resource path="res://assets/Demolevel assets/environment/tiles/jungle/tile_jungle_ground_brown.png" type="Texture" id=4]
 [ext_resource path="res://src/Ladder/ladder.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/Ladder/80x80 ladder.png" type="Texture" id=6]
-[ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/Levels/caveLevel.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/Pressureplate/Spike_pressureplate.gd" type="Script" id=12]
-[ext_resource path="res://src/KillPlayer/Spikes/Multible_Spikes.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/Pressureplate/Ladder_pressureplate.gd" type="Script" id=15]
-[ext_resource path="res://src/Ladder/ladder.gd" type="Script" id=16]
+[ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Levels/caveLevel.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Pressureplate/Spike_pressureplate.gd" type="Script" id=11]
+[ext_resource path="res://src/KillPlayer/Spikes/Multible_Spikes.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Pressureplate/Ladder_pressureplate.gd" type="Script" id=14]
+[ext_resource path="res://src/Ladder/ladder.gd" type="Script" id=15]
+[ext_resource path="res://assets/Ladder/80x80 ladder.png" type="Texture" id=16]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=18]
 [ext_resource path="res://assets/Game sounds/Grasslevel.ogg" type="AudioStream" id=19]
@@ -410,21 +410,9 @@ points = PoolVector2Array( 0, 32, 32, 32, 32, 40, 0, 40 )
 } ]
 2/z_index = 0
 
-[sub_resource type="TileSet" id=19]
-0/name = "80x80 ladder.png 0"
-0/texture = ExtResource( 6 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 5, 0, 70, 80 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shapes = [  ]
-0/z_index = 0
-
 [sub_resource type="TileSet" id=20]
 0/name = "80x80 ladder.png 0"
-0/texture = ExtResource( 6 )
+0/texture = ExtResource( 16 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 5, 0, 70, 80 )
@@ -436,7 +424,7 @@ points = PoolVector2Array( 0, 32, 32, 32, 32, 40, 0, 40 )
 
 [sub_resource type="TileSet" id=21]
 0/name = "80x80 ladder.png 0"
-0/texture = ExtResource( 6 )
+0/texture = ExtResource( 16 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 5, 1, 70, 79 )
@@ -477,15 +465,6 @@ tile_data = PoolIntArray( -65522, 0, 0, -65521, 1, 0, -65520, 1, 0, -65519, 1, 0
 position = Vector2( 1246.27, 790.232 )
 scale = Vector2( 0.33, 1.1 )
 
-[node name="Third_Ladder" type="TileMap" parent="."]
-visible = false
-tile_set = SubResource( 19 )
-cell_size = Vector2( 4, 4 )
-collision_layer = 2
-collision_mask = 2
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 10289552, 0, 0, 12779920, 0, 0 )
-
 [node name="LadderThree" parent="." instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 1633.49, 779.632 )
@@ -495,18 +474,18 @@ collision_mask = 2
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="KillFloor" parent="." instance=ExtResource( 7 )]
+[node name="KillFloor" parent="." instance=ExtResource( 6 )]
 position = Vector2( 765.874, 1263.31 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 8 )]
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 7 )]
 visible = false
 
-[node name="Portal" parent="." instance=ExtResource( 9 )]
+[node name="Portal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1790.43, 563.134 )
 z_index = 2
-next_scene = ExtResource( 10 )
+next_scene = ExtResource( 9 )
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -2
@@ -516,39 +495,40 @@ position = Vector2( 732.942, 626.22 )
 scale = Vector2( 0.5625, 0.5625 )
 z_index = 1
 
-[node name="Pressureplate1" parent="." instance=ExtResource( 11 )]
+[node name="Pressureplate1" parent="." instance=ExtResource( 10 )]
+editor/display_folded = true
 position = Vector2( 608.29, 1133.29 )
 scale = Vector2( 0.55, 1 )
-script = ExtResource( 12 )
+script = ExtResource( 11 )
 
-[node name="Multible_Spikes" parent="Pressureplate1" instance=ExtResource( 13 )]
+[node name="Multible_Spikes" parent="Pressureplate1" instance=ExtResource( 12 )]
 editor/display_folded = true
 
-[node name="Spikes" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 14 )]
+[node name="Spikes" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 13 )]
 position = Vector2( -552.351, -96.7277 )
 scale = Vector2( 2.72727, 1.5 )
 
-[node name="Spikes3" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 14 )]
+[node name="Spikes3" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 13 )]
 position = Vector2( -442.251, -96.817 )
 scale = Vector2( 2.72727, 1.5 )
 
-[node name="Spikes5" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 14 )]
+[node name="Spikes5" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 13 )]
 position = Vector2( -331.953, -96.7748 )
 scale = Vector2( 2.72727, 1.5 )
 
-[node name="Spikes2" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 14 )]
+[node name="Spikes2" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 13 )]
 position = Vector2( -496.827, -96.6998 )
 scale = Vector2( 2.72727, 1.5 )
 
-[node name="Spikes6" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 14 )]
+[node name="Spikes6" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 13 )]
 position = Vector2( -387.111, -96.8031 )
 scale = Vector2( 2.72727, 1.5 )
 
-[node name="Spikes7" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 14 )]
+[node name="Spikes7" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 13 )]
 position = Vector2( -221.655, -96.7242 )
 scale = Vector2( 2.72727, 1.5 )
 
-[node name="Spikes4" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 14 )]
+[node name="Spikes4" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 13 )]
 position = Vector2( -276.7, -96.7655 )
 scale = Vector2( 2.72727, 1.5 )
 
@@ -561,10 +541,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Pressureplate2" parent="." instance=ExtResource( 11 )]
+[node name="Pressureplate2" parent="." instance=ExtResource( 10 )]
+editor/display_folded = true
 position = Vector2( 160.574, 942.597 )
 scale = Vector2( 0.55, 1 )
-script = ExtResource( 15 )
+script = ExtResource( 14 )
 
 [node name="LadderTwo" parent="Pressureplate2" instance=ExtResource( 5 )]
 visible = false
@@ -572,7 +553,7 @@ position = Vector2( 1163.64, -379.105 )
 scale = Vector2( 0.6, 1.2 )
 collision_layer = 2
 collision_mask = 2
-script = ExtResource( 16 )
+script = ExtResource( 15 )
 
 [node name="Second_Ladder" type="TileMap" parent="Pressureplate2/LadderTwo"]
 position = Vector2( -2424.24, -438.367 )
@@ -886,10 +867,10 @@ scale = Vector2( 0.4, 0.4 )
 position = Vector2( -396.258, 736 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Pressureplate" parent="." instance=ExtResource( 11 )]
+[node name="Pressureplate" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1850.41, 206.296 )
 scale = Vector2( 0.55, 1 )
-script = ExtResource( 15 )
+script = ExtResource( 14 )
 
 [node name="LadderTwo2" parent="Pressureplate" instance=ExtResource( 5 )]
 visible = false
@@ -908,6 +889,7 @@ format = 1
 tile_data = PoolIntArray( 5963968, 0, 0, 7209152, 0, 0, 8454336, 0, 0, 9699520, 0, 0 )
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
+editor/display_folded = true
 layer = -4
 
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer2"]
