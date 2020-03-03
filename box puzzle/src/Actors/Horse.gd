@@ -2,9 +2,16 @@ extends "res://src/Actors/Actor.gd"
 
 # Declare member variables here. Examples:
 export var speed_adjust_right: = 150
-export var speed_adjust_left: = 150
+export var speed_adjust_left: = 250
 onready var AnimatedHorse = get_node("AnimatedHorse")
+var timer
 
+func _ready():
+	print("ready")
+	timer = get_node("Timer")
+	timer.connect("timeout",self,"_on_timer_timeout")
+	pass
+	
 func _physics_process(delta: float) -> void:
 	animate_horse()
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -14,6 +21,11 @@ func _physics_process(delta: float) -> void:
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted, current_speed)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 	
+	if Input.is_action_just_pressed("ui_focus_next"):
+		get_tree().reload_current_scene()
+		print("backspace")
+		PlayerData.reset_player_speed()
+	
 func get_direction () -> Vector2:
 		return Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
@@ -21,6 +33,7 @@ func get_direction () -> Vector2:
 		
 		
 		
+
 		
 func calculate_x_speed(
 direction: Vector2
@@ -32,8 +45,12 @@ direction: Vector2
 		current_speed = speed.x - speed_adjust_left
 	return current_speed
 	
-	
-	
+func _on_timer_timeout():
+	print("Timer timeout")
+	PlayerData.update_player_speed(false)
+
+
+
 func animate_horse():
 	if (is_on_floor() == false):
 		AnimatedHorse.play("jump")
@@ -48,7 +65,7 @@ func calculate_move_velocity(
 	current_speed
 ) -> Vector2:
 	var out: = linear_velocity
-	out.x = current_speed
+	out.x = current_speed * PlayerData.get_player_speed()
 	out.y += gravity * get_physics_process_delta_time()
 	if direction.y == -1.0:
 		out.y = speed.y * direction.y
