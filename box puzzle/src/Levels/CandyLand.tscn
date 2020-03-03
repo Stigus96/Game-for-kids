@@ -1,26 +1,26 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://assets/Backgrounds/CandyLandBG3.png" type="Texture" id=1]
+[ext_resource path="res://src/CutScenes/CutScene_Wizzard.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=3]
-[ext_resource path="res://src/Levels/KinematicBody2D.gd" type="Script" id=4]
-[ext_resource path="res://assets/Box sprites/box(1).png" type="Texture" id=5]
-[ext_resource path="res://src/Collectible_Items/Candy.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=7]
-[ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=8]
-[ext_resource path="res://assets/Candy/Sprite/candycane.png" type="Texture" id=9]
-[ext_resource path="res://src/CandyLevelObstacles/HesteHinder.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Candy/cake.png" type="Texture" id=14]
-[ext_resource path="res://src/Levels/Energy_Interface.gd" type="Script" id=15]
-[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=16]
-
+[ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=4]
+[ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=5]
+[ext_resource path="res://assets/Candy/Sprite/candycane.png" type="Texture" id=6]
+[ext_resource path="res://src/Levels/KinematicBody2D.gd" type="Script" id=7]
+[ext_resource path="res://assets/Box sprites/box(1).png" type="Texture" id=8]
+[ext_resource path="res://src/Levels/Energy_Interface.gd" type="Script" id=9]
+[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/Backgrounds/CandyLandBG3.png" type="Texture" id=11]
+[ext_resource path="res://src/Collectible_Items/Candy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/CandyLevelObstacles/HesteHinder.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/Candy/cake.png" type="Texture" id=16]
+[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=17]
 
 [sub_resource type="TileSet" id=1]
 0/name = "lollipop orange.png 0"
-0/texture = ExtResource( 7 )
+0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 160, 256 )
@@ -30,7 +30,7 @@
 0/shapes = [  ]
 0/z_index = 0
 1/name = "lollipop red.png 1"
-1/texture = ExtResource( 8 )
+1/texture = ExtResource( 5 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 160, 256 )
@@ -40,7 +40,7 @@
 1/shapes = [  ]
 1/z_index = 0
 2/name = "candycane.png 2"
-2/texture = ExtResource( 9 )
+2/texture = ExtResource( 6 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( -3, -7, 94, 186 )
@@ -55,12 +55,31 @@ extents = Vector2( 49.6621, 8.96939 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 39
-font_data = ExtResource( 16 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "cake_steal"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 523.824, 743.963 ), Vector2( 879.294, 344.121 ), Vector2( 2085.17, 282.241 ) ]
+}
 
 [node name="Node2D" type="Node2D"]
 
+[node name="CutScene_Wizzard" parent="." instance=ExtResource( 1 )]
+position = Vector2( 420.549, 752.55 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 659.11, 734.693 )
+position = Vector2( 1383.4, 668.375 )
 
 [node name="Timer" type="Timer" parent="Player"]
 wait_time = 5.0
@@ -92,27 +111,27 @@ cell_size = Vector2( 12, 12 )
 format = 1
 tile_data = PoolIntArray( 3473562, 43, 0, 3473563, 43, 0, 3473564, 43, 0, 3473565, 43, 0, 3473566, 43, 0, 3473567, 43, 0, 3473568, 43, 0, 3473569, 43, 0, 3473570, 43, 0, 3473571, 43, 0, 3473572, 43, 0, 3473573, 43, 0, 3473574, 43, 0, 3473575, 43, 0, 3473576, 43, 0, 3473577, 43, 0, 3473578, 43, 0, 3473579, 43, 0, 3473580, 43, 0, 3473581, 43, 0, 3473582, 43, 0, 3473583, 43, 0, 3473584, 43, 0, 3473585, 43, 0, 3473586, 43, 0, 3473587, 43, 0, 3473588, 43, 0, 3473589, 43, 0, 3473590, 43, 0, 3473591, 43, 0, 3473592, 43, 0, 3473593, 43, 0, 3473594, 43, 0, 3473595, 43, 0, 3473596, 43, 0, 3473597, 43, 0, 3539098, 43, 0, 3539099, 43, 0, 3539100, 43, 0, 3539101, 43, 0, 3539102, 43, 0, 3539103, 43, 0, 3539104, 43, 0, 3539105, 43, 0, 3539106, 43, 0, 3539107, 43, 0, 3539108, 43, 0, 3539109, 43, 0, 3539110, 43, 0, 3539111, 43, 0, 3539112, 43, 0, 3539113, 43, 0, 3539114, 43, 0, 3539115, 43, 0, 3539116, 43, 0, 3539117, 43, 0, 3539118, 43, 0, 3539119, 43, 0, 3539120, 43, 0, 3539121, 43, 0, 3539122, 43, 0, 3539123, 43, 0, 3539124, 43, 0, 3539125, 43, 0, 3539126, 43, 0, 3539127, 43, 0, 3539128, 43, 0, 3539129, 43, 0, 3539130, 43, 0, 3539131, 43, 0, 3539132, 43, 0, 3539133, 43, 0, 3539134, 43, 0 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="Moving_Level" type="KinematicBody2D" parent="."]
 position = Vector2( -4.43213, -585.031 )
 z_index = -3
-script = ExtResource( 4 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Level"]
 position = Vector2( 36.9198, 484.832 )
 z_index = -1
 shape = SubResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D/CollisionShape2D"]
+[node name="Sprite" type="Sprite" parent="Moving_Level/CollisionShape2D"]
 visible = false
 position = Vector2( -0.859802, 14.642 )
 scale = Vector2( 1, 11.5314 )
-texture = ExtResource( 5 )
+texture = ExtResource( 8 )
 
-[node name="Camera2D" type="Camera2D" parent="KinematicBody2D/CollisionShape2D"]
+[node name="Camera2D" type="Camera2D" parent="Moving_Level/CollisionShape2D"]
 position = Vector2( 904.432, 585.031 )
 scale = Vector2( 0.5, 0.5 )
 current = true
@@ -120,20 +139,20 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Energy_Interface" type="Control" parent="KinematicBody2D/CollisionShape2D/Camera2D"]
+[node name="Energy_Interface" type="Control" parent="Moving_Level/CollisionShape2D/Camera2D"]
 margin_left = 1706.0
 margin_top = -948.0
 margin_right = 1843.0
 margin_bottom = -893.0
-script = ExtResource( 15 )
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="KinematicBody2D/CollisionShape2D/Camera2D/Energy_Interface"]
-margin_left = -217.0
+[node name="Label" type="Label" parent="Moving_Level/CollisionShape2D/Camera2D/Energy_Interface"]
+margin_left = -454.0
 margin_top = -2.0
-margin_right = 199.0
+margin_right = -172.0
 margin_bottom = 87.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -154,7 +173,7 @@ __meta__ = {
 [node name="CandyLandBG3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 981.068, 513.422 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 1 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -162,220 +181,224 @@ __meta__ = {
 [node name="CandyLandBG4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 4979.52, 512.315 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 1 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Cake" parent="." instance=ExtResource( 6 )]
+[node name="Cake" parent="." instance=ExtResource( 12 )]
 position = Vector2( 2511.27, 566.138 )
 
-[node name="Cake6" parent="." instance=ExtResource( 6 )]
+[node name="Cake6" parent="." instance=ExtResource( 12 )]
 position = Vector2( 5250.31, 471.032 )
 
-[node name="Cake7" parent="." instance=ExtResource( 6 )]
+[node name="Cake7" parent="." instance=ExtResource( 12 )]
 position = Vector2( 6636.06, 369.742 )
 
-[node name="Cake8" parent="." instance=ExtResource( 6 )]
+[node name="Cake8" parent="." instance=ExtResource( 12 )]
 position = Vector2( 6707.97, 372.223 )
 
-[node name="Cake10" parent="." instance=ExtResource( 6 )]
+[node name="Cake10" parent="." instance=ExtResource( 12 )]
 position = Vector2( 6792.23, 376.168 )
 
-[node name="Cake11" parent="." instance=ExtResource( 6 )]
+[node name="Cake11" parent="." instance=ExtResource( 12 )]
 position = Vector2( 6560.19, 369.742 )
 
-[node name="Cake12" parent="." instance=ExtResource( 6 )]
+[node name="Cake12" parent="." instance=ExtResource( 12 )]
 position = Vector2( 6489.32, 368.302 )
 
-[node name="Cake13" parent="." instance=ExtResource( 6 )]
+[node name="Cake13" parent="." instance=ExtResource( 12 )]
 position = Vector2( 4909.62, 378.166 )
 
-[node name="Cake14" parent="." instance=ExtResource( 6 )]
+[node name="Cake14" parent="." instance=ExtResource( 12 )]
 position = Vector2( 4849.5, 376.707 )
 
-[node name="Cake15" parent="." instance=ExtResource( 6 )]
+[node name="Cake15" parent="." instance=ExtResource( 12 )]
 position = Vector2( 4787.55, 373.836 )
 
-[node name="Cake2" parent="." instance=ExtResource( 6 )]
+[node name="Cake2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 2410.2, 454.366 )
 
-[node name="KinematicBody2D2" parent="." instance=ExtResource( 10 )]
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 1423.82, 666.263 )
 
-[node name="KillPlayer" parent="." instance=ExtResource( 11 )]
+[node name="KillPlayer" parent="." instance=ExtResource( 14 )]
 position = Vector2( 19428.2, 1199.79 )
 
-[node name="KinematicBody2D3" parent="." instance=ExtResource( 10 )]
+[node name="KinematicBody2D3" parent="." instance=ExtResource( 13 )]
 position = Vector2( 7474.57, 377.977 )
 
 [node name="Spikes" type="Area2D" parent="."]
 
-[node name="Spikes" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10405.1, 494.894 )
 rotation = 1.57079
 
-[node name="Spikes39" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes39" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 11317.5, 853.73 )
 
-[node name="Spikes40" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes40" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 11538.5, 822.347 )
 
-[node name="Spikes41" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes41" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 11765, 790.317 )
 
-[node name="Spikes17" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes17" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10492.6, 428.449 )
 rotation = 4.71238
 
-[node name="Spikes18" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes18" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10492.8, 459.142 )
 rotation = 4.71238
 
-[node name="Spikes20" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes20" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10492.8, 490.621 )
 rotation = 4.71238
 
-[node name="Spikes19" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes19" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.1, 518.092 )
 rotation = 4.71238
 
-[node name="Spikes24" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes24" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10492.6, 547.697 )
 rotation = 4.71238
 
-[node name="Spikes23" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes23" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10492.8, 578.39 )
 rotation = 4.71238
 
-[node name="Spikes22" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes22" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10492.8, 609.869 )
 rotation = 4.71238
 
-[node name="Spikes38" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes38" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.9, 215.055 )
 rotation = 4.71238
 
-[node name="Spikes37" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes37" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10494.1, 245.748 )
 rotation = 4.71238
 
-[node name="Spikes36" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes36" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10494.1, 277.227 )
 rotation = 4.71238
 
-[node name="Spikes35" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes35" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10494.3, 304.698 )
 rotation = 4.71238
 
-[node name="Spikes34" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes34" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.9, 334.303 )
 rotation = 4.71238
 
-[node name="Spikes33" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes33" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10494.1, 364.996 )
 rotation = 4.71238
 
-[node name="Spikes25" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes25" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10494.1, 396.475 )
 rotation = 4.71238
 
-[node name="Spikes21" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes21" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.1, 637.34 )
 rotation = 4.71238
 
-[node name="Spikes32" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes32" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.2, 666.324 )
 rotation = 4.71238
 
-[node name="Spikes31" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes31" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.5, 697.017 )
 rotation = 4.71238
 
-[node name="Spikes30" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes30" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.5, 728.496 )
 rotation = 4.71238
 
-[node name="Spikes29" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes29" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.7, 755.967 )
 rotation = 4.71238
 
-[node name="Spikes28" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes28" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.2, 785.571 )
 rotation = 4.71238
 
-[node name="Spikes27" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes27" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.5, 816.264 )
 rotation = 4.71238
 
-[node name="Spikes26" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes26" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10493.5, 847.743 )
 rotation = 4.71238
 
-[node name="Spikes2" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes2" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10405.6, 463.58 )
 rotation = 1.57079
 
-[node name="Spikes3" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes3" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10406.3, 432.834 )
 rotation = 1.57079
 
-[node name="Spikes4" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes4" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10404.4, 524.046 )
 rotation = 1.57079
 
-[node name="Spikes8" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes8" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10403.9, 613.204 )
 rotation = 1.57079
 
-[node name="Spikes7" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes7" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10404.5, 581.89 )
 rotation = 1.57079
 
-[node name="Spikes6" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes6" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10405.1, 551.144 )
 rotation = 1.57079
 
-[node name="Spikes5" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes5" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10403.3, 642.356 )
 rotation = 1.57079
 
-[node name="Spikes16" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes16" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10402.2, 733.789 )
 rotation = 1.57079
 
-[node name="Spikes15" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes15" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10402.7, 702.475 )
 rotation = 1.57079
 
-[node name="Spikes14" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes14" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10403.4, 671.729 )
 rotation = 1.57079
 
-[node name="Spikes13" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes13" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10401.6, 762.941 )
 rotation = 1.57079
 
-[node name="Spikes12" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes12" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10401.1, 852.099 )
 rotation = 1.57079
 
-[node name="Spikes11" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes11" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10401.6, 820.785 )
 rotation = 1.57079
 
-[node name="Spikes10" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes10" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10402.3, 790.039 )
 rotation = 1.57079
 
-[node name="Spikes9" parent="Spikes" instance=ExtResource( 12 )]
+[node name="Spikes9" parent="Spikes" instance=ExtResource( 15 )]
 position = Vector2( 10400.4, 881.251 )
 rotation = 1.57079
 
 [node name="cake" type="Sprite" parent="."]
-position = Vector2( 12788.9, 612.913 )
-scale = Vector2( 0.4005, 0.311625 )
-texture = ExtResource( 14 )
+position = Vector2( 2085.17, 282.241 )
+scale = Vector2( 0.323478, 0.251695 )
+texture = ExtResource( 16 )
 
-[node name="Portal" parent="." instance=ExtResource( 13 )]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cake"]
+autoplay = "cake_steal"
+anims/cake_steal = SubResource( 4 )
+
+[node name="Portal" parent="." instance=ExtResource( 17 )]
 position = Vector2( 12940.1, 661.278 )
