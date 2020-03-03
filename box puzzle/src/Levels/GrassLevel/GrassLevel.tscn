@@ -19,6 +19,9 @@
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=18]
 [ext_resource path="res://assets/Game sounds/Grasslevel.ogg" type="AudioStream" id=19]
+[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=20]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 0, 32, 32, 0, 32, 0, 24, 24, 24, 24, 0 )
@@ -446,6 +449,8 @@ points = PoolVector2Array( 0, 32, 32, 32, 32, 40, 0, 40 )
 
 [node name="Node2D" type="Node2D"]
 
+[node name="PlayerData" parent="." instance=ExtResource( 20 )]
+
 [node name="PhysicsBox" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1395.71, 328.078 )
 scale = Vector2( 0.675, 0.675 )
@@ -520,7 +525,6 @@ scale = Vector2( 0.55, 1 )
 script = ExtResource( 12 )
 
 [node name="Multible_Spikes" parent="Pressureplate1" instance=ExtResource( 13 )]
-editor/display_folded = true
 
 [node name="Spikes" parent="Pressureplate1/Multible_Spikes" instance=ExtResource( 14 )]
 position = Vector2( -552.351, -96.7277 )
@@ -582,7 +586,6 @@ format = 1
 tile_data = PoolIntArray( 5963968, 0, 0, 7209152, 0, 0, 8454336, 0, 0, 9699520, 0, 0 )
 
 [node name="Coins" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="Coin" parent="Coins" instance=ExtResource( 17 )]
 position = Vector2( -350.792, 813.147 )
@@ -937,3 +940,9 @@ scale = Vector2( 0.5, 0.7 )
 stream = ExtResource( 19 )
 autoplay = true
 bus = "Background music"
+
+[node name="ScoreInterface" parent="." instance=ExtResource( 19 )]
+margin_left = 1863.41
+margin_top = 18.427
+margin_right = 1863.41
+margin_bottom = 18.427

@@ -12,6 +12,7 @@ var ladder_on = false
 
 func _ready():
 	PlayerData.connect("ladder_updated", self, "update_ladder_on")
+
 	pass
 
 
@@ -37,7 +38,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("ui_focus_next"):
 		get_tree().reload_current_scene()
-		
+		PlayerData.reset_player_speed()
 	
 func get_direction () -> Vector2:
 		return Vector2(
@@ -61,8 +62,7 @@ func calculate_move_velocity(
 	linear_velocity: Vector2,
 	direction: Vector2,
 	speed: Vector2,
-	is_jump_interrupted: bool
-) -> Vector2:
+	is_jump_interrupted: bool) -> Vector2:
 	var out: = linear_velocity
 	out.x = speed.x * direction.x
 	out.y += gravity * get_physics_process_delta_time()
