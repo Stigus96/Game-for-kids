@@ -1,8 +1,8 @@
 extends "res://src/Actors/Actor.gd"
 
 # Declare member variables here. Examples:
-export var speed_adjust: = 150
-var timer
+export var speed_adjust_right: = 150
+export var speed_adjust_left: = 150
 onready var AnimatedHorse = get_node("AnimatedHorse")
 
 func _ready():
@@ -39,9 +39,9 @@ direction: Vector2
 ):
 	var current_speed = speed.x
 	if direction.x > 0:
-		current_speed = speed.x + speed_adjust
+		current_speed = speed.x + speed_adjust_right
 	if direction.x < 0:
-		current_speed = speed.x - speed_adjust
+		current_speed = speed.x - speed_adjust_left
 	return current_speed
 	
 func _on_timer_timeout():
