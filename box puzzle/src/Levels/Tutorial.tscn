@@ -19,7 +19,6 @@
 [ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/Game sounds/Tutorial.ogg" type="AudioStream" id=18]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "Cloud1"
 length = 15.0
