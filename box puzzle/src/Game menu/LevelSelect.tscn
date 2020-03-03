@@ -1,55 +1,48 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Game menu/LevelSelect.gd" type="Script" id=1]
 [ext_resource path="res://assets/Game menu assets/imageedit_3_3928308832.png" type="Texture" id=2]
 [ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://src/Game menu/ReturnButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Game menu assets/level select.png" type="Texture" id=5]
-[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=6]
-[ext_resource path="res://assets/Game sounds/IntroTheme.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/Game menu assets/level select.png" type="Texture" id=4]
+[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=5]
+[ext_resource path="res://assets/Game sounds/IntroTheme.ogg" type="AudioStream" id=6]
+[ext_resource path="res://src/Game menu/ReturnButton.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 0, 0, 0, 0.27451 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0, 0, 0, 0.27451 )
-corner_detail = 100
-
-[sub_resource type="StyleBoxFlat" id=10]
-bg_color = Color( 0, 0, 0, 0.27451 )
-
 [sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0, 0, 0, 0.27451 )
-
-[sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0, 0, 0, 0.27451 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0, 0, 0, 0.27451 )
 
-[sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0, 0, 0, 0.27451 )
-
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0, 0, 0, 0.27451 )
-
-[sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0, 0, 0, 0.27451 )
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0, 0, 0, 0.27451 )
 
-[sub_resource type="StyleBoxFlat" id=14]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0, 0, 0, 0.27451 )
 
-[sub_resource type="StyleBoxFlat" id=15]
+[sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0, 0, 0, 0.27451 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="DynamicFont" id=14]
 size = 55
 font_data = ExtResource( 3 )
 
@@ -137,8 +130,6 @@ margin_left = 75.0
 margin_top = 170.0
 margin_right = -853.0
 margin_bottom = -563.0
-custom_styles/hover = SubResource( 9 )
-custom_styles/focus = SubResource( 3 )
 flat = true
 
 [node name="grassLevelBtn" type="Button" parent="TextureRect"]
@@ -148,8 +139,8 @@ margin_left = 75.0
 margin_top = 330.0
 margin_right = -853.0
 margin_bottom = -403.0
-custom_styles/hover = SubResource( 10 )
-custom_styles/focus = SubResource( 4 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
 flat = true
 
 [node name="caveLevelBtn" type="Button" parent="TextureRect"]
@@ -159,8 +150,8 @@ margin_left = 75.0
 margin_top = 480.0
 margin_right = -853.0
 margin_bottom = -253.0
-custom_styles/hover = SubResource( 11 )
-custom_styles/focus = SubResource( 5 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
 flat = true
 
 [node name="TBDBtn" type="Button" parent="TextureRect"]
@@ -170,8 +161,8 @@ margin_left = 910.0
 margin_top = 173.0
 margin_right = -18.0
 margin_bottom = -560.0
-custom_styles/hover = SubResource( 12 )
-custom_styles/focus = SubResource( 6 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
 flat = true
 
 [node name="TBDBtn2" type="Button" parent="TextureRect"]
@@ -181,8 +172,8 @@ margin_left = 910.0
 margin_top = 325.0
 margin_right = -18.0
 margin_bottom = -408.0
-custom_styles/hover = SubResource( 13 )
-custom_styles/focus = SubResource( 7 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
 flat = true
 
 [node name="candylandBtn" type="Button" parent="TextureRect"]
@@ -192,15 +183,9 @@ margin_left = 910.0
 margin_top = 480.0
 margin_right = -18.0
 margin_bottom = -253.0
-custom_styles/hover = SubResource( 14 )
-custom_styles/focus = SubResource( 15 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/focus = SubResource( 13 )
 flat = true
-
-[node name="TextureRect" parent="TextureRect" instance=ExtResource( 4 )]
-margin_left = -135.127
-margin_top = 751.227
-margin_right = 376.873
-margin_bottom = 1263.23
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -208,7 +193,7 @@ margin_left = 699.582
 margin_top = -22.6912
 margin_right = 1274.58
 margin_bottom = 35.3088
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 14 )
 text = "Level select"
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -217,7 +202,7 @@ margin_top = -105.949
 margin_right = 735.033
 margin_bottom = -21.9491
 rect_scale = Vector2( 1.7, 1.7 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 stretch_mode = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -226,15 +211,22 @@ layer = -1
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 1196, 636 )
 scale = Vector2( 1.25, 1.19 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 6 )
 autoplay = true
 bus = "Background music"
+
+[node name="Button" parent="." instance=ExtResource( 7 )]
+margin_left = 70.7399
+margin_top = 798.642
+margin_right = -1285.26
+margin_bottom = 386.642
+[connection signal="mouse_entered" from="TextureRect/tutorialBtn" to="." method="_on_tutorialBtn_mouse_entered"]
 [connection signal="pressed" from="TextureRect/tutorialBtn" to="." method="_on_tutorialBtn_pressed"]
 [connection signal="pressed" from="TextureRect/grassLevelBtn" to="." method="_on_grassLevelBtn_pressed"]
 [connection signal="pressed" from="TextureRect/caveLevelBtn" to="." method="_on_caveLevelBtn_pressed"]
