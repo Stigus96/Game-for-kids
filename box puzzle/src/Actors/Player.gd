@@ -11,7 +11,7 @@ onready var i = 0
 var ladder_on = false
 
 func _ready():
-	PlayerData.connect("ladder_updated", self, "update_ladder_on")
+	PlayerData.connect("ladder_update", self, "update_ladder_on")
 
 	pass
 
