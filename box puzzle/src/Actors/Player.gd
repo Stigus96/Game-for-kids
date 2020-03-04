@@ -85,20 +85,23 @@ func animate_player():
 	var is_crouching = Input.is_action_pressed("crouch")
 	var start_crouching = Input.is_action_just_pressed("crouch")
 	var direction = get_direction()
-	if (direction.x < 0 && is_crouching == false):
-		AnimatedPlayer.play("walk_left")
-	if (direction.x > 0 && is_crouching == false):
-		 AnimatedPlayer.play("walk_right")
-	if(direction.x == 0 && is_crouching == false):
-		AnimatedPlayer.play("idle")
-	if (direction.x < 0 && is_crouching == true):
-		AnimatedPlayer.play("crouch_walk_left")
-	if (direction.x > 0 && is_crouching == true):
-		 AnimatedPlayer.play("crouch_walk_right")
-	if(direction.x == 0 && start_crouching == true):
-		AnimatedPlayer.play("start_crouching")
-	if(direction.x == 0 && is_crouching == true && AnimatedPlayer.is_playing() == false):
-		AnimatedPlayer.play("is_crouching")
+	if (ladder_on == false):
+		if (direction.x < 0 && is_crouching == false):
+			AnimatedPlayer.play("walk_left")
+		if (direction.x > 0 && is_crouching == false):
+			 AnimatedPlayer.play("walk_right")
+		if(direction.x == 0 && is_crouching == false):
+			AnimatedPlayer.play("idle")
+		if (direction.x < 0 && is_crouching == true):
+			AnimatedPlayer.play("crouch_walk_left")
+		if (direction.x > 0 && is_crouching == true):
+			 AnimatedPlayer.play("crouch_walk_right")
+		if(direction.x == 0 && start_crouching == true):
+			AnimatedPlayer.play("start_crouching")
+		if(direction.x == 0 && is_crouching == true && AnimatedPlayer.is_playing() == false):
+			AnimatedPlayer.play("is_crouching")
+	if (ladder_on == true):
+		AnimatedPlayer.play("climb")
 
 func crouch():
 	var is_crouching = Input.is_action_pressed("crouch")
