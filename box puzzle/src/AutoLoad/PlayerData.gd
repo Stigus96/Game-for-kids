@@ -3,7 +3,7 @@ extends Node
 
 signal score_updated
 signal door_updated
-signal ladder_update
+signal ladder_updated
 signal energy_updated
 
 var player_speed = 1
@@ -43,7 +43,7 @@ func get_door() -> bool:
 
 func set_ladder(value: bool) -> void:
 	ladder = value
-	emit_signal("ladder_update")
+	emit_signal("ladder_updated")
 	
 func get_ladder() -> bool:
 	return ladder

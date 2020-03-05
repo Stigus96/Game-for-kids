@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Tilemaps/CaveTiles.tres" type="TileSet" id=2]
@@ -19,10 +19,9 @@
 [ext_resource path="res://src/Walls/Wall1.gd" type="Script" id=17]
 [ext_resource path="res://assets/Misc assest/shelf.png" type="Texture" id=18]
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=20]
-[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=21]
-
-
+[ext_resource path="res://src/Levels/CandyLand.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0.605103, 30.2492, 0.0603428, 20.8842, 18.1872, 15.4579, 40.5138, 11.2717, 54.1888, 14.0625, 62.5612, 30.2492 )
@@ -500,70 +499,71 @@ texture = ExtResource( 18 )
 
 [node name="Portal" parent="." instance=ExtResource( 19 )]
 position = Vector2( 545.005, 119.787 )
+next_scene = ExtResource( 20 )
 
 [node name="Coins" type="Area2D" parent="."]
 
-[node name="Coin2" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin2" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.241, 178.638 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin5" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin5" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 791.54, 858.785 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin8" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin8" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1497.74, 531.603 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin15" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin15" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 874.114, 344.787 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin16" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin16" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 963.816, 383.817 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin11" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin11" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1058.22, 426.914 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin12" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin12" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1778.59, 884.787 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin13" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin13" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1817.5, 883.709 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin14" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin14" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1855.72, 883.708 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin9" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin9" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1458.4, 532.46 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin10" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin10" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1417.52, 532.253 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin6" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin6" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 492.238, 697.018 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin7" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin7" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 492.994, 748.214 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin3" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin3" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.543, 217.684 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Coin4" parent="Coins" instance=ExtResource( 20 )]
+[node name="Coin4" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.689, 592.908 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 21 )]
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 22 )]
 visible = false
