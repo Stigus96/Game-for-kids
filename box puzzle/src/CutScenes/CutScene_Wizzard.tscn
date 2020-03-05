@@ -94,7 +94,7 @@ position = Vector2( 594.066, 20.7807 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -416.436, -14.5372 )
+position = Vector2( -510.826, -20.0818 )
 script = ExtResource( 3 )
 speed = Vector2( 300, 1000 )
 gravity = 3000.0

@@ -59,11 +59,6 @@ func CheckLadderAndTakeAction():
 		 gravity = 830
 		
 		
-		
-
-	
-	
-	
 func calculate_move_velocity(
 	linear_velocity: Vector2,
 	direction: Vector2,
