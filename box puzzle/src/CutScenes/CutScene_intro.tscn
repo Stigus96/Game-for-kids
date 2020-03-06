@@ -24,6 +24,5 @@ position = Vector2( 618, 175 )
 shape = SubResource( 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1187.37, 8.89536 )
-scale = Vector2( 1.4, 2 )
+position = Vector2( 1064.3, 41.7771 )
 next_scene = ExtResource( 4 )

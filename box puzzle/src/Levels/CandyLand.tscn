@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=2]
@@ -12,11 +12,15 @@
 [ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Candy/cake.png" type="Texture" id=11]
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/CandyLevelObstacles/HesteHinder.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=15]
-[ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=16]
-[ext_resource path="res://assets/Candy/Sprite/candycane.png" type="Texture" id=17]
+[ext_resource path="res://src/Game menu/TitleScreen.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/CandyLevelObstacles/HesteHinder.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=16]
+[ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=17]
+[ext_resource path="res://assets/Candy/Sprite/candycane.png" type="Texture" id=18]
+[ext_resource path="res://assets/Game sounds/BossTheme.ogg" type="AudioStream" id=19]
+[ext_resource path="res://src/CutScenes/CutScene_Wizzard.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.6621, 37.3757 )
@@ -27,7 +31,7 @@ font_data = ExtResource( 6 )
 
 [sub_resource type="TileSet" id=3]
 0/name = "lollipop orange.png 0"
-0/texture = ExtResource( 15 )
+0/texture = ExtResource( 16 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 160, 256 )
@@ -37,7 +41,7 @@ font_data = ExtResource( 6 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "lollipop red.png 1"
-1/texture = ExtResource( 16 )
+1/texture = ExtResource( 17 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 160, 256 )
@@ -47,7 +51,7 @@ font_data = ExtResource( 6 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "candycane.png 2"
-2/texture = ExtResource( 17 )
+2/texture = ExtResource( 18 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( -3, -7, 94, 186 )
@@ -241,31 +245,32 @@ texture = ExtResource( 11 )
 
 [node name="Portal" parent="." instance=ExtResource( 12 )]
 position = Vector2( 14135.8, 601.715 )
+next_scene = ExtResource( 13 )
 
 [node name="KillPlayer2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 19149.3, 1244.16 )
 
-[node name="HesteHinder" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder" parent="." instance=ExtResource( 14 )]
 position = Vector2( 2183.51, 543.833 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="HesteHinder2" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3088.67, 637.302 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="HesteHinder3" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder3" parent="." instance=ExtResource( 14 )]
 position = Vector2( 6285.56, 606.294 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="HesteHinder4" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder4" parent="." instance=ExtResource( 14 )]
 position = Vector2( 7765.2, 736.938 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="HesteHinder5" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder5" parent="." instance=ExtResource( 14 )]
 position = Vector2( 8368.88, 672.877 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="HesteHinder6" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder6" parent="." instance=ExtResource( 14 )]
 position = Vector2( 9015.75, 637.632 )
 scale = Vector2( 1.5, 1.5 )
 
@@ -275,7 +280,8 @@ position = Vector2( 9998.03, 406.029 )
 [node name="Cake2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 9867.92, 474.255 )
 
-[node name="Horse" parent="." instance=ExtResource( 14 )]
+[node name="Horse" parent="." instance=ExtResource( 15 )]
+visible = false
 position = Vector2( 470.642, 715.708 )
 scale = Vector2( 0.8, 0.8 )
 collision_layer = 2
@@ -292,3 +298,14 @@ format = 1
 tile_data = PoolIntArray( 1048855, 0, 0, 1311032, 1, 0, 1507449, 0, 0, 1638641, 1, 0, 1638665, 2, 0, 1966266, 0, 0, 2162755, 1, 0, 2294098, 2, 0, 2621489, 2, 0, 2621672, 2, 0, 2687084, 2, 0, 3145879, 2, 0, 3146226, 2, 0 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+autoplay = true
+bus = "Background music"
+
+[node name="CutScene_Wizzard" parent="." instance=ExtResource( 20 )]
+position = Vector2( 522.221, 755.479 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 21 )]
+visible = false

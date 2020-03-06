@@ -9,10 +9,9 @@ func _on_newGame_pressed():
 	var minimumVolume = -80
 	var currentVolume = music.get_volume_db()
 	var myVolume = 0
-	get_node("CutScene_intro/Player").CutScene_speed = 1
 	
 	while currentVolume > minimumVolume :
-		currentVolume = currentVolume - 5
+		currentVolume = currentVolume - 15
 		myVolume = music.set_volume_db(currentVolume)
 		print(currentVolume)
 		yield(get_tree().create_timer(0.1), "timeout")
