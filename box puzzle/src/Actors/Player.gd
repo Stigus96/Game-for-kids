@@ -56,8 +56,8 @@ func CheckLadderAndTakeAction():
 			_velocity.y += upSpeed
 	else:
 		 gravity = 830
-	
-	
+		
+		
 func calculate_move_velocity(
 	linear_velocity: Vector2,
 	direction: Vector2,
@@ -120,3 +120,11 @@ func crouch():
 
 func update_ladder_on() -> void:
 	ladder_on = PlayerData.get_ladder()
+	
+func update_playerAutoMov(value: bool):
+	var ev = InputEventAction.new()
+# set as move_left, pressed
+	ev.action = "move_right"
+	ev.pressed = value
+# feedback
+	Input.parse_input_event(ev)

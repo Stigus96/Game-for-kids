@@ -1,9 +1,9 @@
 extends Node
 
+
 signal score_updated
 signal door_updated
-signal ladder_update
-
+signal ladder_updated
 signal energy_updated
 
 var player_speed = 1

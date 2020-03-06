@@ -115,7 +115,6 @@ extents = Vector2( 39, 54.3112 )
 extents = Vector2( 39, 35 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 153.216, 149 )
 scale = Vector2( 0.45, 0.45 )
 script = ExtResource( 1 )
 speed = Vector2( 270, 450 )

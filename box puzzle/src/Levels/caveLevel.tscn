@@ -21,8 +21,8 @@
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/Levels/CandyLand.tscn" type="PackedScene" id=20]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=21]
-[ext_resource path="res://assets/Game sounds/CaveLevel.ogg" type="AudioStream" id=22]
 [ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=23]
+[ext_resource path="res://assets/Game sounds/CaveLevel.ogg" type="AudioStream" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0.605103, 30.2492, 0.0603428, 20.8842, 18.1872, 15.4579, 40.5138, 11.2717, 54.1888, 14.0625, 62.5612, 30.2492 )
@@ -499,14 +499,17 @@ z_index = 2
 texture = ExtResource( 18 )
 
 [node name="Portal" parent="." instance=ExtResource( 19 )]
-position = Vector2( 545.005, 121.32 )
-z_index = 2
+position = Vector2( 545.005, 119.787 )
 next_scene = ExtResource( 20 )
 
 [node name="Coins" type="Area2D" parent="."]
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.241, 178.638 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 21 )]
+position = Vector2( 791.54, 858.785 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin8" parent="Coins" instance=ExtResource( 21 )]
@@ -568,7 +571,7 @@ bus = "Background music"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 21 )]
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 22 )]
 visible = false
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]

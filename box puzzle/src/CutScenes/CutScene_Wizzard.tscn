@@ -1,0 +1,244 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://src/CutScenes/CutScene_Wizzard.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/Intro_CutScene.gd" type="Script" id=3]
+[ext_resource path="res://src/CutScenes/Wizzard_CutScene_Playerstop.gd" type="Script" id=4]
+[ext_resource path="res://assets/Wizzard/Wizzard.png" type="Texture" id=5]
+[ext_resource path="res://assets/Game menu Fonts/expressway rg.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://src/CutScenes/Cake.gd" type="Script" id=7]
+[ext_resource path="res://assets/Candy/cake.png" type="Texture" id=8]
+[ext_resource path="res://assets/Birds/Flying bird.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1203.73, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1.25247, 9.86316 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 6 )
+
+[sub_resource type="AtlasTexture" id=4]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 35.5692, 23.8406 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "Flying"
+length = 5.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -708.327, -525.606 ), Vector2( -271.328, -333.707 ), Vector2( 94.4214, -26.8573 ) ]
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("../AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "Fly_Away" ),
+"times": PoolRealArray( 2 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Fly_Away"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 426.592, -349.03 ), Vector2( 1962.91, -470.118 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[node name="CutScene_Wizzard" type="Node2D"]
+position = Vector2( 610.112, 680.603 )
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 594.066, 20.7807 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -510.826, -20.0818 )
+script = ExtResource( 3 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
+
+[node name="StopZone" type="Area2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StopZone"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="StopZone"]
+position = Vector2( 237.883, -39.8804 )
+scale = Vector2( -0.0748924, 0.0837501 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 0.46
+margin_left = 32.0
+margin_top = -238.0
+margin_right = 232.0
+margin_bottom = -121.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Well done making it though the different levels!
+You deserve this cake as a prize"
+autowrap = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Label"]
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
+show_behind_parent = true
+margin_left = -7.0
+margin_top = -7.0
+margin_right = 202.0
+margin_bottom = 116.0
+texture = SubResource( 4 )
+
+[node name="Label2" type="Label" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 0.46
+margin_left = 32.0
+margin_top = -238.0
+margin_right = 232.0
+margin_bottom = -121.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Ohh NO!!!
+The _____ stole the cake. You have to chase him and take it back!"
+autowrap = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Label2"]
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
+show_behind_parent = true
+margin_left = -7.0
+margin_top = -7.0
+margin_right = 202.0
+margin_bottom = 95.0
+texture = SubResource( 4 )
+
+[node name="Label3" type="Label" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 0.46
+margin_left = 32.0
+margin_top = -238.0
+margin_right = 232.0
+margin_bottom = -121.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Here! I will transform you into a horse, so you can catch him"
+autowrap = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Label3"]
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
+show_behind_parent = true
+margin_left = -7.0
+margin_top = -7.0
+margin_right = 202.0
+margin_bottom = 75.0
+texture = SubResource( 4 )
+
+[node name="Label4" type="Label" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 0.46
+margin_left = 32.0
+margin_top = -238.0
+margin_right = 232.0
+margin_bottom = -121.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "There you go.
+NOW RUN!!!"
+autowrap = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Label4"]
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
+show_behind_parent = true
+margin_left = -7.0
+margin_top = -7.0
+margin_right = 202.0
+margin_bottom = 54.0
+texture = SubResource( 4 )
+
+[node name="Cake" type="Area2D" parent="."]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Cake"]
+position = Vector2( 94.0011, -13.0186 )
+scale = Vector2( 0.235001, 0.235001 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cake"]
+position = Vector2( 91.8873, -16.2288 )
+shape = SubResource( 5 )
+
+[node name="Bird" type="Sprite" parent="Cake"]
+position = Vector2( -708.327, -525.606 )
+rotation = -3.14159
+scale = Vector2( 0.41667, -0.386222 )
+texture = ExtResource( 9 )
+
+[node name="BirdAnimation" type="AnimationPlayer" parent="Cake/Bird"]
+anims/Flying = SubResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cake"]
+anims/Fly_Away = SubResource( 7 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="StopZone" to="StopZone" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Cake" to="Cake" method="_on_Cake_body_entered"]
