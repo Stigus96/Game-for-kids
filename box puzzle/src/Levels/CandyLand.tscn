@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=2]
@@ -17,8 +17,6 @@
 [ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=15]
 [ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=16]
 [ext_resource path="res://assets/Candy/Sprite/candycane.png" type="Texture" id=17]
-[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=19]
-[ext_resource path="res://assets/Game sounds/BossTheme.ogg" type="AudioStream" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.6621, 37.3757 )
@@ -293,10 +291,4 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 1048855, 0, 0, 1311032, 1, 0, 1507449, 0, 0, 1638641, 1, 0, 1638665, 2, 0, 1966266, 0, 0, 2162755, 1, 0, 2294098, 2, 0, 2621489, 2, 0, 2621672, 2, 0, 2687084, 2, 0, 3145879, 2, 0, 3146226, 2, 0 )
 
-autoplay = true
-bus = "Background music"
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 19 )]
-visible = false
-
-stream = ExtResource( 18 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

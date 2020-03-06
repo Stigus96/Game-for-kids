@@ -43,7 +43,7 @@ func get_door() -> bool:
 
 func set_ladder(value: bool) -> void:
 	ladder = value
-	emit_signal("ladder_update")
+	emit_signal("ladder_updated")
 	
 func get_ladder() -> bool:
 	return ladder

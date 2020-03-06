@@ -2,20 +2,20 @@
 
 [ext_resource path="res://src/Actors/Horse.gd" type="Script" id=1]
 [ext_resource path="res://assets/characters/Horse/horse.png" type="Texture" id=2]
-[ext_resource path="res://assets/characters/Horse/jump/horse-jump-00.png" type="Texture" id=3]
-[ext_resource path="res://assets/characters/Horse/jump/horse-jump-01.png" type="Texture" id=4]
-[ext_resource path="res://assets/characters/Horse/jump/horse-jump-02.png" type="Texture" id=5]
-[ext_resource path="res://assets/characters/Horse/jump/horse-jump-03.png" type="Texture" id=6]
-[ext_resource path="res://assets/characters/Horse/jump/horse-jump-04.png" type="Texture" id=7]
-[ext_resource path="res://assets/characters/Horse/jump/horse-jump-05.png" type="Texture" id=8]
-[ext_resource path="res://assets/characters/Horse/jump/horse-jump-06.png" type="Texture" id=9]
-[ext_resource path="res://assets/characters/Horse/run/horse-run-00.png" type="Texture" id=10]
-[ext_resource path="res://assets/characters/Horse/run/horse-run-01.png" type="Texture" id=11]
-[ext_resource path="res://assets/characters/Horse/run/horse-run-02.png" type="Texture" id=12]
-[ext_resource path="res://assets/characters/Horse/run/horse-run-03.png" type="Texture" id=13]
-[ext_resource path="res://assets/characters/Horse/run/horse-run-04.png" type="Texture" id=14]
-[ext_resource path="res://assets/characters/Horse/run/horse-run-05.png" type="Texture" id=15]
-[ext_resource path="res://assets/characters/Horse/run/horse-run-06.png" type="Texture" id=16]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-00.png" type="Texture" id=3]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-01.png" type="Texture" id=4]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-02.png" type="Texture" id=5]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-03.png" type="Texture" id=6]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-04.png" type="Texture" id=7]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-05.png" type="Texture" id=8]
+[ext_resource path="res://assets/characters/Horse/run/horse-run-06.png" type="Texture" id=9]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-00.png" type="Texture" id=10]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-01.png" type="Texture" id=11]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-02.png" type="Texture" id=12]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-03.png" type="Texture" id=13]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-04.png" type="Texture" id=14]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-05.png" type="Texture" id=15]
+[ext_resource path="res://assets/characters/Horse/jump/horse-jump-06.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -24,12 +24,12 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "run",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": false,
 "name": "jump",
 "speed": 15.0
