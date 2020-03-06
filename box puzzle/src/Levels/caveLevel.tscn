@@ -19,10 +19,10 @@
 [ext_resource path="res://src/Walls/Wall1.gd" type="Script" id=17]
 [ext_resource path="res://assets/Misc assest/shelf.png" type="Texture" id=18]
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/Levels/CandyLand.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Game menu/TitleScreen.tscn" type="PackedScene" id=20]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=21]
-[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=23]
 [ext_resource path="res://assets/Game sounds/CaveLevel.ogg" type="AudioStream" id=22]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0.605103, 30.2492, 0.0603428, 20.8842, 18.1872, 15.4579, 40.5138, 11.2717, 54.1888, 14.0625, 62.5612, 30.2492 )
@@ -302,7 +302,7 @@ blend_mode = 1
 background_mode = 4
 glow_enabled = true
 glow_intensity = 6.28
-glow_strength = 1.49
+glow_strength = 1.59
 glow_blend_mode = 0
 
 [sub_resource type="TileSet" id=5]
@@ -437,14 +437,15 @@ __meta__ = {
 [node name="BlackBG" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="BlackBG"]
-modulate = Color( 0.0235294, 0.0235294, 0.0235294, 0.85098 )
+modulate = Color( 0.0235294, 0.0235294, 0.0235294, 0.909804 )
 self_modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 925.984, 605.594 )
+position = Vector2( 917.563, 546.647 )
 scale = Vector2( 1.51548, 1.34406 )
 z_index = 6
 texture = ExtResource( 13 )
 
 [node name="Jump puzzle spikes" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Spikes7" parent="Jump puzzle spikes" instance=ExtResource( 9 )]
 position = Vector2( 229.834, 521.468 )
@@ -465,6 +466,7 @@ position = Vector2( 209.365, 521.416 )
 rotation = -3.14159
 
 [node name="ladder1" parent="." instance=ExtResource( 14 )]
+editor/display_folded = true
 position = Vector2( 1640.45, 733.92 )
 scale = Vector2( 0.2, 0.16 )
 
@@ -477,6 +479,7 @@ format = 1
 tile_data = PoolIntArray( 3342604, 0, 0 )
 
 [node name="PressurePlate" parent="." instance=ExtResource( 16 )]
+editor/display_folded = true
 position = Vector2( 415.445, 1173.59 )
 scale = Vector2( 0.5, 0.5 )
 
@@ -499,10 +502,12 @@ z_index = 2
 texture = ExtResource( 18 )
 
 [node name="Portal" parent="." instance=ExtResource( 19 )]
-position = Vector2( 545.005, 119.787 )
+position = Vector2( 545.005, 121.32 )
+z_index = 2
 next_scene = ExtResource( 20 )
 
 [node name="Coins" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.241, 178.638 )
@@ -571,7 +576,7 @@ bus = "Background music"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 22 )]
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 21 )]
 visible = false
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
