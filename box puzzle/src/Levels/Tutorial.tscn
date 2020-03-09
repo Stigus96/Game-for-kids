@@ -69,10 +69,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 29.9, 30.1, 30.3, 70.2, 71.5, 73.6, 75, 135.8, 139.4, 142.6, 145.2, 189.1, 190.7, 192.8, 195.9, 197.5, 226.3, 228.4, 232.6, 250.4, 300 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 29.6, 30.1, 31.3, 32.4, 70.2, 71.5, 73.6, 75, 135.8, 139.4, 142.6, 145.2, 189.1, 190.7, 192.8, 195.9, 197.5, 226.3, 228.4, 232.6, 250.4, 300 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 415.193, 227.297 ), Vector2( 2637.53, 168.57 ), Vector2( 2631.35, -251.788 ), Vector2( -660.43, 63.4808 ), Vector2( 2637.53, -23.0635 ), Vector2( 2566.44, -251.788 ), Vector2( -719.156, -202.334 ), Vector2( -669.702, 292.205 ), Vector2( 2628.26, 286.023 ), Vector2( 2625.17, -211.607 ), Vector2( -703.702, -217.788 ), Vector2( -678.975, 276.751 ), Vector2( 2652.98, 273.66 ), Vector2( 2631.35, -257.97 ), Vector2( -620.248, -233.243 ), Vector2( -666.611, 363.295 ), Vector2( 2646.8, 282.932 ), Vector2( 2632.81, 228.273 ), Vector2( 2648.27, -253.903 ), Vector2( -745.51, -226.085 ), Vector2( -671.329, 314.817 ), Vector2( 2651.36, 256.091 ) ]
+"values": [ Vector2( 415.193, 227.297 ), Vector2( 2637.53, 168.57 ), Vector2( 2631.35, -251.788 ), Vector2( -530.001, -198.668 ), Vector2( -660.43, 63.4808 ), Vector2( 2637.53, -23.0635 ), Vector2( 2566.44, -251.788 ), Vector2( -719.156, -202.334 ), Vector2( -669.702, 292.205 ), Vector2( 2628.26, 286.023 ), Vector2( 2625.17, -211.607 ), Vector2( -703.702, -217.788 ), Vector2( -678.975, 276.751 ), Vector2( 2652.98, 273.66 ), Vector2( 2631.35, -257.97 ), Vector2( -620.248, -233.243 ), Vector2( -666.611, 363.295 ), Vector2( 2646.8, 282.932 ), Vector2( 2632.81, 228.273 ), Vector2( 2648.27, -253.903 ), Vector2( -745.51, -226.085 ), Vector2( -671.329, 314.817 ), Vector2( 2651.36, 256.091 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("bg_cloud3:position")
@@ -112,7 +112,6 @@ scale = Vector2( 0.45, 0.45 )
 [node name="PlayerData" parent="." instance=ExtResource( 2 )]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="PauseScreen" parent="CanvasLayer2" instance=ExtResource( 3 )]
 visible = false
@@ -128,7 +127,6 @@ scale = Vector2( 0.6, 0.6 )
 z_index = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 layer = -2
 
 [node name="Bakgrunn2" type="Sprite" parent="CanvasLayer"]
@@ -174,37 +172,35 @@ tile_data = PoolIntArray( 1900543, 15, 0, 1835008, 15, 0, 1835009, 15, 0, 183501
 position = Vector2( 260, 870 )
 
 [node name="Position2D3" type="Position2D" parent="."]
-editor/display_folded = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Position2D3"]
 anims/Cloud1 = SubResource( 1 )
 
 [node name="Position2D" type="Position2D" parent="."]
-editor/display_folded = true
 
 [node name="bg_cloud6" type="Sprite" parent="Position2D"]
 self_modulate = Color( 0.894118, 0.666667, 0.921569, 0.439216 )
-position = Vector2( 415.193, 227.297 )
+position = Vector2( 290.569, 38.5249 )
 scale = Vector2( 2.04679, 2.18341 )
 texture = ExtResource( 8 )
 
 [node name="bg_cloud3" type="Sprite" parent="Position2D"]
-position = Vector2( -428.072, -165.769 )
+position = Vector2( 819.115, 428.119 )
 scale = Vector2( 1.58799, 1.43633 )
 texture = ExtResource( 8 )
 
 [node name="bg_cloud2" type="Sprite" parent="Position2D"]
-position = Vector2( 479.369, 223.277 )
+position = Vector2( 2234.61, 194.176 )
 scale = Vector2( 1.58799, 1.43633 )
 texture = ExtResource( 8 )
 
 [node name="bg_cloud9" type="Sprite" parent="Position2D"]
-position = Vector2( 1326.74, 424.329 )
+position = Vector2( 943.72, 216.184 )
 scale = Vector2( 3.36842, 3.362 )
 texture = ExtResource( 9 )
 
 [node name="bg_cloud8" type="Sprite" parent="Position2D"]
-position = Vector2( -220.061, 307.08 )
+position = Vector2( -35.7238, 492.725 )
 scale = Vector2( 3.36842, 3.362 )
 texture = ExtResource( 9 )
 
@@ -218,7 +214,6 @@ anims/Cloud1 = SubResource( 2 )
 anims/Cloud1 = SubResource( 3 )
 
 [node name="Pressureplate2" parent="." instance=ExtResource( 10 )]
-editor/display_folded = true
 position = Vector2( 931.791, 937.349 )
 scale = Vector2( 0.5, 1 )
 
