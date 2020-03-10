@@ -1,6 +1,5 @@
 extends Node2D
 
-onready var parent = get_parent()
 
 onready var PlayerNode = get_node("Player")
 
@@ -12,14 +11,10 @@ onready var numberOfTimeouts = 0
 
 var horse_pos = Vector2(484.635, 715.708)
 
-onready var lable1 = get_node("Label")
-onready var lable2 = get_node("Label2")
-onready var lable3 = get_node("Label3")
-onready var lable4 = get_node("Label4")
-
-onready var movingScene = parent.get_node("KinematicBody2D")
-
-onready var horse = parent.get_node("Horse")
+onready var lable1 = get_node("Control/Label")
+onready var lable2 = get_node("Control/Label2")
+onready var lable3 = get_node("Control/Label3")
+onready var lable4 = get_node("Control/Label4")
 
 onready var bird_animation = get_node("Cake/Bird/BirdAnimation")
 
@@ -46,23 +41,16 @@ func _on_Timer_timeout():
 	#horse.get_position_in_parent()
 	#horse.set_position(PlayerData.player_pos)
 	if numberOfTimeouts == 0:
+		bird_animation.play("Flying")
+	elif numberOfTimeouts == 2:
 		lable1.hide()
 		lable2.show()
-		bird_animation.play("Flying")
-	elif numberOfTimeouts == 1:
+	elif numberOfTimeouts == 6:
 		lable2.hide()
 		lable3.show()
-	elif numberOfTimeouts == 2:
+	elif numberOfTimeouts == 10:
 		lable3.hide()
 		lable4.show()
-		horse.set_collision_mask(1)
-		horse.set_collision_layer(1)
 		PlayerNode.queue_free()
-		horse.show()
-		horse.set_position(horse_pos)
-		movingScene.hay = true
-		movingScene._physics_process(true)
-	elif numberOfTimeouts == 3:
-		lable4.hide()
 		
 	numberOfTimeouts += 1
