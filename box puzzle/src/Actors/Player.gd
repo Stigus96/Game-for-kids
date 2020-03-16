@@ -8,6 +8,7 @@ onready var right_ray = get_node("right_ray")
 onready var left_ray = get_node("left_ray")
 onready var i = 0
 
+var fricitonValue = 0.5
 var ladder_on = false
 
 func _ready():
@@ -26,6 +27,7 @@ func _physics_process(delta: float) -> void:
 	var direction = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+	
 	CheckLadderAndTakeAction()
 	
 	if left_ray.is_colliding() or right_ray.is_colliding():
@@ -45,6 +47,8 @@ func get_direction () -> Vector2:
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
 		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() else 1.0)
 		
+
+
 func CheckLadderAndTakeAction():
 	if ladder_on == true:
 		gravity = 0

@@ -29,7 +29,7 @@ tracks/0/keys = {
 [node name="movingPlatform" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 12.2328, 4.39489 )
+position = Vector2( 146.115, 3.09555 )
 rotation = -0.0147668
 motion/sync_to_physics = true
 
@@ -50,9 +50,9 @@ tile_data = PoolIntArray( -2, 3, 0, -1, 4, 0, -65536, 4, 0, -65535, 5, 0, 131070
 curve = SubResource( 2 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 12.2328, 4.39489 )
+position = Vector2( 146.115, 3.09555 )
 rotation = -0.0147668
-offset = 12.5794
+offset = 146.455
 rotate = false
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D"]
