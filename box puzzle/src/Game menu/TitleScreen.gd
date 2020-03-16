@@ -1,9 +1,13 @@
 #Startmenu.gd
 extends Control
 
-
 onready var music = get_node("IntroMusic")
 onready var musicVolume = music.volume_db
+onready var levelSelect = get_node("LevelSelect")
+onready var mainMenuButtons = get_node("Menu")
+
+func _ready():
+	PlayerData.connect("menu_updated", self, "updateMenu")
 
 func _on_newGame_pressed():
 	var minimumVolume = -80
@@ -21,11 +25,16 @@ func _on_newGame_pressed():
 
 
 func _on_LevelSelect_pressed():
-	get_tree().change_scene("res://src/Game menu/LevelSelect.tscn")
+	levelSelect.show()
+	mainMenuButtons.hide()
 	
 func _on_Options_pressed():
-	get_tree().change_scene("res://.tscn")
 	
+	pass
 func _on_Quit_pressed():
 	get_tree().quit()
+	
+func updateMenu():
+	levelSelect.hide()
+	mainMenuButtons.show()
 
