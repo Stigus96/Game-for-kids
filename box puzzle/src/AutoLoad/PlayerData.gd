@@ -70,4 +70,4 @@ func reset_player_speed() -> void:
 	
 func main_menu_update(value: String) -> void:
 	emit_signal("menu_updated")
-		
+

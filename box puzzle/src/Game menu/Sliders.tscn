@@ -1,10 +1,9 @@
 [gd_scene format=2]
 
-[node name="Sliders" type="Node2D"]
-
-[node name="HSlider" type="HSlider" parent="."]
+[node name="HSlider" type="HSlider"]
 margin_right = 271.0
 margin_bottom = 16.0
 rect_scale = Vector2( 3, 3 )
+min_value = -50.0
+max_value = 0.0
 rounded = true
-ticks_on_borders = false
