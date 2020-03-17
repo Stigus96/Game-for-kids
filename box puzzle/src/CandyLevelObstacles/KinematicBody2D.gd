@@ -16,10 +16,8 @@ func _physics_process(delta):
 	elif hay == true:
 		motion.x = 250
 		move_and_slide(motion, Vector2(0,-1))
-		print("gayyy")
-	
+
 func moveScene() -> void:
-	print("fuckface")
 	motion.x = 250
 	move_and_slide(motion, Vector2(0,-1))
 	print(motion)
