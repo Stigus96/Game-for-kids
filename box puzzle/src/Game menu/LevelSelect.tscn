@@ -204,11 +204,11 @@ margin_bottom = 35.3088
 custom_fonts/font = SubResource( 14 )
 text = "Level select"
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-margin_left = 234.033
-margin_top = -105.949
-margin_right = 735.033
-margin_bottom = -21.9491
+[node name="Heading" type="TextureRect" parent="."]
+margin_left = 235.0
+margin_top = -105.0
+margin_right = 736.0
+margin_bottom = -21.0
 rect_scale = Vector2( 1.7, 1.7 )
 texture = ExtResource( 4 )
 stretch_mode = 4
@@ -225,10 +225,10 @@ __meta__ = {
 }
 
 [node name="Button" parent="." instance=ExtResource( 6 )]
-margin_left = 70.7399
-margin_top = 798.642
-margin_right = -1285.26
-margin_bottom = 386.642
+margin_left = 72.0
+margin_top = 800.0
+margin_right = -1284.0
+margin_bottom = 388.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1216.88, 605.941 )

@@ -8,6 +8,7 @@ func _ready():
 	yellowBtn.hide()
 	
 func _on_Button_pressed():
+	yellowBtn.show()
 	returnToMenu.hide()
 	PlayerData.main_menu_update("menu")
 	pass # Replace with function body.

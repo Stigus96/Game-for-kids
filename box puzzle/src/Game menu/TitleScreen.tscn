@@ -1,27 +1,28 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Game menu/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/Game sounds/IntroTheme.ogg" type="AudioStream" id=2]
-[ext_resource path="res://src/Game menu/LevelSelect.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/Game menu assets/PUZZLE BOX LOGO.png" type="Texture" id=4]
-[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=6]
+[ext_resource path="res://src/Game menu/Options.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Game menu/LevelSelect.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Game menu assets/PUZZLE BOX LOGO.png" type="Texture" id=5]
+[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
-font_data = ExtResource( 5 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 35
-font_data = ExtResource( 5 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 35
-font_data = ExtResource( 5 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 35
-font_data = ExtResource( 5 )
+font_data = ExtResource( 6 )
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -36,7 +37,10 @@ stream = ExtResource( 2 )
 autoplay = true
 bus = "Background music"
 
-[node name="LevelSelect" parent="." instance=ExtResource( 3 )]
+[node name="Options" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="LevelSelect" parent="." instance=ExtResource( 4 )]
 visible = false
 
 [node name="Menu" type="VBoxContainer" parent="."]
@@ -52,7 +56,7 @@ margin_bottom = -0.200012
 [node name="TextureRect" type="TextureRect" parent="Menu"]
 margin_right = 1800.0
 margin_bottom = 154.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 4
 
 [node name="CenterRow" type="HBoxContainer" parent="Menu"]
@@ -102,12 +106,13 @@ custom_fonts/font = SubResource( 4 )
 text = "Quit"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 layer = -1
 
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 1196, 636 )
 scale = Vector2( 1.25, 1.19 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/newGame" to="." method="_on_newGame_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/Options" to="." method="_on_Options_pressed"]

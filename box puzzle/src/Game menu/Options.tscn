@@ -1,5 +1,144 @@
-[gd_scene format=2]
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/Game menu assets/Options.png" type="Texture" id=1]
+[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=2]
+[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://src/Game menu/Sliders.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Game menu/OptionsText.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Game menu/ReturnButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Game menu assets/Spacebar jump.png" type="Texture" id=7]
+[ext_resource path="res://assets/Game menu assets/movement transparent.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 56
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+font_data = ExtResource( 3 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 32.1093
+margin_top = 8.62939
+margin_right = 32.1093
+margin_bottom = 8.62939
+
+[node name="Heading" type="TextureRect" parent="."]
+margin_left = 45.0
+margin_top = 90.0
+margin_right = 546.0
+margin_bottom = 175.0
+rect_scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+layer = -1
+
+[node name="Bakgrunn" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 1196, 636 )
+scale = Vector2( 1.25, 1.19 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SLiders" type="Node2D" parent="."]
+position = Vector2( 639.483, 410.937 )
+
+[node name="Label" type="Label" parent="SLiders"]
+margin_left = -440.0
+margin_top = 150.127
+margin_right = 269.0
+margin_bottom = 209.127
+custom_fonts/font = SubResource( 1 )
+text = "VOLUME SETTINGS"
+
+[node name="Music" parent="SLiders" instance=ExtResource( 4 )]
+position = Vector2( 40, 300 )
+
+[node name="ObjectSound" parent="SLiders" instance=ExtResource( 4 )]
+position = Vector2( 40, 400 )
+
+[node name="MasterSound" parent="SLiders" instance=ExtResource( 4 )]
+position = Vector2( 40, 500 )
+
+[node name="ObjectVolume" parent="SLiders" instance=ExtResource( 5 )]
+margin_left = -430.793
+margin_top = 508.432
+margin_right = -51.7932
+margin_bottom = 548.432
+text = "Player Volume:"
+
+[node name="MusicVolume" parent="SLiders" instance=ExtResource( 5 )]
+margin_left = -381.595
+margin_top = 408.077
+margin_right = -62.5947
+margin_bottom = 448.077
+text = "Music Volume:"
+
+[node name="MasterVolume" parent="SLiders" instance=ExtResource( 5 )]
+margin_left = -429.429
+margin_top = 309.194
+margin_right = -61.4294
+margin_bottom = 349.194
+text = "Master Volume:"
+
+[node name="Button" parent="." instance=ExtResource( 6 )]
+margin_left = 72.0
+margin_top = 1050.0
+margin_right = -1302.0
+margin_bottom = 368.0
+
+[node name="Node" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="CheckButton" type="CheckButton" parent="Node"]
+margin_left = 591.173
+margin_top = 427.247
+margin_right = 667.173
+margin_bottom = 469.247
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/focus = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
+flat = true
+
+[node name="Label" parent="Node" instance=ExtResource( 5 )]
+margin_left = 195.0
+margin_top = 446.69
+margin_right = 495.0
+margin_bottom = 480.69
+text = "Fullscreen"
+
+[node name="Movement" type="Control" parent="."]
+margin_left = 1067.11
+margin_top = 312.818
+margin_right = 1506.11
+margin_bottom = 488.818
+
+[node name="Spacebar jump" type="Sprite" parent="Movement"]
+position = Vector2( 221.34, 37.8652 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 7 )
+
+[node name="movement transparent" type="Sprite" parent="Movement"]
+position = Vector2( 221.34, 95.4263 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Movement"]
+margin_left = 14.7981
+margin_top = -60.4111
+margin_right = 374.798
+margin_bottom = -10.4111
+custom_fonts/font = SubResource( 4 )
+text = "Movement"
