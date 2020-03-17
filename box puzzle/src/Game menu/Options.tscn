@@ -13,9 +13,9 @@
 size = 56
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=2]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 12
 font_data = ExtResource( 3 )
 
@@ -32,10 +32,10 @@ margin_right = 32.1093
 margin_bottom = 8.62939
 
 [node name="Heading" type="TextureRect" parent="."]
-margin_left = 45.0
-margin_top = 90.0
-margin_right = 546.0
-margin_bottom = 175.0
+margin_left = 46.1057
+margin_top = 190.613
+margin_right = 547.106
+margin_bottom = 275.613
 rect_scale = Vector2( 1.7, 1.7 )
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -99,31 +99,28 @@ margin_top = 1050.0
 margin_right = -1302.0
 margin_bottom = 368.0
 
-[node name="Node" type="Node" parent="."]
-editor/display_folded = true
-
-[node name="CheckButton" type="CheckButton" parent="Node"]
-margin_left = 591.173
-margin_top = 427.247
-margin_right = 667.173
-margin_bottom = 469.247
+[node name="CheckButton" type="CheckButton" parent="."]
+margin_left = 558.569
+margin_top = 420.597
+margin_right = 634.569
+margin_bottom = 462.597
 rect_scale = Vector2( 1.5, 1.5 )
-custom_styles/focus = SubResource( 3 )
-custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 flat = true
 
-[node name="Label" parent="Node" instance=ExtResource( 5 )]
-margin_left = 195.0
-margin_top = 446.69
-margin_right = 495.0
-margin_bottom = 480.69
+[node name="Label" parent="." instance=ExtResource( 5 )]
+margin_left = 193.855
+margin_top = 439.545
+margin_right = 493.855
+margin_bottom = 473.545
 text = "Fullscreen"
 
 [node name="Movement" type="Control" parent="."]
-margin_left = 1067.11
-margin_top = 312.818
-margin_right = 1506.11
-margin_bottom = 488.818
+margin_left = 1063.79
+margin_top = 420.065
+margin_right = 1502.79
+margin_bottom = 596.065
 
 [node name="Spacebar jump" type="Sprite" parent="Movement"]
 position = Vector2( 221.34, 37.8652 )
