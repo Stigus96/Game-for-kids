@@ -10,7 +10,7 @@ func _ready():
 
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta):
-		motion.x = 250
+		motion.x = 350
 		move_and_slide(motion, Vector2(0,-1))
 	
 

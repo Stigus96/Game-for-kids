@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=2]
@@ -15,9 +15,8 @@
 [ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/DialogBox/DialogBox.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/Levels/GrassLevel/GrassLevel.tscn" type="PackedScene" id=16]
-[ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=17]
-[ext_resource path="res://assets/Game sounds/Tutorial.ogg" type="AudioStream" id=18]
+[ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/Game sounds/Tutorial.ogg" type="AudioStream" id=17]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Cloud1"
@@ -235,19 +234,18 @@ position = Vector2( -230.058, -40.64 )
 
 [node name="Portal" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1800.57, 857.646 )
-next_scene = ExtResource( 16 )
 
-[node name="Spike" parent="." instance=ExtResource( 17 )]
+[node name="Spike" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1354.31, 917.373 )
 
-[node name="Spike2" parent="." instance=ExtResource( 17 )]
+[node name="Spike2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1374.14, 917.373 )
 
-[node name="Spike3" parent="." instance=ExtResource( 17 )]
+[node name="Spike3" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1396.62, 918.064 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 18 )
+stream = ExtResource( 17 )
 volume_db = -3.0
 autoplay = true
 bus = "Background music"

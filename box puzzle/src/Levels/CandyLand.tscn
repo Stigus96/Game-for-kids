@@ -192,9 +192,6 @@ position = Vector2( 6527.32, 474.302 )
 [node name="Cake15" parent="Candy" instance=ExtResource( 9 )]
 position = Vector2( 4851, 371.515 )
 
-[node name="Cake" parent="Candy/Cake15" instance=ExtResource( 9 )]
-position = Vector2( 2341.36, 3.69397 )
-
 [node name="Cake2" parent="Candy" instance=ExtResource( 9 )]
 position = Vector2( 2410.2, 454.366 )
 
@@ -212,6 +209,9 @@ position = Vector2( 12602.7, 467.046 )
 
 [node name="Cake16" parent="Candy" instance=ExtResource( 9 )]
 position = Vector2( 13663.1, 438.237 )
+
+[node name="Cake13" parent="Candy" instance=ExtResource( 9 )]
+position = Vector2( 7192.36, 375.209 )
 
 [node name="Spikes" type="Area2D" parent="."]
 

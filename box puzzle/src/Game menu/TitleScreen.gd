@@ -1,15 +1,15 @@
-#Startmenu.gd
 extends Control
 
-
+onready var playerNode = get_node("CutScene_intro/Player")
 onready var music = get_node("IntroMusic")
 onready var musicVolume = music.volume_db
 
 func _on_newGame_pressed():
+	
 	var minimumVolume = -80
 	var currentVolume = music.get_volume_db()
 	var myVolume = 0
-	
+
 	while currentVolume > minimumVolume :
 		currentVolume = currentVolume - 15
 		myVolume = music.set_volume_db(currentVolume)
