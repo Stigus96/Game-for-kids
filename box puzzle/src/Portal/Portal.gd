@@ -22,7 +22,7 @@ func fade_out_music() -> void:
 		currentVolume = currentVolume - 12
 		myVolume = musicFade.set_volume_db(currentVolume)
 		print(currentVolume)
-		yield(get_tree().create_timer(0.2), "timeout")
+		yield(get_tree().create_timer(0.22), "timeout")
 		if currentVolume <= -48:
 			print(currentVolume)
 			musicFade.stop()

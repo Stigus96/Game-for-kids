@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://src/CutScenes/CutScene_Wizzard.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -20,7 +20,6 @@
 [ext_resource path="res://src/CutScenes/CutScene_nextScene.gd" type="Script" id=18]
 [ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=20]
-[ext_resource path="res://assets/start-assets/tileset.tres" type="TileSet" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1203.73, 10 )
@@ -165,28 +164,34 @@ anims/Flying = SubResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Cake/Bird"]
 frames = SubResource( 6 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cake"]
 anims/Fly_Away = SubResource( 7 )
 
 [node name="CandyLandBG3" type="Sprite" parent="."]
-position = Vector2( -112.217, -181.004 )
+visible = false
+position = Vector2( -126.282, -181.004 )
+scale = Vector2( 1.02813, 1 )
 z_index = -1
 texture = ExtResource( 16 )
 
 [node name="CandyLandBG5" type="Sprite" parent="."]
+visible = false
 position = Vector2( 887.795, 819.096 )
 z_index = -1
 texture = ExtResource( 16 )
 
 [node name="CandyLandBG6" type="Sprite" parent="."]
-position = Vector2( -112.021, 819.026 )
+visible = false
+position = Vector2( -126.341, 819.026 )
+scale = Vector2( 1.02864, 1 )
 z_index = -1
 texture = ExtResource( 16 )
 
 [node name="CandyLandBG4" type="Sprite" parent="."]
+visible = false
 position = Vector2( 887.748, -180.925 )
 z_index = -1
 texture = ExtResource( 16 )
@@ -273,6 +278,7 @@ margin_bottom = 75.0
 texture = SubResource( 9 )
 
 [node name="Label4" type="Label" parent="Control"]
+visible = false
 anchor_right = 0.46
 margin_left = 642.112
 margin_top = 442.603
@@ -298,7 +304,7 @@ texture = SubResource( 9 )
 region_rect = Rect2( 905, 57, 18, 29 )
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 1412.65, -136.8 )
+position = Vector2( 1433.75, -136.8 )
 script = ExtResource( 18 )
 __meta__ = {
 "_edit_group_": true
@@ -319,7 +325,6 @@ wait_time = 5.0
 [node name="PlayerData" parent="." instance=ExtResource( 20 )]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 21 )
 format = 1
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="StopZone" to="StopZone" method="_on_Area2D_body_entered"]
