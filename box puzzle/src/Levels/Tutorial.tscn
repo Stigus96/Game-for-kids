@@ -17,7 +17,7 @@
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/Game sounds/Tutorial.ogg" type="AudioStream" id=17]
-[ext_resource path="res://src/Levels/caveLevel.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/Levels/GrassLevel/GrassLevel.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Cloud1"
