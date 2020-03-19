@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://src/CutScenes/CutScene_Wizzard.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -20,6 +20,9 @@
 [ext_resource path="res://src/CutScenes/CutScene_nextScene.gd" type="Script" id=18]
 [ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=21]
+[ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=22]
+[ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=23]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1203.73, 10 )
@@ -106,7 +109,7 @@ font_data = ExtResource( 17 )
 extents = Vector2( 10, 145.403 )
 
 [node name="CutScene_Wizzard" type="Node2D"]
-position = Vector2( 610.112, 680.603 )
+position = Vector2( 620.927, 835.62 )
 script = ExtResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -114,7 +117,7 @@ script = ExtResource( 1 )
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 387.971, 20.7807 )
+position = Vector2( 387.971, 7.95087 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
@@ -124,7 +127,7 @@ speed = Vector2( 300, 1000 )
 gravity = 3000.0
 
 [node name="StopZone" type="Area2D" parent="."]
-position = Vector2( -18.0499, -0.949951 )
+position = Vector2( -12.2181, -12.6135 )
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StopZone"]
@@ -137,7 +140,7 @@ scale = Vector2( -0.075, 0.084 )
 texture = ExtResource( 5 )
 
 [node name="Cake" type="Area2D" parent="."]
-position = Vector2( 301.538, -0.630249 )
+position = Vector2( 304.755, -12.5759 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
@@ -164,35 +167,21 @@ anims/Flying = SubResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Cake/Bird"]
 frames = SubResource( 6 )
-frame = 2
+frame = 7
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cake"]
 anims/Fly_Away = SubResource( 7 )
 
 [node name="CandyLandBG3" type="Sprite" parent="."]
-visible = false
-position = Vector2( -126.282, -181.004 )
-scale = Vector2( 1.02813, 1 )
-z_index = -1
-texture = ExtResource( 16 )
-
-[node name="CandyLandBG5" type="Sprite" parent="."]
-visible = false
-position = Vector2( 887.795, 819.096 )
-z_index = -1
-texture = ExtResource( 16 )
-
-[node name="CandyLandBG6" type="Sprite" parent="."]
-visible = false
-position = Vector2( -126.341, 819.026 )
-scale = Vector2( 1.02864, 1 )
+position = Vector2( 345.483, -164.736 )
+scale = Vector2( 2, 2 )
 z_index = -1
 texture = ExtResource( 16 )
 
 [node name="CandyLandBG4" type="Sprite" parent="."]
-visible = false
-position = Vector2( 887.748, -180.925 )
+position = Vector2( 2345.62, -164.629 )
+scale = Vector2( 2, 2 )
 z_index = -1
 texture = ExtResource( 16 )
 
@@ -325,7 +314,40 @@ wait_time = 5.0
 [node name="PlayerData" parent="." instance=ExtResource( 20 )]
 
 [node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 21 )
+cell_size = Vector2( 32, 32 )
 format = 1
+tile_data = PoolIntArray( -20, 15, 0, -19, 15, 0, -18, 15, 0, -17, 15, 0, -16, 15, 0, -15, 15, 0, -14, 15, 0, -13, 15, 0, -12, 15, 0, -11, 15, 0, -10, 15, 0, -9, 15, 0, -8, 15, 0, -7, 15, 0, -6, 15, 0, -5, 15, 0, -4, 15, 0, -3, 15, 0, -2, 15, 0, -1, 15, 0, -65536, 15, 0, -65535, 15, 0, -65534, 15, 0, -65533, 15, 0, -65532, 15, 0, -65531, 15, 0, -65530, 15, 0, -65529, 15, 0, -65528, 15, 0, -65527, 15, 0, -65526, 15, 0, -65525, 15, 0, -65524, 15, 0, -65523, 15, 0, -65522, 15, 0, -65521, 15, 0, -65520, 15, 0, -65519, 15, 0, -65518, 15, 0, -65517, 15, 0, -65516, 15, 0, -65515, 15, 0, -65514, 15, 0, -65513, 15, 0, -65512, 15, 0, -65511, 15, 0, -65510, 15, 0, -65509, 15, 0, -65508, 15, 0, -65507, 15, 0, -65506, 15, 0, -65505, 15, 0, -65504, 15, 0, -65503, 15, 0, -65502, 15, 0, -65501, 15, 0, -65500, 15, 0, -65499, 15, 0, -65498, 15, 0, -65497, 15, 0, -65496, 15, 0, -65495, 15, 0, -65494, 15, 0, -65493, 15, 0, -65492, 15, 0, -65491, 15, 0, -65490, 15, 0, -65489, 15, 0, -65488, 15, 0, -65487, 15, 0 )
+
+[node name="lollipop red" type="Sprite" parent="."]
+position = Vector2( -289.987, -49.5571 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -1
+texture = ExtResource( 22 )
+
+[node name="lollipop red2" type="Sprite" parent="."]
+position = Vector2( 874.132, -56.2379 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -1
+texture = ExtResource( 22 )
+
+[node name="lollipop orange" type="Sprite" parent="."]
+position = Vector2( 658.724, -59.5811 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -1
+texture = ExtResource( 23 )
+
+[node name="lollipop orange2" type="Sprite" parent="."]
+position = Vector2( -203.091, -52.9005 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -1
+texture = ExtResource( 23 )
+
+[node name="lollipop orange3" type="Sprite" parent="."]
+position = Vector2( 959.358, -57.9109 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -1
+texture = ExtResource( 23 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="StopZone" to="StopZone" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Cake" to="Cake" method="_on_Cake_body_entered"]
