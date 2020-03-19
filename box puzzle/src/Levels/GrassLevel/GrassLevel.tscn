@@ -591,7 +591,6 @@ format = 1
 tile_data = PoolIntArray( 5963968, 0, 0, 7209152, 0, 0, 8454336, 0, 0, 9699520, 0, 0 )
 
 [node name="Coins" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="Coin" parent="Coins" instance=ExtResource( 19 )]
 position = Vector2( -350.792, 813.147 )
@@ -915,7 +914,6 @@ format = 1
 tile_data = PoolIntArray( 5963968, 0, 0, 7209152, 0, 0, 8454336, 0, 0, 9699520, 0, 0 )
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
-editor/display_folded = true
 layer = -4
 
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer2"]

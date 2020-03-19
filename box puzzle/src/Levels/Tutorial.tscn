@@ -15,9 +15,9 @@
 [ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/DialogBox/DialogBox.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/Levels/GrassLevel/GrassLevel.tscn" type="PackedScene" id=16]
-[ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=17]
-[ext_resource path="res://assets/Game sounds/Tutorial.ogg" type="AudioStream" id=18]
+[ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/Game sounds/Tutorial.ogg" type="AudioStream" id=17]
+[ext_resource path="res://src/Levels/GrassLevel/GrassLevel.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Cloud1"
@@ -73,30 +73,6 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 415.193, 227.297 ), Vector2( 2637.53, 168.57 ), Vector2( 2631.35, -251.788 ), Vector2( -530.001, -198.668 ), Vector2( -660.43, 63.4808 ), Vector2( 2637.53, -23.0635 ), Vector2( 2566.44, -251.788 ), Vector2( -719.156, -202.334 ), Vector2( -669.702, 292.205 ), Vector2( 2628.26, 286.023 ), Vector2( 2625.17, -211.607 ), Vector2( -703.702, -217.788 ), Vector2( -678.975, 276.751 ), Vector2( 2652.98, 273.66 ), Vector2( 2631.35, -257.97 ), Vector2( -620.248, -233.243 ), Vector2( -666.611, 363.295 ), Vector2( 2646.8, 282.932 ), Vector2( 2632.81, 228.273 ), Vector2( 2648.27, -253.903 ), Vector2( -745.51, -226.085 ), Vector2( -671.329, 314.817 ), Vector2( 2651.36, 256.091 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("bg_cloud3:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 2.2, 7.3, 27.8, 29.1, 30.5, 31.2, 58.4, 59.7, 61.1, 61.8, 99.3, 100.6, 102, 102.7, 130, 131.3, 132.7, 133.4, 157.1, 158.4, 159.8, 160.5, 200.4, 201.7, 203.1, 203.8, 234.2, 235.5, 236.9, 237.6, 257, 258.3, 259.7, 260.4, 296.9, 298.2, 299.6, 300.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -406.547, 369.962 ), Vector2( -406.547, 369.962 ), Vector2( 2360.6, 372.354 ), Vector2( 2365.38, -199.252 ), Vector2( -428.072, -165.769 ), Vector2( -416.114, 472.804 ), Vector2( 2360.6, 372.354 ), Vector2( 2365.38, -199.252 ), Vector2( -428.072, -165.769 ), Vector2( -416.114, 472.804 ), Vector2( 2360.6, 372.354 ), Vector2( 2365.38, -199.252 ), Vector2( -428.072, -165.769 ), Vector2( -416.114, 472.804 ), Vector2( 2360.6, 372.354 ), Vector2( 2365.38, -199.252 ), Vector2( -428.072, -165.769 ), Vector2( -416.114, 472.804 ), Vector2( 2360.6, 372.354 ), Vector2( 2365.38, -199.252 ), Vector2( -428.072, -165.769 ), Vector2( -416.114, 472.804 ), Vector2( 2360.6, 372.354 ), Vector2( 2365.38, -199.252 ), Vector2( -428.072, -165.769 ), Vector2( -416.114, 472.804 ), Vector2( 2360.6, 372.354 ), Vector2( 2365.38, -199.252 ), Vector2( -428.072, -165.769 ), Vector2( -416.114, 472.804 ), Vector2( 2360.6, 372.354 ), Vector2( 2365.38, -199.252 ), Vector2( -428.072, -165.769 ), Vector2( -416.114, 472.804 ), Vector2( 2360.6, 372.354 ), Vector2( 2365.38, -199.252 ), Vector2( -428.072, -165.769 ), Vector2( -416.114, 472.804 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("bg_cloud3:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 2.2, 7.3, 27.8, 29.1, 30.5, 31.2, 58.4, 59.7, 61.1, 61.8, 99.3, 100.6, 102, 102.7, 130, 131.3, 132.7, 133.4, 157.1, 158.4, 159.8, 160.5, 200.4, 201.7, 203.1, 203.8, 234.2, 235.5, 236.9, 237.6, 257, 258.3, 259.7, 260.4, 296.9, 298.2, 299.6, 300.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -184,11 +160,6 @@ position = Vector2( 290.569, 38.5249 )
 scale = Vector2( 2.04679, 2.18341 )
 texture = ExtResource( 8 )
 
-[node name="bg_cloud3" type="Sprite" parent="Position2D"]
-position = Vector2( 819.115, 428.119 )
-scale = Vector2( 1.58799, 1.43633 )
-texture = ExtResource( 8 )
-
 [node name="bg_cloud2" type="Sprite" parent="Position2D"]
 position = Vector2( 2234.61, 194.176 )
 scale = Vector2( 1.58799, 1.43633 )
@@ -235,19 +206,19 @@ position = Vector2( -230.058, -40.64 )
 
 [node name="Portal" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1800.57, 857.646 )
-next_scene = ExtResource( 16 )
+next_scene = ExtResource( 18 )
 
-[node name="Spike" parent="." instance=ExtResource( 17 )]
+[node name="Spike" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1354.31, 917.373 )
 
-[node name="Spike2" parent="." instance=ExtResource( 17 )]
+[node name="Spike2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1374.14, 917.373 )
 
-[node name="Spike3" parent="." instance=ExtResource( 17 )]
+[node name="Spike3" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1396.62, 918.064 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 18 )
+stream = ExtResource( 17 )
 volume_db = -3.0
 autoplay = true
 bus = "Background music"
