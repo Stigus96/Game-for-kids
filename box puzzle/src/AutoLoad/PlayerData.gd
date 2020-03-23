@@ -5,6 +5,7 @@ signal score_updated
 signal door_updated
 signal ladder_updated
 signal energy_updated
+signal menu_updated
 
 var player_speed = 1
 
@@ -66,3 +67,7 @@ func reset_player_speed() -> void:
 	print("UU")
 	player_speed = 1
 	emit_signal("energy_updated")
+	
+func main_menu_update(value: String) -> void:
+	emit_signal("menu_updated")
+
