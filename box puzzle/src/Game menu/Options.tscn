@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Game menu/Options.gd" type="Script" id=1]
 [ext_resource path="res://assets/Game menu assets/Options.png" type="Texture" id=2]
@@ -14,13 +14,7 @@
 size = 56
 font_data = ExtResource( 4 )
 
-[sub_resource type="StyleBoxEmpty" id=2]
-
-[sub_resource type="DynamicFont" id=3]
-size = 12
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=2]
 size = 48
 font_data = ExtResource( 4 )
 
@@ -110,16 +104,6 @@ margin_top = 1050.0
 margin_right = -1302.0
 margin_bottom = 368.0
 
-[node name="CheckButton" type="CheckButton" parent="."]
-margin_left = 558.569
-margin_top = 420.597
-margin_right = 634.569
-margin_bottom = 462.597
-rect_scale = Vector2( 1.5, 1.5 )
-custom_styles/focus = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
-flat = true
-
 [node name="Label" parent="." instance=ExtResource( 6 )]
 margin_left = 193.855
 margin_top = 439.545
@@ -148,8 +132,16 @@ margin_left = 14.7981
 margin_top = -60.4111
 margin_right = 374.798
 margin_bottom = -10.4111
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 text = "Movement"
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 591.206
+margin_top = 424.831
+margin_right = 615.206
+margin_bottom = 448.831
+rect_scale = Vector2( 2.5, 2.5 )
 [connection signal="value_changed" from="Sliders/MasterSound" to="." method="_on_MasterSound_value_changed"]
 [connection signal="value_changed" from="Sliders/Music" to="." method="_on_Music_value_changed"]
 [connection signal="value_changed" from="Sliders/ObjectSound" to="." method="_on_ObjectSound_value_changed"]
+[connection signal="pressed" from="CheckBox" to="." method="_on_CheckBox_pressed"]
