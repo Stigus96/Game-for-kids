@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Game menu/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/Game sounds/IntroTheme.ogg" type="AudioStream" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/Game menu assets/PUZZLE BOX LOGO.png" type="Texture" id=5]
 [ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=7]
-[ext_resource path="res://src/CutScenes/CutScene_intro.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/CutScenes/CutScene_intro.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -43,7 +43,6 @@ visible = false
 
 [node name="Options" parent="." instance=ExtResource( 4 )]
 visible = false
-margin_right = 32.1093
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_left = 0.031
@@ -112,11 +111,13 @@ editor/display_folded = true
 layer = -1
 
 [node name="Bakgrunn" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 1196, 636 )
+visible = false
+position = Vector2( 1613.58, 764.697 )
 scale = Vector2( 1.25, 1.19 )
 texture = ExtResource( 7 )
-[node name="CutScene_intro" parent="." instance=ExtResource( 6 )]
-position = Vector2( 493.069, 856.532 )
+
+[node name="CutScene_intro" parent="." instance=ExtResource( 8 )]
+position = Vector2( 295.916, 859.27 )
 scale = Vector2( 1.1, 1.1 )
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/newGame" to="." method="_on_newGame_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]

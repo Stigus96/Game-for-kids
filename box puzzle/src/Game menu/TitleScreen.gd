@@ -6,6 +6,7 @@ onready var musicVolume = music.volume_db
 onready var levelSelect = get_node("LevelSelect")
 onready var optionsMenu = get_node("Options")
 onready var mainMenuButtons = get_node("Menu")
+onready var cutScene = get_node("CutScene_intro")
 
 func _ready():
 	PlayerData.connect("menu_updated", self, "updateMenu")
@@ -31,10 +32,12 @@ func _on_newGame_pressed():
 func _on_LevelSelect_pressed():
 	levelSelect.show()
 	mainMenuButtons.hide()
+	cutScene.hide()
 	
 func _on_Options_pressed():
 	optionsMenu.show()
 	mainMenuButtons.hide()
+	cutScene.hide()
 	pass
 func _on_Quit_pressed():
 	get_tree().quit()
@@ -43,4 +46,5 @@ func updateMenu():
 	levelSelect.hide()
 	optionsMenu.hide()
 	mainMenuButtons.show()
+	cutScene.show()
 
