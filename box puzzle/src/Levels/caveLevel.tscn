@@ -301,7 +301,7 @@ blend_mode = 1
 [sub_resource type="Environment" id=4]
 background_mode = 4
 glow_enabled = true
-glow_intensity = 6.28
+glow_intensity = 0.3
 glow_strength = 1.59
 glow_blend_mode = 0
 
@@ -404,8 +404,15 @@ z_index = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 3 )
-position = Vector2( 658.765, 393.459 )
+position = Vector2( 515.274, 905.884 )
 texture = ExtResource( 11 )
+offset = Vector2( 154.493, -494.192 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+material = SubResource( 3 )
+position = Vector2( 398.64, 1647.14 )
+texture = ExtResource( 11 )
+offset = Vector2( 154.493, -494.192 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
@@ -437,7 +444,7 @@ __meta__ = {
 [node name="BlackBG" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="BlackBG"]
-modulate = Color( 0.0235294, 0.0235294, 0.0235294, 0.909804 )
+modulate = Color( 0.0235294, 0.0235294, 0.0235294, 0.764706 )
 self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 917.563, 546.647 )
 scale = Vector2( 1.51548, 1.34406 )
@@ -504,6 +511,7 @@ z_index = 2
 next_scene = ExtResource( 20 )
 
 [node name="Coins" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.241, 178.638 )
