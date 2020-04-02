@@ -27,11 +27,11 @@ func _physics_process(delta: float) -> void:
 	
 	motion.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	
-	var snap = Vector2.DOWN * 32 if !is_jumping else Vector2.ZERO
+	var snap = Vector2.DOWN * 32 if !is_jumping else _velocity
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
-	_velocity = move_and_slide_with_snap(_velocity, snap, FLOOR_NORMAL)
+	_velocity = move_and_slide_with_snap(_velocity, snap, FLOOR_NORMAL, true)
 	
 	CheckLadderAndTakeAction()
 	
