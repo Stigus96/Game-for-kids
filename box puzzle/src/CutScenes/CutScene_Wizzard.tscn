@@ -167,7 +167,7 @@ anims/Flying = SubResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Cake/Bird"]
 frames = SubResource( 6 )
-frame = 7
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cake"]
