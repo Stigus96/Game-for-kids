@@ -7,9 +7,10 @@ onready var AnimatedHorse = get_node("AnimatedHorse")
 var timer
 
 func _ready():
-	print("ready")
+	
 	timer = get_node("Timer")
 	timer.connect("timeout",self,"_on_timer_timeout")
+	print("ready")
 	pass
 	
 func _physics_process(delta: float) -> void:

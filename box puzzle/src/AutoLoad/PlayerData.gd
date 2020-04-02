@@ -60,6 +60,7 @@ func update_player_speed(value: bool) -> void:
 			emit_signal("energy_updated")
 		
 	elif value == false:
+		print("timerout")
 		player_speed -= 0.1
 		emit_signal("energy_updated")
 		
