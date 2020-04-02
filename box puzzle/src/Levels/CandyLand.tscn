@@ -306,7 +306,7 @@ position = Vector2( 311.246, 687.979 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="Timer" type="Timer" parent="Horse"]
-wait_time = 5.0
+wait_time = 4.0
 autostart = true
 
 [node name="TileMap2" type="TileMap" parent="."]
@@ -332,6 +332,6 @@ visible = false
 position = Vector2( 13709.7, 514.328 )
 scale = Vector2( 0.265892, 0.32304 )
 frames = SubResource( 5 )
-frame = 4
+frame = 7
 playing = true
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
