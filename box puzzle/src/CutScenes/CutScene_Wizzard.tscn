@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://src/CutScenes/CutScene_Wizzard.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -18,11 +18,12 @@
 [ext_resource path="res://assets/Backgrounds/CandyLandBG3.png" type="Texture" id=16]
 [ext_resource path="res://assets/Game menu Fonts/expressway rg.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://src/CutScenes/CutScene_nextScene.gd" type="Script" id=18]
-[ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=20]
-[ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=21]
-[ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=22]
-[ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=23]
+[ext_resource path="res://src/Levels/CandyLand.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=22]
+[ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=23]
+[ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1203.73, 10 )
@@ -167,7 +168,7 @@ anims/Flying = SubResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Cake/Bird"]
 frames = SubResource( 6 )
-frame = 2
+frame = 7
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cake"]
@@ -293,16 +294,17 @@ texture = SubResource( 9 )
 region_rect = Rect2( 905, 57, 18, 29 )
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 1433.75, -136.8 )
+position = Vector2( 1362.52, -145.434 )
 script = ExtResource( 18 )
 __meta__ = {
 "_edit_group_": true
 }
+candyLevel = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 10 )
 
-[node name="Horse" parent="." instance=ExtResource( 19 )]
+[node name="Horse" parent="." instance=ExtResource( 20 )]
 visible = false
 position = Vector2( 233.886, -50.6495 )
 collision_layer = 2
@@ -311,10 +313,10 @@ collision_mask = 2
 [node name="Timer" type="Timer" parent="Horse"]
 wait_time = 5.0
 
-[node name="PlayerData" parent="." instance=ExtResource( 20 )]
+[node name="PlayerData" parent="." instance=ExtResource( 21 )]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 21 )
+tile_set = ExtResource( 22 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -20, 15, 0, -19, 15, 0, -18, 15, 0, -17, 15, 0, -16, 15, 0, -15, 15, 0, -14, 15, 0, -13, 15, 0, -12, 15, 0, -11, 15, 0, -10, 15, 0, -9, 15, 0, -8, 15, 0, -7, 15, 0, -6, 15, 0, -5, 15, 0, -4, 15, 0, -3, 15, 0, -2, 15, 0, -1, 15, 0, -65536, 15, 0, -65535, 15, 0, -65534, 15, 0, -65533, 15, 0, -65532, 15, 0, -65531, 15, 0, -65530, 15, 0, -65529, 15, 0, -65528, 15, 0, -65527, 15, 0, -65526, 15, 0, -65525, 15, 0, -65524, 15, 0, -65523, 15, 0, -65522, 15, 0, -65521, 15, 0, -65520, 15, 0, -65519, 15, 0, -65518, 15, 0, -65517, 15, 0, -65516, 15, 0, -65515, 15, 0, -65514, 15, 0, -65513, 15, 0, -65512, 15, 0, -65511, 15, 0, -65510, 15, 0, -65509, 15, 0, -65508, 15, 0, -65507, 15, 0, -65506, 15, 0, -65505, 15, 0, -65504, 15, 0, -65503, 15, 0, -65502, 15, 0, -65501, 15, 0, -65500, 15, 0, -65499, 15, 0, -65498, 15, 0, -65497, 15, 0, -65496, 15, 0, -65495, 15, 0, -65494, 15, 0, -65493, 15, 0, -65492, 15, 0, -65491, 15, 0, -65490, 15, 0, -65489, 15, 0, -65488, 15, 0, -65487, 15, 0 )
@@ -323,31 +325,31 @@ tile_data = PoolIntArray( -20, 15, 0, -19, 15, 0, -18, 15, 0, -17, 15, 0, -16, 1
 position = Vector2( -289.987, -49.5571 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
-texture = ExtResource( 22 )
+texture = ExtResource( 23 )
 
 [node name="lollipop red2" type="Sprite" parent="."]
 position = Vector2( 874.132, -56.2379 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
-texture = ExtResource( 22 )
+texture = ExtResource( 23 )
 
 [node name="lollipop orange" type="Sprite" parent="."]
 position = Vector2( 658.724, -59.5811 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
-texture = ExtResource( 23 )
+texture = ExtResource( 24 )
 
 [node name="lollipop orange2" type="Sprite" parent="."]
 position = Vector2( -203.091, -52.9005 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
-texture = ExtResource( 23 )
+texture = ExtResource( 24 )
 
 [node name="lollipop orange3" type="Sprite" parent="."]
 position = Vector2( 959.358, -57.9109 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
-texture = ExtResource( 23 )
+texture = ExtResource( 24 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="StopZone" to="StopZone" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Cake" to="Cake" method="_on_Cake_body_entered"]
