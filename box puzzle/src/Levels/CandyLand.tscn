@@ -35,11 +35,11 @@ extents = Vector2( 49.6621, 37.3757 )
 size = 39
 font_data = ExtResource( 6 )
 
-[sub_resource type="CapsuleShape2D" id=4]
+[sub_resource type="CapsuleShape2D" id=3]
 radius = 82.7188
 height = 89.3528
 
-[sub_resource type="TileSet" id=3]
+[sub_resource type="TileSet" id=4]
 0/name = "lollipop orange.png 0"
 0/texture = ExtResource( 15 )
 0/tex_offset = Vector2( 0, 0 )
@@ -266,7 +266,7 @@ texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -4.05469, 19.3481 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="KillPlayer2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 19149.3, 1244.16 )
@@ -299,7 +299,7 @@ scale = Vector2( 1.5, 1.5 )
 position = Vector2( 9694.14, 378.757 )
 
 [node name="Cake2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 9567.92, 441.139 )
+position = Vector2( 9567.92, 440.57 )
 
 [node name="Horse" parent="." instance=ExtResource( 14 )]
 position = Vector2( 311.246, 687.979 )
@@ -311,7 +311,7 @@ autostart = true
 
 [node name="TileMap2" type="TileMap" parent="."]
 z_index = -1
-tile_set = SubResource( 3 )
+tile_set = SubResource( 4 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 1048855, 0, 0, 1048882, 1, 0, 1507449, 0, 0, 1638641, 1, 0, 1966266, 0, 0, 2031882, 2, 0, 2097214, 1, 0, 2163016, 2, 0, 2490414, 2, 0, 2490593, 2, 0, 2621545, 2, 0, 2949269, 2, 0, 2949602, 2, 0 )
@@ -332,6 +332,5 @@ visible = false
 position = Vector2( 13709.7, 514.328 )
 scale = Vector2( 0.265892, 0.32304 )
 frames = SubResource( 5 )
-frame = 7
 playing = true
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
