@@ -1,12 +1,11 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/Demolevel assets/environment/background/jungle background.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/Demolevel assets/environment/tiles/jungle/tile_jungle_ground_brown.png" type="Texture" id=2]
 [ext_resource path="res://assets/Demolevel assets/environment/tiles/jungle/tile_jungle_bottom_brown.png" type="Texture" id=3]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Walls/Wall.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Cannon/Cannon.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -223,7 +222,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 14/shapes = [  ]
 14/z_index = 0
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -254,14 +253,8 @@ margin_top = 20.5575
 margin_right = 1898.83
 margin_bottom = 20.5575
 
-[node name="Pressureplate" parent="." instance=ExtResource( 6 )]
-position = Vector2( 340.001, 904.001 )
+[node name="Cannon" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1281.29, 797.766 )
 
-[node name="Wall" parent="Pressureplate" instance=ExtResource( 7 )]
-position = Vector2( 74.7223, -21.6484 )
-
-[node name="Pressureplate2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 529.928, 904.339 )
-
-[node name="Wall" parent="Pressureplate2" instance=ExtResource( 7 )]
-position = Vector2( 71.9289, -26.5369 )
+[node name="Cannon2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 484.105, 866.445 )

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Cannon/AnimationPlayer2.tscn" type="PackedScene" id=1]
+
+[node name="cannonSmoke" type="Node2D"]
+
+[node name="AnimationPlayer2" parent="." instance=ExtResource( 1 )]
