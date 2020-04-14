@@ -1,6 +1,6 @@
 extends Node2D
 
-var cannonBall = preload("res://src/Cannon/CannonBall.tscn")
+var cannonBall = preload("res://src/Cannon/CannonBall_Right.tscn")
 
 var cannon_position = self.get_global_position()
 
