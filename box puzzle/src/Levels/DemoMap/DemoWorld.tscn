@@ -257,4 +257,6 @@ margin_bottom = 20.5575
 position = Vector2( 1281.29, 797.766 )
 
 [node name="Cannon2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 484.105, 866.445 )
+position = Vector2( 487.788, 897.138 )
+RandomShoot = false
+TimeDelay = 1

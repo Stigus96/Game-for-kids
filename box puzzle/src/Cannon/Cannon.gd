@@ -6,15 +6,22 @@ var cannon_position = self.get_global_position()
 
 onready var animatedSprite = get_node("AnimatedSprite")
 
-var time = 0
+export var RandomShoot = true
+export var TimeDelay = 3
 
+var time = 0
 var timer = null
+
+onready var CannonSound = get_node("AudioStreamPlayer")
 
 
 func _ready():
 	timer = Timer.new()
 	timer.set_one_shot(true)
-	timer.set_wait_time(get_random_time())
+	if RandomShoot == true:
+		timer.set_wait_time(get_random_time())
+	elif RandomShoot == false:
+		timer.set_wait_time(TimeDelay)
 	add_child(timer)
 	timer.start()
 	print("Hei1")
@@ -28,6 +35,7 @@ func get_random_time() -> int:
 
 func on_timeout_complete():
 	Shoot_cannonBall()
+	CannonSound.play()
 
 func Shoot_cannonBall():
 	print("hei2")
@@ -37,7 +45,11 @@ func Shoot_cannonBall():
 		
 	animatedSprite.play("Shoot")
 		
-	timer.set_wait_time(get_random_time())
+	if RandomShoot == true:
+		timer.set_wait_time(get_random_time())
+	elif RandomShoot == false:
+		timer.set_wait_time(TimeDelay)
+		
 	timer.start()
 		
 
