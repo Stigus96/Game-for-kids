@@ -15,6 +15,9 @@ onready var tween = $MoveTween
 func _ready():
 	_init_tween()
 
+#Tells the node how to act corresponding to the move to var.
+#Sets a duration it takes for the platform to move from a to b, with a set speed.
+#Sets a idle duration for how long the platform waits before moving after turning around.
 func _init_tween():
 
 	var duration = move_to.length() / float(speed * 100)

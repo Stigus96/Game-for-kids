@@ -515,63 +515,48 @@ editor/display_folded = true
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.241, 178.638 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin5" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 791.54, 858.785 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin8" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1497.74, 531.603 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin15" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 874.114, 344.787 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin16" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 963.816, 383.817 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin11" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1058.22, 426.914 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin12" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1778.59, 884.787 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin13" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1817.5, 883.709 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin14" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1855.72, 883.708 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin9" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1458.4, 532.46 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin10" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 1417.52, 532.253 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin6" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 492.238, 697.018 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin7" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 492.994, 748.214 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin3" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.543, 217.684 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="Coin4" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.689, 592.908 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )

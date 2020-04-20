@@ -50,23 +50,23 @@ func set_ladder(value: bool) -> void:
 func get_ladder() -> bool:
 	return ladder
 	
+#Returns the speed of the player
 func get_player_speed() -> float:
 	return player_speed
 	
+#updates the speed of the player in Candyland if triggered
 func update_player_speed(value: bool) -> void:
 	if value == true:
 		if player_speed < 1.4:
-			print("candyPickedUp")
 			player_speed += 0.1
 			emit_signal("energy_updated")
 		
 	elif value == false:
-		print("timerout")
 		player_speed -= 0.1
 		emit_signal("energy_updated")
 		
+#resets the player speed
 func reset_player_speed() -> void:
-	print("UU")
 	player_speed = 1
 	emit_signal("energy_updated")
 	

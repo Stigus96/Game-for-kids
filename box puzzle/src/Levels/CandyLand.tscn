@@ -253,7 +253,7 @@ position = Vector2( 8813.79, 671.75 )
 position = Vector2( 8791.55, 671.998 )
 rotation = 6.28318
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="FianlCake" type="Area2D" parent="."]
 position = Vector2( 13596.8, 622.973 )
 scale = Vector2( 0.4005, 0.311625 )
 script = ExtResource( 11 )
@@ -261,10 +261,10 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="cake" type="Sprite" parent="Area2D"]
+[node name="cake" type="Sprite" parent="FianlCake"]
 texture = ExtResource( 12 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FianlCake"]
 position = Vector2( -4.05469, 19.3481 )
 shape = SubResource( 3 )
 
@@ -332,5 +332,6 @@ visible = false
 position = Vector2( 13709.7, 514.328 )
 scale = Vector2( 0.265892, 0.32304 )
 frames = SubResource( 5 )
+frame = 7
 playing = true
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="FianlCake" to="FianlCake" method="_on_Area2D_body_entered"]
