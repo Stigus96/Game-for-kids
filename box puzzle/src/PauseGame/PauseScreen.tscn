@@ -1,23 +1,24 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/PauseGame/PauseScreen.gd" type="Script" id=1]
-[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/PauseGame/PauseGameOptions.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 30
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 30
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
 [node name="PauseScreen" type="Control"]
 pause_mode = 2
@@ -30,7 +31,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.54902 )
 
+[node name="Options" parent="." instance=ExtResource( 2 )]
+visible = false
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -40,9 +45,9 @@ margin_bottom = 1200.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
 margin_left = 779.0
-margin_top = 518.0
+margin_top = 497.0
 margin_right = 1141.0
-margin_bottom = 682.0
+margin_bottom = 703.0
 
 [node name="Continue" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 margin_right = 362.0
@@ -57,20 +62,28 @@ margin_bottom = 80.0
 custom_fonts/font = SubResource( 2 )
 text = "Restart"
 
-[node name="ReturnToMenu" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+[node name="Optionsbtn" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 margin_top = 84.0
 margin_right = 362.0
 margin_bottom = 122.0
+custom_fonts/font = SubResource( 1 )
+text = "Options"
+
+[node name="ReturnToMenu" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 126.0
+margin_right = 362.0
+margin_bottom = 164.0
 custom_fonts/font = SubResource( 3 )
 text = "Return To Menu"
 
 [node name="Quit" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
-margin_top = 126.0
+margin_top = 168.0
 margin_right = 362.0
-margin_bottom = 164.0
+margin_bottom = 206.0
 custom_fonts/font = SubResource( 4 )
 text = "QUIT"
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Optionsbtn" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/ReturnToMenu" to="." method="_on_ReturnToMenu_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
