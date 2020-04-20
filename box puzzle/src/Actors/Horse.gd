@@ -7,10 +7,9 @@ onready var AnimatedHorse = get_node("AnimatedHorse")
 var timer
 
 func _ready():
-	
+	#make a timer that is connected on a timeout
 	timer = get_node("Timer")
-	timer.connect("timeout",self,"_on_timer_timeout")
-	print("ready")
+	timer.connect("timeout",self,"_on_timer_timeout") 
 	pass
 	
 func _physics_process(delta: float) -> void:
@@ -25,7 +24,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_focus_next"):
 		get_tree().reload_current_scene()
 		print("backspace")
-		PlayerData.reset_player_speed()
+		PlayerData.reset_player_speed()#resets the player speed when the scene is reloaded
 	
 func get_direction () -> Vector2:
 		return Vector2(

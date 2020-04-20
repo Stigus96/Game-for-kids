@@ -1,8 +1,6 @@
 extends Area2D
 
-
-
-
+#Ends the scene when picking up the cake
 func _on_Area2D_body_entered(body):
 	if body.name == "Horse":
 		queue_free()
