@@ -13,7 +13,6 @@ func _on_MasterSound_value_changed(value):
 func _on_Music_value_changed(value):
 	music = value
 	AudioServer.set_bus_volume_db(1, music)
-	print(AudioServer.get_bus_volume_db(1))
 	pass # Replace with function body.
 
 func _on_ObjectSound_value_changed(value):
