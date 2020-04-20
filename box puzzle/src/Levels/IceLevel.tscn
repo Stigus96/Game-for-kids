@@ -340,5 +340,6 @@ position = Vector2( 640.003, 549.001 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
+volume_db = -10.0
 autoplay = true
 bus = "Background music"

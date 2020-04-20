@@ -64,6 +64,7 @@ margin_left = 40.0
 margin_top = 300.0
 margin_right = 311.0
 margin_bottom = 316.0
+ticks_on_borders = true
 
 [node name="Music" parent="Sliders" instance=ExtResource( 5 )]
 margin_left = 40.0
