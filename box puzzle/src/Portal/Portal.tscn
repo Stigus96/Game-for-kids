@@ -112,5 +112,6 @@ texture = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = 10.0
 bus = "Player"
 [connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]

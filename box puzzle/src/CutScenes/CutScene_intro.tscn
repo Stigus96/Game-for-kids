@@ -6,12 +6,12 @@
 [ext_resource path="res://src/Levels/Tutorial.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 622, 11 )
+extents = Vector2( 837.314, 11 )
 
 [node name="CutScene_intro" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 169.216, 74 )
+position = Vector2( 199.133, 137.158 )
 scale = Vector2( 1, 1 )
 script = ExtResource( 2 )
 speed = Vector2( 300, 1000 )
@@ -24,5 +24,6 @@ position = Vector2( 618, 175 )
 shape = SubResource( 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1064.3, 41.7771 )
+position = Vector2( 1339.5, 48.4452 )
+scale = Vector2( 1.2, 1.8 )
 next_scene = ExtResource( 4 )

@@ -10,16 +10,7 @@ func _ready():
 
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta):
-	if hay == false:
-		motion.x = 0
+		motion.x = 350
 		move_and_slide(motion, Vector2(0,-1))
-	elif hay == true:
-		motion.x = 250
-		move_and_slide(motion, Vector2(0,-1))
-		print("gayyy")
 	
-func moveScene() -> void:
-	print("fuckface")
-	motion.x = 250
-	move_and_slide(motion, Vector2(0,-1))
-	print(motion)
+
