@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Intro_CutScene.gd" type="Script" id=2]
+[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Levels/Tutorial.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 837.314, 11 )
+
+[node name="CutScene_intro" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 199.133, 137.158 )
+scale = Vector2( 1, 1 )
+script = ExtResource( 2 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 618, 175 )
+shape = SubResource( 1 )
+
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1339.5, 48.4452 )
+scale = Vector2( 1.2, 1.8 )
+next_scene = ExtResource( 4 )

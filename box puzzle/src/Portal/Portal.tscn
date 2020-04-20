@@ -15,7 +15,7 @@ height = 60.3448
 length = 1.6
 loop = true
 tracks/0/type = "method"
-tracks/0/path = NodePath("Portal_1")
+tracks/0/path = NodePath("../Portal/Portal_1")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -32,7 +32,7 @@ tracks/0/keys = {
 } ]
 }
 tracks/1/type = "method"
-tracks/1/path = NodePath("Portal_2")
+tracks/1/path = NodePath("../Portal/Portal_2")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -49,7 +49,7 @@ tracks/1/keys = {
 } ]
 }
 tracks/2/type = "method"
-tracks/2/path = NodePath("Portal_3")
+tracks/2/path = NodePath("../Portal/Portal_3")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -66,7 +66,7 @@ tracks/2/keys = {
 } ]
 }
 tracks/3/type = "method"
-tracks/3/path = NodePath("Portal_4")
+tracks/3/path = NodePath("../Portal/Portal_4")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -112,5 +112,6 @@ texture = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = 10.0
 bus = "Player"
 [connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]
