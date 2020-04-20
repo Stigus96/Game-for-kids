@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Game menu/Options.gd" type="Script" id=1]
 [ext_resource path="res://assets/Game menu assets/Options.png" type="Texture" id=2]
@@ -8,7 +8,8 @@
 [ext_resource path="res://src/Game menu/OptionsText.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Game menu/ReturnButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Game menu assets/Spacebar jump.png" type="Texture" id=8]
-[ext_resource path="res://assets/Game menu assets/movement transparent.png" type="Texture" id=9]
+[ext_resource path="res://assets/Game menu assets/Escape button.png" type="Texture" id=9]
+[ext_resource path="res://assets/Game menu assets/movement transparent.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -123,10 +124,15 @@ position = Vector2( 221.34, 37.8652 )
 scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 8 )
 
+[node name="Escape" type="Sprite" parent="Movement"]
+position = Vector2( 409.568, 40.3313 )
+scale = Vector2( 0.110928, 0.108749 )
+texture = ExtResource( 9 )
+
 [node name="movement transparent" type="Sprite" parent="Movement"]
 position = Vector2( 221.34, 95.4263 )
 scale = Vector2( 1.25, 1.25 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="Movement"]
 margin_left = 14.7981
