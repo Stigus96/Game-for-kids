@@ -9,7 +9,7 @@ onready var numberOfTimeouts = 0
 
 export var next_scene: PackedScene
 
-var wizzard_scale = Vector2(0.144, 0.151)
+var wizzard_scale = Vector2(0.166, 0.174)
 
 onready var Lable1 = get_node("Control/Label")
 onready var Lable2 = get_node("Control/Label2")

@@ -11,13 +11,13 @@
 [ext_resource path="res://src/Levels/Tutorial.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1236.87, 10 )
+extents = Vector2( 1483.46, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 167.097 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 20
+size = 24
 font_data = ExtResource( 7 )
 
 [sub_resource type="AtlasTexture" id=4]
@@ -26,6 +26,8 @@ font_data = ExtResource( 7 )
 extents = Vector2( 10.1677, 230.574 )
 
 [node name="Start_CutScene" type="Node2D"]
+position = Vector2( 136.324, 241.557 )
+scale = Vector2( 0.8, 0.8 )
 script = ExtResource( 1 )
 next_scene = ExtResource( 9 )
 
@@ -58,12 +60,12 @@ texture = ExtResource( 4 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 836.539, 763.139 )
+position = Vector2( 1091.46, 763.139 )
 shape = SubResource( 2 )
 
 [node name="Wizzard" type="Sprite" parent="."]
-position = Vector2( 1061.89, 828.79 )
-scale = Vector2( -0.144215, 0.151104 )
+position = Vector2( 1269.6, 813.739 )
+scale = Vector2( -0.165986, 0.173915 )
 z_index = -1
 texture = ExtResource( 6 )
 
@@ -78,10 +80,10 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Control"]
 visible = false
-margin_left = 1107.87
-margin_top = 611.0
-margin_right = 1395.87
-margin_bottom = 703.0
+margin_left = 1245.75
+margin_top = 553.813
+margin_right = 1589.75
+margin_bottom = 663.813
 custom_fonts/font = SubResource( 3 )
 text = "Welcome to Box puzzle!
 Your goal is pass all the levels,
@@ -97,16 +99,16 @@ self_modulate = Color( 0.615686, 0.615686, 0.615686, 1 )
 show_behind_parent = true
 margin_left = -13.0
 margin_top = -8.0
-margin_right = 307.0
-margin_bottom = 94.0
+margin_right = 346.0
+margin_bottom = 103.0
 texture = SubResource( 4 )
 
 [node name="Label2" type="Label" parent="Control"]
 visible = false
-margin_left = 1107.87
-margin_top = 611.0
-margin_right = 1395.87
-margin_bottom = 703.0
+margin_left = 1245.12
+margin_top = 552.625
+margin_right = 1716.12
+margin_bottom = 686.625
 custom_fonts/font = SubResource( 3 )
 text = "But watch out for the dangerous
  crow! 
@@ -122,20 +124,20 @@ self_modulate = Color( 0.615686, 0.615686, 0.615686, 1 )
 show_behind_parent = true
 margin_left = -13.0
 margin_top = -8.0
-margin_right = 338.0
-margin_bottom = 94.0
+margin_right = 397.0
+margin_bottom = 107.0
 texture = SubResource( 4 )
 
 [node name="Label3" type="Label" parent="Control"]
 visible = false
-margin_left = 1107.87
-margin_top = 611.0
-margin_right = 1395.87
-margin_bottom = 703.0
+margin_left = 1244.44
+margin_top = 554.0
+margin_right = 1615.44
+margin_bottom = 650.0
 custom_fonts/font = SubResource( 3 )
 text = "Hurry!
 You need to reach the cake before
-the crow! No time to lose"
+the crow! It's no time to lose"
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -147,8 +149,8 @@ self_modulate = Color( 0.615686, 0.615686, 0.615686, 1 )
 show_behind_parent = true
 margin_left = -13.0
 margin_top = -8.0
-margin_right = 330.0
-margin_bottom = 94.0
+margin_right = 385.0
+margin_bottom = 102.0
 texture = SubResource( 4 )
 
 [node name="PlayerData" parent="." instance=ExtResource( 8 )]
@@ -156,7 +158,7 @@ texture = SubResource( 4 )
 [node name="PortalToNextLevel" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortalToNextLevel"]
-position = Vector2( 2058.65, 711.323 )
+position = Vector2( 2267.92, 705.344 )
 shape = SubResource( 5 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
