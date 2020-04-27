@@ -7,6 +7,7 @@ onready var levelSelect = get_node("LevelSelect")
 onready var optionsMenu = get_node("Options")
 onready var mainMenuButtons = get_node("Menu")
 onready var cutScene = get_node("CutScene_intro")
+onready var Player = get_node("CutScene_intro/Player")
 
 func _ready():
 	PlayerData.connect("menu_updated", self, "updateMenu")
@@ -48,3 +49,9 @@ func updateMenu():
 	mainMenuButtons.show()
 	cutScene.show()
 
+
+
+func _on_PlayerStop_body_entered(body):
+	if body.name == "Player":
+		Player.CutScene_speed = 0
+	pass # Replace with function body.

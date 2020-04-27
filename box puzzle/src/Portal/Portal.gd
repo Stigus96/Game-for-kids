@@ -9,7 +9,7 @@ onready var myVolume = 0
 
 func _on_Portal_body_entered(body):
 	fade_out_music()
-	$AudioStreamPlayer.play()
+	$AudioStreamPlayer.play()	
 	pass # Replace with function body.
 
 func teleport() -> void:
