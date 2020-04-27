@@ -12,15 +12,19 @@ func _on_caveLevelBtn_pressed():
 	get_tree().change_scene("res://src/Levels/caveLevel.tscn")
 	pass
 
-func _on_TBDBtn_pressed():
-	get_tree().change_scene("")
-	pass
+func _on_IceLevelBtn_pressed():
+	get_tree().change_scene("res://src/Levels/IceLevel.tscn")
+	pass # Replace with function body.
 
-func _on_TBDBtn2_pressed():
-	get_tree().change_scene("")
-	pass
+
+func _on_CastleLevelBtn_pressed():
+	get_tree().change_scene("res://src/Levels/CastleLevel.tscn")
+	pass # Replace with function body.
+
 
 func _on_candylandBtn_pressed():
 	get_tree().change_scene("res://src/Levels/CandyLand.tscn")
 	pass
+
+
 
