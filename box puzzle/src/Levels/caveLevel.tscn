@@ -19,7 +19,7 @@
 [ext_resource path="res://src/Walls/Wall1.gd" type="Script" id=17]
 [ext_resource path="res://assets/Misc assest/shelf.png" type="Texture" id=18]
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/CutScenes/CutScene_Wizzard.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Levels/CastleLevel.tscn" type="PackedScene" id=20]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/Game sounds/CaveLevel.ogg" type="AudioStream" id=22]
 [ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=23]

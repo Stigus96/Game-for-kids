@@ -123,6 +123,7 @@ scale = Vector2( 0.5, 1 )
 script = ExtResource( 10 )
 
 [node name="Area2D3" type="Area2D" parent="SpikePressurePlate"]
+editor/display_folded = true
 position = Vector2( -1526.59, -977.275 )
 scale = Vector2( 2, 1 )
 script = ExtResource( 11 )
@@ -211,6 +212,7 @@ position = Vector2( 1789.4, 833.417 )
 next_scene = ExtResource( 14 )
 
 [node name="UpSideDownSpikes" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="Spikes" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
 position = Vector2( 475.386, 630.43 )
@@ -297,6 +299,7 @@ margin_bottom = -3.05042
 visible = false
 
 [node name="Coin" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="Coin2" parent="Coin" instance=ExtResource( 20 )]
 position = Vector2( 89.8154, 572.109 )

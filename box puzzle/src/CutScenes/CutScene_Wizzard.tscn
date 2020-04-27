@@ -141,7 +141,8 @@ scale = Vector2( -0.075, 0.084 )
 texture = ExtResource( 5 )
 
 [node name="Cake" type="Area2D" parent="."]
-position = Vector2( 304.755, -12.5759 )
+position = Vector2( 304.755, -8.38584 )
+z_index = 1
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
@@ -168,7 +169,6 @@ anims/Flying = SubResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Cake/Bird"]
 frames = SubResource( 6 )
-frame = 7
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cake"]
@@ -179,33 +179,40 @@ position = Vector2( 345.483, -164.736 )
 scale = Vector2( 2, 2 )
 z_index = -1
 texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CandyLandBG4" type="Sprite" parent="."]
 position = Vector2( 2345.62, -164.629 )
 scale = Vector2( 2, 2 )
 z_index = -1
 texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Control" type="Control" parent="."]
-margin_left = -90.05
-margin_top = -646.1
-margin_right = -60.05
-margin_bottom = -606.1
+margin_left = -88.3325
+margin_top = -645.682
+margin_right = -58.3325
+margin_bottom = -605.682
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Label" type="Label" parent="Control"]
-visible = false
 anchor_right = 0.46
-margin_left = 642.0
-margin_top = 443.0
-margin_right = 842.2
+margin_left = 640.0
+margin_top = 442.0
+margin_right = 918.2
 margin_bottom = 553.0
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Congratualtions on reaching candyland, here is the cake i promised you"
-autowrap = true
+text = "Congratualtions
+on reaching candyland, 
+here is the cake i promised you"
 __meta__ = {
 "_edit_group_": true
 }
@@ -215,7 +222,7 @@ modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
 show_behind_parent = true
 margin_left = -7.0
 margin_top = -7.0
-margin_right = 220.0
+margin_right = 232.0
 margin_bottom = 78.0
 texture = SubResource( 9 )
 
@@ -229,6 +236,7 @@ margin_bottom = 514.0
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = " Oh no the crow stole the cake! We have to get it back. "
+align = 1
 autowrap = true
 __meta__ = {
 "_edit_group_": true
@@ -253,6 +261,7 @@ margin_bottom = 559.603
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Transforming you into a horse will be quicker"
+align = 1
 autowrap = true
 __meta__ = {
 "_edit_group_": true
@@ -277,6 +286,7 @@ margin_bottom = 559.603
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "The crow is getting away, hurry"
+align = 1
 autowrap = true
 __meta__ = {
 "_edit_group_": true
@@ -319,7 +329,7 @@ wait_time = 5.0
 tile_set = ExtResource( 22 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( -20, 15, 0, -19, 15, 0, -18, 15, 0, -17, 15, 0, -16, 15, 0, -15, 15, 0, -14, 15, 0, -13, 15, 0, -12, 15, 0, -11, 15, 0, -10, 15, 0, -9, 15, 0, -8, 15, 0, -7, 15, 0, -6, 15, 0, -5, 15, 0, -4, 15, 0, -3, 15, 0, -2, 15, 0, -1, 15, 0, -65536, 15, 0, -65535, 15, 0, -65534, 15, 0, -65533, 15, 0, -65532, 15, 0, -65531, 15, 0, -65530, 15, 0, -65529, 15, 0, -65528, 15, 0, -65527, 15, 0, -65526, 15, 0, -65525, 15, 0, -65524, 15, 0, -65523, 15, 0, -65522, 15, 0, -65521, 15, 0, -65520, 15, 0, -65519, 15, 0, -65518, 15, 0, -65517, 15, 0, -65516, 15, 0, -65515, 15, 0, -65514, 15, 0, -65513, 15, 0, -65512, 15, 0, -65511, 15, 0, -65510, 15, 0, -65509, 15, 0, -65508, 15, 0, -65507, 15, 0, -65506, 15, 0, -65505, 15, 0, -65504, 15, 0, -65503, 15, 0, -65502, 15, 0, -65501, 15, 0, -65500, 15, 0, -65499, 15, 0, -65498, 15, 0, -65497, 15, 0, -65496, 15, 0, -65495, 15, 0, -65494, 15, 0, -65493, 15, 0, -65492, 15, 0, -65491, 15, 0, -65490, 15, 0, -65489, 15, 0, -65488, 15, 0, -65487, 15, 0 )
+tile_data = PoolIntArray( -20, 19, 0, -19, 15, 0, -18, 15, 0, -17, 15, 0, -16, 15, 0, -15, 15, 0, -14, 15, 0, -13, 15, 0, -12, 15, 0, -11, 15, 0, -10, 15, 0, -9, 15, 0, -8, 15, 0, -7, 15, 0, -6, 15, 0, -5, 15, 0, -4, 15, 0, -3, 15, 0, -2, 15, 0, -1, 15, 0, -65536, 15, 0, -65535, 15, 0, -65534, 15, 0, -65533, 15, 0, -65532, 15, 0, -65531, 15, 0, -65530, 15, 0, -65529, 15, 0, -65528, 15, 0, -65527, 15, 0, -65526, 15, 0, -65525, 15, 0, -65524, 15, 0, -65523, 15, 0, -65522, 15, 0, -65521, 15, 0, -65520, 15, 0, -65519, 15, 0, -65518, 15, 0, -65517, 15, 0, -65516, 15, 0, -65515, 15, 0, -65514, 15, 0, -65513, 15, 0, -65512, 15, 0, -65511, 15, 0, -65510, 15, 0, -65509, 15, 0, -65508, 15, 0, -65507, 15, 0, -65506, 15, 0, -65505, 15, 0, -65504, 15, 0, -65503, 15, 0, -65502, 15, 0, -65501, 15, 0, -65500, 15, 0, -65499, 15, 0, -65498, 15, 0, -65497, 15, 0, -65496, 15, 0, -65495, 15, 0, -65494, 15, 0, -65493, 15, 0, -65492, 15, 0, -65491, 15, 0, -65490, 15, 0, -65489, 15, 0, -65488, 15, 0, -65487, 15, 0, 131052, 7, 0, 131053, 8, 0, 131054, -1073741783, 0, 131055, 11, 0, 131056, 11, 0, 131057, 11, 0, 131058, 11, 0, 131059, 11, 0, 131060, 1610612777, 0, 131061, 5, 0, 131062, 5, 0, 131063, 5, 0, 131064, 5, 0, 131065, 5, 0, 131066, 5, 0, 131067, 5, 0, 131068, 5, 0, 131069, 5, 0, 131070, 5, 0, 131071, 5, 0, 65536, 5, 0, 65537, 5, 0, 65538, 5, 0, 65539, 5, 0, 65540, 5, 0, 65541, 5, 0, 65542, 5, 0, 65543, 5, 0, 65544, 5, 0, 65545, 5, 0, 65546, 5, 0, 65547, 5, 0, 65548, 5, 0, 65549, 5, 0, 65550, 5, 0, 65551, 5, 0, 65552, 5, 0, 65553, 5, 0, 65554, 5, 0, 65555, 5, 0, 65556, 5, 0, 65557, 5, 0, 65558, 5, 0, 65559, 5, 0, 65560, 5, 0, 65561, 5, 0, 65562, 5, 0, 65563, 5, 0, 65564, 5, 0, 65565, 5, 0, 65566, 5, 0, 65567, 5, 0, 65568, 5, 0, 65569, 5, 0, 65570, 5, 0, 65571, 5, 0, 65572, 5, 0, 65573, 5, 0, 65574, 5, 0, 65575, 5, 0, 65576, 5, 0, 65577, 5, 0, 65578, 5, 0, 65579, 5, 0, 65580, 5, 0, 65581, 5, 0, 65582, 5, 0, 65583, 5, 0, 65585, 9, 0, 196590, 7, 0, 196591, 8, 0, 196592, 5, 0, 196593, 5, 0, 196594, 5, 0, 196595, 9, 0, 196596, 10, 0 )
 
 [node name="lollipop red" type="Sprite" parent="."]
 position = Vector2( -289.987, -49.5571 )
