@@ -67,15 +67,20 @@ animations = [ {
 "name": "crouch_walk_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ) ],
-"loop": true,
-"name": "climb",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "walk_left",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 53 ) ],
+"loop": true,
+"name": "crouch_walk_left",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 31 ) ],
 "loop": true,
@@ -87,14 +92,9 @@ animations = [ {
 "name": "start_crouching",
 "speed": 100.0
 }, {
-"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
+"frames": [ ExtResource( 21 ) ],
 "loop": true,
-"name": "walk_right",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 53 ) ],
-"loop": true,
-"name": "crouch_walk_left",
+"name": "climb",
 "speed": 5.0
 } ]
 
@@ -115,7 +115,7 @@ position = Vector2( -115.287, -64.2278 )
 scale = Vector2( 0.397937, 0.351599 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 17
+frame = 7
 playing = true
 
 [node name="player" type="Sprite" parent="."]

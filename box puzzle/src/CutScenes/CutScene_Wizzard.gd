@@ -40,10 +40,6 @@ func start_cutscene() -> void:
 
 
 func _on_Timer_timeout():
-	#PlayerData.started_candyland()
-	#PlayerData.set_player_Pos()
-	#horse.get_position_in_parent()
-	#horse.set_position(PlayerData.player_pos)
 	if numberOfTimeouts == 2:
 		bird_animation.play("Flying")
 	elif numberOfTimeouts == 4:

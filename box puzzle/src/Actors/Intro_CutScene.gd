@@ -6,7 +6,7 @@ onready var right_ray = get_node("right_ray")
 onready var left_ray = get_node("left_ray")
 var ladder_on = false
 export var upSpeed = 200
-onready var CutScene_speed = 0
+export var CutScene_speed = 0
 
 onready var i = 0
 
@@ -20,7 +20,6 @@ func _physics_process(delta: float) -> void:
 	var motion : = Vector2()
 	animate_player()
 	motion.x = CutScene_speed
-	print(CutScene_speed)
 	
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction = get_direction()
