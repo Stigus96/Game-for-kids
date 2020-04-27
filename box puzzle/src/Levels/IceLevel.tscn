@@ -1,0 +1,350 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://src/Tilemaps/IceLevelTileMap.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/Misc assest/CaveOpening.png" type="Texture" id=2]
+[ext_resource path="res://assets/Backgrounds/ice.png" type="Texture" id=3]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/MovingPlatforms/HorizontalMove2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Physics_box/PhysicsBox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Walls/Wall1.gd" type="Script" id=8]
+[ext_resource path="res://assets/Box sprites/box(1).png" type="Texture" id=9]
+[ext_resource path="res://src/Pressureplate/Spike_pressureplate.gd" type="Script" id=10]
+[ext_resource path="res://src/KillPlayer/Spikes/Multible_Spikes.gd" type="Script" id=11]
+[ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Levels/caveLevel.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/Game sounds/IceTheme.ogg" type="AudioStream" id=21]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4.34399, 21.1558 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap2" type="TileMap" parent="."]
+z_index = -2
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 589865, 0, 0, 589866, 1, 0, 589867, 2, 0, 655401, 5, 0, 655402, 11, 0, 655403, 12, 0, 720917, 30, 0, 851989, 30, 0, 1835049, 18, 0, 1835053, 18, 0, 1835058, 18, 0, 1835064, 19, 0, 1966081, 0, 0, 1966082, 1, 0, 1966083, 1, 0, 1966084, 1, 0, 1966085, 2, 0, 2031617, 10, 0, 2031618, 10, 0, 2031619, 10, 0, 2031620, 10, 0, 2031621, 10, 0, 2031641, 0, 0, 2031642, 1, 0, 2031643, 1, 0, 2031644, 1, 0, 2031645, 2, 0, 2031672, 19, 0, 2097177, 5, 0, 2097178, 6, 0, 2097179, 7, 0, 2097180, 8, 0, 2097181, 12, 0 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 458753, 0, 0, 458754, 2, 0, 524289, 5, 0, 524290, 12, 0, 655364, 0, 0, 655365, 2, 0, 655368, 0, 0, 655369, 2, 0, 655372, 0, 0, 655373, 2, 0, 655376, 0, 0, 655377, 2, 0, 655380, 0, 0, 655381, 2, 0, 655384, 0, 0, 655385, 2, 0, 655402, 30, 0, 720900, 5, 0, 720901, 12, 0, 720904, 5, 0, 720905, 12, 0, 720908, 5, 0, 720909, 12, 0, 720912, 5, 0, 720913, 12, 0, 720916, 5, 0, 720917, 12, 0, 720920, 5, 0, 720921, 12, 0, 720938, 30, 0, 917532, 0, 0, 917533, 1, 0, 917534, 1, 0, 917535, 1, 0, 917536, 1, 0, 917537, 2, 0, 983068, 5, 0, 983069, 11, 0, 983070, 11, 0, 983071, 11, 0, 983072, 11, 0, 983073, 12, 0, 1048618, 30, 0, 1179662, 0, 0, 1179663, 1, 0, 1179664, 1, 0, 1179665, 1, 0, 1179666, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179669, 1, 0, 1179670, 1, 0, 1179671, 1, 0, 1179672, 1, 0, 1179673, 1, 0, 1179674, 2, 0, 1245198, 5, 0, 1245199, 11, 0, 1245200, 11, 0, 1245201, 11, 0, 1245202, 11, 0, 1245203, 11, 0, 1245204, 11, 0, 1245205, 11, 0, 1245206, 11, 0, 1245207, 11, 0, 1245208, 11, 0, 1245209, 11, 0, 1245210, 12, 0, 1310721, 0, 0, 1310722, 1, 0, 1310723, 2, 0, 1310730, 0, 0, 1310731, 1, 0, 1310732, 2, 0, 1310762, 30, 0, 1376257, 5, 0, 1376258, 11, 0, 1376259, 12, 0, 1376266, 5, 0, 1376267, 11, 0, 1376268, 12, 0, 1376287, 0, 0, 1376288, 1, 0, 1376289, 2, 0, 1441823, 5, 0, 1441824, 11, 0, 1441825, 12, 0, 1507370, 30, 0, 1900575, 0, 0, 1900576, 1, 0, 1900577, 2, 0, 1966111, 5, 0, 1966112, 11, 0, 1966113, 12, 0, 2031616, 18, 0, 2031622, 21, 0, 2031623, 21, 0, 2031624, 21, 0, 2031625, 21, 0, 2031626, 21, 0, 2031627, 21, 0, 2031628, 21, 0, 2031629, 21, 0, 2031630, 21, 0, 2031631, 21, 0, 2031632, 21, 0, 2031633, 21, 0, 2031634, 21, 0, 2031635, 21, 0, 2031636, 21, 0, 2031637, 21, 0, 2031638, 21, 0, 2031639, 21, 0, 2031640, 21, 0, 2031641, 21, 0, 2031642, 21, 0, 2031643, 21, 0, 2031644, 21, 0, 2031645, 21, 0, 2031646, 21, 0, 2031647, 21, 0, 2031648, 21, 0, 2031649, 21, 0, 2031650, 21, 0, 2031651, 21, 0, 2031652, 21, 0, 2031653, 21, 0, 2031654, 21, 0, 2031655, 21, 0, 2031656, 21, 0, 2031657, 21, 0, 2031658, 21, 0, 2031660, 21, 0, 2031661, 21, 0, 2031662, 21, 0, 2031663, 21, 0, 2031664, 21, 0, 2031665, 21, 0, 2031666, 21, 0, 2031667, 21, 0, 2031668, 21, 0, 2031669, 21, 0, 2031670, 21, 0 )
+
+[node name="CaveOpening" type="Sprite" parent="TileMap"]
+position = Vector2( 1814.06, 839.945 )
+scale = Vector2( 0.247073, 0.228656 )
+texture = ExtResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 2542, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 706.163, 506.284 )
+scale = Vector2( 1.41195, 1.84502 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 128.491, 960.427 )
+
+[node name="HorisontalMove" parent="." instance=ExtResource( 5 )]
+position = Vector2( 158.839, 890.248 )
+move_to = Vector2( 0, -250 )
+speed = 2
+
+[node name="HorisontalMove2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 376.701, 674.809 )
+move_to = Vector2( 450, 0 )
+speed = 2
+
+[node name="HorisontalMove3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1089.55, 940.742 )
+move_to = Vector2( 0, -270 )
+speed = 1
+
+[node name="HorisontalMove4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1087.63, 717.134 )
+move_to = Vector2( 0, -270 )
+speed = 1
+
+[node name="HorisontalMove5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 123.966, 139.152 )
+move_to = Vector2( 1300, 0 )
+speed = 6
+
+[node name="PhysicsBox" parent="." instance=ExtResource( 6 )]
+position = Vector2( 373.753, 631.013 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="PhysicsBox2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1035.33, 915.977 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Area2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 81.6747, 635.556 )
+scale = Vector2( 0.5, 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Area2D"]
+modulate = Color( 0, 0.882353, 0.243137, 1 )
+position = Vector2( 220.189, -30.0897 )
+scale = Vector2( 1, 1.5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/KinematicBody2D"]
+position = Vector2( 1314.19, 30.5075 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D/KinematicBody2D"]
+position = Vector2( 1313.91, 29.3444 )
+scale = Vector2( 0.153176, 0.487911 )
+texture = ExtResource( 9 )
+
+[node name="SpikePressurePlate" parent="." instance=ExtResource( 7 )]
+position = Vector2( 859.997, 973.515 )
+scale = Vector2( 0.5, 1 )
+script = ExtResource( 10 )
+
+[node name="Area2D3" type="Area2D" parent="SpikePressurePlate"]
+editor/display_folded = true
+position = Vector2( -1526.59, -977.275 )
+scale = Vector2( 2, 1 )
+script = ExtResource( 11 )
+
+[node name="Spike" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 209.227, 985.308 )
+
+[node name="Spike25" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 187.672, 985.308 )
+
+[node name="Spike26" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 166.118, 985.308 )
+
+[node name="Spike17" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 431.629, 985.308 )
+
+[node name="Spike8" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 320.144, 985.308 )
+
+[node name="Spike15" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 542.546, 985.308 )
+
+[node name="Spike2" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 231.41, 985.308 )
+
+[node name="Spike11" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 453.812, 985.308 )
+
+[node name="Spike6" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 342.327, 985.308 )
+
+[node name="Spike20" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 564.729, 985.308 )
+
+[node name="Spike3" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 254.162, 985.308 )
+
+[node name="Spike12" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 476.564, 985.308 )
+
+[node name="Spike7" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 365.079, 985.308 )
+
+[node name="Spike14" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 587.481, 985.308 )
+
+[node name="Spike4" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 276.346, 985.308 )
+
+[node name="Spike19" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 498.748, 985.308 )
+
+[node name="Spike10" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 387.262, 985.308 )
+
+[node name="Spike16" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 609.664, 985.308 )
+
+[node name="Spike5" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 298.529, 985.308 )
+
+[node name="Spike18" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 520.931, 985.308 )
+
+[node name="Spike9" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 409.446, 985.308 )
+
+[node name="Spike13" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 631.848, 985.308 )
+
+[node name="Spike21" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 653.462, 985.308 )
+
+[node name="Spike22" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 675.077, 985.308 )
+
+[node name="Spike23" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 696.691, 985.308 )
+
+[node name="Spike24" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
+position = Vector2( 718.306, 985.308 )
+
+[node name="Portal" parent="." instance=ExtResource( 13 )]
+visible = false
+position = Vector2( 1789.4, 833.417 )
+next_scene = ExtResource( 14 )
+
+[node name="UpSideDownSpikes" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="Spikes" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 475.386, 630.43 )
+rotation = 3.14159
+
+[node name="Spikes5" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 541.936, 630.43 )
+rotation = 3.14159
+
+[node name="Spikes9" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 607.937, 630.43 )
+rotation = 3.14159
+
+[node name="Spikes2" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 497.569, 630.43 )
+rotation = 3.14159
+
+[node name="Spikes4" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 564.119, 630.43 )
+rotation = 3.14159
+
+[node name="Spikes8" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 630.12, 630.43 )
+rotation = 3.14159
+
+[node name="Spikes3" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 519.753, 630.43 )
+rotation = 3.14159
+
+[node name="Spikes6" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 586.303, 630.43 )
+rotation = 3.14159
+
+[node name="Spikes7" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 652.304, 630.43 )
+rotation = 3.14159
+
+[node name="Spikes10" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 673.981, 630.106 )
+rotation = 3.14159
+
+[node name="Spikes11" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 695.211, 630.106 )
+rotation = 3.14159
+
+[node name="Spikes12" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 716.44, 630.106 )
+rotation = 3.14159
+
+[node name="Spikes13" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 737.67, 630.106 )
+rotation = 3.14159
+
+[node name="Spikes14" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 758.899, 630.106 )
+rotation = 3.14159
+
+[node name="Spikes15" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 779.792, 630.106 )
+rotation = 3.14159
+
+[node name="Spikes16" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 800.684, 630.106 )
+rotation = 3.14159
+
+[node name="Spikes17" parent="UpSideDownSpikes" instance=ExtResource( 15 )]
+position = Vector2( 821.576, 630.106 )
+rotation = 3.14159
+
+[node name="Area2D2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 968.548, 1154.33 )
+
+[node name="PlayerData" parent="." instance=ExtResource( 17 )]
+
+[node name="ScoreInterface" parent="PlayerData" instance=ExtResource( 18 )]
+margin_left = 12.2406
+margin_top = -3.05045
+margin_right = 12.2406
+margin_bottom = -3.05042
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 19 )]
+visible = false
+
+[node name="Coin" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="Coin2" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 89.8154, 572.109 )
+
+[node name="Coin" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 403.108, 923.687 )
+
+[node name="Coin14" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 483.344, 922.319 )
+
+[node name="Coin3" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 1036.24, 425.107 )
+
+[node name="Coin10" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 1398.98, 432.522 )
+
+[node name="Coin11" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 1438.35, 431.823 )
+
+[node name="Coin12" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 1399.55, 473.977 )
+
+[node name="Coin13" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 1437.73, 473.655 )
+
+[node name="Coin5" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 1038.83, 633.177 )
+
+[node name="Coin6" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 801.032, 289.409 )
+
+[node name="Coin7" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 546.436, 282.947 )
+
+[node name="Coin8" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 289.257, 288.117 )
+
+[node name="Coin9" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 183.283, 78.7539 )
+
+[node name="Coin4" parent="Coin" instance=ExtResource( 20 )]
+position = Vector2( 640.003, 549.001 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+volume_db = -10.0
+autoplay = true
+bus = "Background music"

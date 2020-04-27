@@ -1,0 +1,42 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Cannon/CannonBall_Left.gd" type="Script" id=1]
+[ext_resource path="res://assets/Cannon/Cannon balls/Cannon Ball.png" type="Texture" id=2]
+[ext_resource path="res://assets/Cannon/Cannon Animations/Explotions/Explotion_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/Cannon/Cannon Animations/Explotions/Explotion_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/Cannon/Cannon Animations/Explotions/Explotion_3.png" type="Texture" id=5]
+[ext_resource path="res://assets/Cannon/Cannon Animations/Explotions/Explotion_4.png" type="Texture" id=6]
+[ext_resource path="res://assets/Cannon/Cannon Animations/Explotions/Explotion_5.png" type="Texture" id=7]
+[ext_resource path="res://assets/Cannon/Cannon Animations/Explotions/Explotion_6.png" type="Texture" id=8]
+[ext_resource path="res://assets/Cannon/Cannon Animations/Explotions/Explotion_7.png" type="Texture" id=9]
+[ext_resource path="res://assets/Cannon/Cannon Animations/Explotions/Explotion_8.png" type="Texture" id=10]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 9.94118
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ null, ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), null ],
+"loop": false,
+"name": "Explode",
+"speed": 10.0
+} ]
+
+[node name="CannonBall" type="Area2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "Explode"
+[connection signal="body_entered" from="." to="." method="_on_CannonBall_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

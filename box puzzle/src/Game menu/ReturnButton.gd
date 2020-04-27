@@ -1,13 +1,16 @@
 extends Control
 
 onready var yellowBtn = get_node("Sprite")
+onready var returnToMenu = get_parent()
+
 
 func _ready():
 	yellowBtn.hide()
 	
 func _on_Button_pressed():
-	yellowBtn.show()
-	get_tree().change_scene("res://src/Game menu/TitleScreen.tscn")
+	yellowBtn.hide()
+#	returnToMenu.hide()
+	PlayerData.main_menu_update("menu")
 	pass # Replace with function body.
 	
 func _on_Button_mouse_entered():

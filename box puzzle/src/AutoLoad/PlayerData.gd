@@ -1,9 +1,14 @@
 extends Node
 
+
 signal score_updated
 signal door_updated
 signal ladder_updated
+signal energy_updated
+signal color_door_updated
+signal menu_updated
 
+var player_speed = 1
 
 var score: = 0 setget set_score
 
@@ -44,3 +49,34 @@ func set_ladder(value: bool) -> void:
 	
 func get_ladder() -> bool:
 	return ladder
+	
+#Returns the speed of the player
+func get_player_speed() -> float:
+	return player_speed
+	
+#updates the speed of the player in Candyland if triggered
+func update_player_speed(value: bool) -> void:
+	if value == true:
+		if player_speed < 1.4:
+			player_speed += 0.1
+			emit_signal("energy_updated")
+		
+	elif value == false:
+		player_speed -= 0.1
+		emit_signal("energy_updated")
+		
+#resets the player speed
+func reset_player_speed() -> void:
+	player_speed = 1
+	emit_signal("energy_updated")
+	
+func set_color_door(value: bool) -> void:
+	door = value
+	emit_signal("color_door_updated")
+	
+func get_color_door() -> bool:
+	return door
+	
+func main_menu_update(value: String) -> void:
+	emit_signal("menu_updated")
+

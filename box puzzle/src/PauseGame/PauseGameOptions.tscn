@@ -1,0 +1,151 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/PauseGame/PauseGameOptions.gd" type="Script" id=1]
+[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/Game menu/Sliders.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Game menu/OptionsText.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Game menu assets/Spacebar jump.png" type="Texture" id=5]
+[ext_resource path="res://assets/Game menu assets/movement transparent.png" type="Texture" id=6]
+[ext_resource path="res://src/Game menu/ReturnButton.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 56
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 2 )
+
+[node name="Options" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.1093
+margin_top = 8.62939
+margin_right = 32.1093
+margin_bottom = 8.62939
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -30.7419
+margin_top = -8.38416
+margin_right = -30.7419
+margin_bottom = -8.38416
+color = Color( 0, 0, 0, 0.54902 )
+
+[node name="Sliders" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 639.483, 410.937 )
+z_index = 1
+
+[node name="Label" type="Label" parent="Sliders"]
+margin_left = -440.0
+margin_top = 150.127
+margin_right = 269.0
+margin_bottom = 209.127
+custom_fonts/font = SubResource( 1 )
+text = "VOLUME SETTINGS"
+
+[node name="MasterSound" parent="Sliders" instance=ExtResource( 3 )]
+margin_left = 40.0
+margin_top = 300.0
+margin_right = 311.0
+margin_bottom = 316.0
+
+[node name="Music" parent="Sliders" instance=ExtResource( 3 )]
+margin_left = 40.0
+margin_top = 400.0
+margin_right = 311.0
+margin_bottom = 416.0
+ticks_on_borders = true
+
+[node name="ObjectSound" parent="Sliders" instance=ExtResource( 3 )]
+margin_left = 40.0
+margin_top = 500.0
+margin_right = 311.0
+margin_bottom = 516.0
+ticks_on_borders = true
+
+[node name="ObjectVolume" parent="Sliders" instance=ExtResource( 4 )]
+margin_left = -430.793
+margin_top = 508.432
+margin_right = -51.793
+margin_bottom = 548.432
+text = "Player Volume:"
+
+[node name="MusicVolume" parent="Sliders" instance=ExtResource( 4 )]
+margin_left = -381.595
+margin_top = 408.077
+margin_right = -51.595
+margin_bottom = 448.077
+text = "Music Volume:"
+
+[node name="MasterVolume" parent="Sliders" instance=ExtResource( 4 )]
+margin_left = -429.429
+margin_top = 309.194
+margin_right = -50.429
+margin_bottom = 349.194
+text = "Master Volume:"
+
+[node name="Label2" parent="Sliders" instance=ExtResource( 4 )]
+margin_left = -445.628
+margin_top = 28.608
+margin_right = -145.628
+margin_bottom = 62.608
+text = "Fullscreen"
+
+[node name="Label4" type="Label" parent="Sliders"]
+margin_left = -457.826
+margin_top = -198.538
+margin_right = 134.174
+margin_bottom = -93.5385
+custom_fonts/font = SubResource( 3 )
+text = "OPTIONS"
+
+[node name="Movement" type="Control" parent="."]
+editor/display_folded = true
+margin_left = 1063.79
+margin_top = 420.065
+margin_right = 1502.79
+margin_bottom = 596.065
+
+[node name="Spacebar jump" type="Sprite" parent="Movement"]
+position = Vector2( 221.34, 37.8652 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 5 )
+
+[node name="movement transparent" type="Sprite" parent="Movement"]
+position = Vector2( 221.34, 95.4263 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 6 )
+
+[node name="Label3" type="Label" parent="Movement"]
+margin_left = 14.7981
+margin_top = -60.4111
+margin_right = 374.798
+margin_bottom = -10.4111
+custom_fonts/font = SubResource( 2 )
+text = "Movement"
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 591.206
+margin_top = 424.831
+margin_right = 615.206
+margin_bottom = 448.831
+rect_scale = Vector2( 2.5, 2.5 )
+flat = true
+
+[node name="Button" parent="." instance=ExtResource( 7 )]
+margin_left = 72.0
+margin_top = 1050.0
+margin_right = -1324.0
+margin_bottom = 368.0
+[connection signal="value_changed" from="Sliders/MasterSound" to="." method="_on_MasterSound_value_changed"]
+[connection signal="value_changed" from="Sliders/Music" to="." method="_on_Music_value_changed"]
+[connection signal="value_changed" from="Sliders/ObjectSound" to="." method="_on_ObjectSound_value_changed"]
+[connection signal="pressed" from="CheckBox" to="." method="_on_CheckBox_pressed"]
