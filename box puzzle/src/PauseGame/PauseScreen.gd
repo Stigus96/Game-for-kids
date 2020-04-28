@@ -6,17 +6,13 @@ onready var mainMenuButtons = get_node("MarginContainer")
 func _ready():
 	PlayerData.connect("menu_updated", self, "backtoMenuButtons")
 
-
+# Hovers over the top choice when entering the pause menu
 func _physics_process(delta):
 	if $MarginContainer/CenterContainer/VBoxContainer/Continue.is_hovered() == true:
 		$MarginContainer/CenterContainer/VBoxContainer/Continue.grab_focus()
-	
-	if $MarginContainer/CenterContainer/VBoxContainer/Restart.is_hovered() == true:
-		$MarginContainer/CenterContainer/VBoxContainer/Restart.grab_focus()
-	
-	if $MarginContainer/CenterContainer/VBoxContainer/ReturnToMenu.is_hovered():
-		$MarginContainer/CenterContainer/VBoxContainer/ReturnToMenu.grab_focus()
 
+
+#Pauses game when event happens, then hovers continue
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		mainMenuButtons.show()
