@@ -60,7 +60,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 128.491, 960.427 )
+position = Vector2( 145.263, 956.159 )
 
 [node name="HorisontalMove" parent="." instance=ExtResource( 5 )]
 position = Vector2( 158.839, 890.248 )
@@ -88,11 +88,11 @@ move_to = Vector2( 1300, 0 )
 speed = 6
 
 [node name="PhysicsBox" parent="." instance=ExtResource( 6 )]
-position = Vector2( 373.753, 631.013 )
+position = Vector2( 379.859, 629.581 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="PhysicsBox2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1035.33, 915.977 )
+position = Vector2( 1041.79, 917.287 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Area2D" parent="." instance=ExtResource( 7 )]
@@ -123,88 +123,84 @@ scale = Vector2( 0.5, 1 )
 script = ExtResource( 10 )
 
 [node name="Area2D3" type="Area2D" parent="SpikePressurePlate"]
-editor/display_folded = true
 position = Vector2( -1526.59, -977.275 )
 scale = Vector2( 2, 1 )
 script = ExtResource( 11 )
 
 [node name="Spike" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 209.227, 985.308 )
+position = Vector2( 213.009, 985.308 )
 
 [node name="Spike25" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 187.672, 985.308 )
+position = Vector2( 191.454, 985.308 )
 
 [node name="Spike26" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 166.118, 985.308 )
+position = Vector2( 169.9, 985.308 )
 
 [node name="Spike17" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 431.629, 985.308 )
+position = Vector2( 435.411, 985.308 )
 
 [node name="Spike8" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 320.144, 985.308 )
+position = Vector2( 323.926, 985.308 )
 
 [node name="Spike15" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 542.546, 985.308 )
+position = Vector2( 546.328, 985.308 )
 
 [node name="Spike2" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 231.41, 985.308 )
+position = Vector2( 235.192, 985.308 )
 
 [node name="Spike11" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 453.812, 985.308 )
+position = Vector2( 457.594, 985.308 )
 
 [node name="Spike6" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 342.327, 985.308 )
+position = Vector2( 346.109, 985.308 )
 
 [node name="Spike20" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 564.729, 985.308 )
+position = Vector2( 568.511, 985.308 )
 
 [node name="Spike3" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 254.162, 985.308 )
+position = Vector2( 257.944, 985.308 )
 
 [node name="Spike12" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 476.564, 985.308 )
+position = Vector2( 480.346, 985.308 )
 
 [node name="Spike7" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 365.079, 985.308 )
+position = Vector2( 368.861, 985.308 )
 
 [node name="Spike14" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 587.481, 985.308 )
+position = Vector2( 591.263, 985.308 )
 
 [node name="Spike4" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 276.346, 985.308 )
+position = Vector2( 280.128, 985.308 )
 
 [node name="Spike19" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 498.748, 985.308 )
+position = Vector2( 502.53, 985.308 )
 
 [node name="Spike10" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 387.262, 985.308 )
+position = Vector2( 391.044, 985.308 )
 
 [node name="Spike16" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 609.664, 985.308 )
+position = Vector2( 613.446, 985.308 )
 
 [node name="Spike5" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 298.529, 985.308 )
+position = Vector2( 302.311, 985.308 )
 
 [node name="Spike18" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 520.931, 985.308 )
+position = Vector2( 524.713, 985.308 )
 
 [node name="Spike9" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 409.446, 985.308 )
+position = Vector2( 413.228, 985.308 )
 
 [node name="Spike13" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 631.848, 985.308 )
+position = Vector2( 635.63, 985.308 )
 
 [node name="Spike21" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 653.462, 985.308 )
+position = Vector2( 657.244, 985.308 )
 
 [node name="Spike22" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 675.077, 985.308 )
+position = Vector2( 678.859, 985.308 )
 
 [node name="Spike23" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 696.691, 985.308 )
-
-[node name="Spike24" parent="SpikePressurePlate/Area2D3" instance=ExtResource( 12 )]
-position = Vector2( 718.306, 985.308 )
+position = Vector2( 701.597, 985.308 )
 
 [node name="Portal" parent="." instance=ExtResource( 13 )]
 visible = false
@@ -288,10 +284,10 @@ position = Vector2( 968.548, 1154.33 )
 [node name="PlayerData" parent="." instance=ExtResource( 17 )]
 
 [node name="ScoreInterface" parent="PlayerData" instance=ExtResource( 18 )]
-margin_left = 12.2406
-margin_top = -3.05045
-margin_right = 12.2406
-margin_bottom = -3.05042
+margin_left = 12.9508
+margin_top = 56.1204
+margin_right = 12.9508
+margin_bottom = 56.1204
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

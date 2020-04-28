@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=2]
@@ -7,26 +7,27 @@
 [ext_resource path="res://src/CandyLevelObstacles/Energy_Interface.gd" type="Script" id=5]
 [ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/Backgrounds/CandyLandBG3.png" type="Texture" id=8]
-[ext_resource path="res://src/Collectible_Items/Candy.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/CandyLevelObstacles/Area2D.gd" type="Script" id=11]
-[ext_resource path="res://assets/Candy/cake.png" type="Texture" id=12]
-[ext_resource path="res://src/CandyLevelObstacles/HesteHinder.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=15]
-[ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=16]
-[ext_resource path="res://assets/Candy/Sprite/candycane.png" type="Texture" id=17]
-[ext_resource path="res://assets/Game sounds/BossTheme.ogg" type="AudioStream" id=18]
-[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=19]
-[ext_resource path="res://assets/Birds/Bird_Animation/Fly_1.png" type="Texture" id=20]
-[ext_resource path="res://assets/Birds/Bird_Animation/Fly_2.png" type="Texture" id=21]
-[ext_resource path="res://assets/Birds/Bird_Animation/fly_3.png" type="Texture" id=22]
-[ext_resource path="res://assets/Birds/Bird_Animation/Fly_4.png" type="Texture" id=23]
-[ext_resource path="res://assets/Birds/Bird_Animation/Fly_5.png" type="Texture" id=24]
-[ext_resource path="res://assets/Birds/Bird_Animation/Fly_6.png" type="Texture" id=25]
-[ext_resource path="res://assets/Birds/Bird_Animation/Fly_7.png" type="Texture" id=26]
-[ext_resource path="res://assets/Birds/Bird_Animation/Fly_8.png" type="Texture" id=27]
+[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/Backgrounds/CandyLandBG3.png" type="Texture" id=9]
+[ext_resource path="res://src/Collectible_Items/Candy.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/CandyLevelObstacles/Area2D.gd" type="Script" id=12]
+[ext_resource path="res://assets/Candy/cake.png" type="Texture" id=13]
+[ext_resource path="res://src/CandyLevelObstacles/HesteHinder.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=16]
+[ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=17]
+[ext_resource path="res://assets/Candy/Sprite/candycane.png" type="Texture" id=18]
+[ext_resource path="res://assets/Game sounds/BossTheme.ogg" type="AudioStream" id=19]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/Birds/Bird_Animation/Fly_1.png" type="Texture" id=21]
+[ext_resource path="res://assets/Birds/Bird_Animation/Fly_2.png" type="Texture" id=22]
+[ext_resource path="res://assets/Birds/Bird_Animation/fly_3.png" type="Texture" id=23]
+[ext_resource path="res://assets/Birds/Bird_Animation/Fly_4.png" type="Texture" id=24]
+[ext_resource path="res://assets/Birds/Bird_Animation/Fly_5.png" type="Texture" id=25]
+[ext_resource path="res://assets/Birds/Bird_Animation/Fly_6.png" type="Texture" id=26]
+[ext_resource path="res://assets/Birds/Bird_Animation/Fly_7.png" type="Texture" id=27]
+[ext_resource path="res://assets/Birds/Bird_Animation/Fly_8.png" type="Texture" id=28]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.6621, 37.3757 )
@@ -41,7 +42,7 @@ height = 89.3528
 
 [sub_resource type="TileSet" id=4]
 0/name = "lollipop orange.png 0"
-0/texture = ExtResource( 15 )
+0/texture = ExtResource( 16 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 160, 256 )
@@ -51,7 +52,7 @@ height = 89.3528
 0/shapes = [  ]
 0/z_index = 0
 1/name = "lollipop red.png 1"
-1/texture = ExtResource( 16 )
+1/texture = ExtResource( 17 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 160, 256 )
@@ -61,7 +62,7 @@ height = 89.3528
 1/shapes = [  ]
 1/z_index = 0
 2/name = "candycane.png 2"
-2/texture = ExtResource( 17 )
+2/texture = ExtResource( 18 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( -3, -7, 94, 186 )
@@ -73,7 +74,7 @@ height = 89.3528
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "default",
 "speed": 8.0
@@ -132,8 +133,8 @@ __meta__ = {
 
 [node name="Energy_Interface" type="Control" parent="KinematicBody2D/CollisionShape2D/Camera2D"]
 margin_left = 1706.0
-margin_top = -948.0
-margin_right = 1843.0
+margin_top = -949.0
+margin_right = 2120.0
 margin_bottom = -893.0
 script = ExtResource( 5 )
 __meta__ = {
@@ -157,6 +158,12 @@ position = Vector2( -1926.97, -31562.7 )
 rotation = -1.57079
 scale = Vector2( 2, 2 )
 
+[node name="ScoreInterface" parent="KinematicBody2D/CollisionShape2D/Camera2D" instance=ExtResource( 8 )]
+margin_left = 900.0
+margin_top = -1000.0
+margin_right = 900.0
+margin_bottom = -1000.0
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0.5, 0.5 )
 
@@ -169,7 +176,7 @@ __meta__ = {
 [node name="CandyLandBG3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 981.068, 513.422 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -177,95 +184,95 @@ __meta__ = {
 [node name="CandyLandBG4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 4979.52, 512.315 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Candy" type="Area2D" parent="."]
 
-[node name="Cake" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 2414.58, 567.896 )
 
-[node name="Cake6" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake6" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 5247.3, 526.804 )
 
-[node name="Cake7" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake7" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 6984.09, 357.528 )
 
-[node name="Cake8" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake8" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 7008.22, 617.585 )
 
-[node name="Cake10" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake10" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 6943.02, 614.897 )
 
-[node name="Cake11" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake11" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 6770.53, 389.837 )
 
-[node name="Cake12" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake12" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 6550.18, 419.078 )
 
-[node name="Cake15" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake15" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 4793.72, 338.354 )
 
-[node name="Cake2" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake2" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 2331.09, 482.495 )
 
-[node name="Cake3" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake3" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 10461.1, 267.241 )
 
-[node name="Cake4" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake4" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 11243, 897.838 )
 
-[node name="Cake14" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake14" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 11663.4, 900.929 )
 
-[node name="Cake5" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake5" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 11449.5, 608.23 )
 
-[node name="Cake9" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake9" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 12224.8, 426.388 )
 
-[node name="Cake16" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake16" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 13172.5, 556.979 )
 
-[node name="Cake13" parent="Candy" instance=ExtResource( 9 )]
+[node name="Cake13" parent="Candy" instance=ExtResource( 10 )]
 position = Vector2( 7213.79, 402.481 )
 
 [node name="Spikes" type="Area2D" parent="."]
 
-[node name="Spikes39" parent="Spikes" instance=ExtResource( 10 )]
+[node name="Spikes39" parent="Spikes" instance=ExtResource( 11 )]
 position = Vector2( 4306.15, 483.099 )
 rotation = -1.57079
 
-[node name="Spikes40" parent="Spikes" instance=ExtResource( 10 )]
+[node name="Spikes40" parent="Spikes" instance=ExtResource( 11 )]
 position = Vector2( 4055.14, 543.78 )
 rotation = -1.57079
 
-[node name="Spikes2" parent="Spikes" instance=ExtResource( 10 )]
+[node name="Spikes2" parent="Spikes" instance=ExtResource( 11 )]
 position = Vector2( 4551.88, 422.372 )
 rotation = 4.71238
 
-[node name="Spikes12" parent="Spikes" instance=ExtResource( 10 )]
+[node name="Spikes12" parent="Spikes" instance=ExtResource( 11 )]
 position = Vector2( 8207.59, 703.495 )
 
-[node name="Spikes43" parent="Spikes" instance=ExtResource( 10 )]
+[node name="Spikes43" parent="Spikes" instance=ExtResource( 11 )]
 position = Vector2( 8813.79, 671.75 )
 
-[node name="Spikes42" parent="Spikes" instance=ExtResource( 10 )]
+[node name="Spikes42" parent="Spikes" instance=ExtResource( 11 )]
 position = Vector2( 8791.55, 671.998 )
 rotation = 6.28318
 
 [node name="FianlCake" type="Area2D" parent="."]
 position = Vector2( 13596.8, 622.973 )
 scale = Vector2( 0.4005, 0.311625 )
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="cake" type="Sprite" parent="FianlCake"]
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FianlCake"]
 position = Vector2( -4.05469, 19.3481 )
@@ -274,37 +281,37 @@ shape = SubResource( 3 )
 [node name="KillPlayer2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 19149.3, 1244.16 )
 
-[node name="HesteHinder" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder" parent="." instance=ExtResource( 14 )]
 position = Vector2( 2186.09, 525.74 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="HesteHinder2" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 2956.76, 616.985 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="HesteHinder3" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder3" parent="." instance=ExtResource( 14 )]
 position = Vector2( 6107.69, 585.191 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="HesteHinder4" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder4" parent="." instance=ExtResource( 14 )]
 position = Vector2( 7543.62, 709.806 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="HesteHinder5" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder5" parent="." instance=ExtResource( 14 )]
 position = Vector2( 8172.93, 647.252 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="HesteHinder6" parent="." instance=ExtResource( 13 )]
+[node name="HesteHinder6" parent="." instance=ExtResource( 14 )]
 position = Vector2( 8757.86, 616.579 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="Cake" parent="." instance=ExtResource( 9 )]
+[node name="Cake" parent="." instance=ExtResource( 10 )]
 position = Vector2( 9694.14, 378.757 )
 
-[node name="Cake2" parent="." instance=ExtResource( 9 )]
+[node name="Cake2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 9567.92, 440.57 )
 
-[node name="Horse" parent="." instance=ExtResource( 14 )]
+[node name="Horse" parent="." instance=ExtResource( 15 )]
 position = Vector2( 311.246, 687.979 )
 scale = Vector2( 0.75, 0.75 )
 
@@ -320,14 +327,14 @@ format = 1
 tile_data = PoolIntArray( 1048855, 0, 0, 1048882, 1, 0, 1507449, 0, 0, 1638641, 1, 0, 1966266, 0, 0, 2031882, 2, 0, 2097214, 1, 0, 2163016, 2, 0, 2490414, 2, 0, 2490593, 2, 0, 2621545, 2, 0, 2621589, 2, 0, 2949602, 2, 0 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 18 )
+stream = ExtResource( 19 )
 volume_db = -10.0
 autoplay = true
 bus = "Background music"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 19 )]
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 20 )]
 visible = false
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -336,6 +343,6 @@ visible = false
 position = Vector2( 13709.7, 514.328 )
 scale = Vector2( 0.265892, 0.32304 )
 frames = SubResource( 5 )
-frame = 4
+frame = 1
 playing = true
 [connection signal="body_entered" from="FianlCake" to="FianlCake" method="_on_Area2D_body_entered"]
