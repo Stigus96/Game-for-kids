@@ -9,5 +9,5 @@ func _ready():
 	pass # Replace with function body.
 	
 func update_interface() -> void:
-	score.text = "score: %s" % PlayerData.score
+	score.text = "Coins: %s" % PlayerData.score
 	print(score)
