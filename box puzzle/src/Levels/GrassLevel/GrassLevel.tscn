@@ -11,7 +11,7 @@
 [ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/Levels/caveLevel.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Levels/IceLevel.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/Pressureplate/Spike_pressureplate.gd" type="Script" id=14]
 [ext_resource path="res://src/KillPlayer/Spikes/Multible_Spikes.tscn" type="PackedScene" id=15]
@@ -512,7 +512,7 @@ position = Vector2( 765.874, 1263.31 )
 visible = false
 
 [node name="Portal" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1790.43, 563.134 )
+position = Vector2( 1790.43, 577.709 )
 z_index = 2
 next_scene = ExtResource( 12 )
 

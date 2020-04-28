@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Portal/Portal.gd" type="Script" id=1]
 [ext_resource path="res://assets/Portal/Portal_1.png" type="Texture" id=2]
@@ -83,6 +83,9 @@ tracks/3/keys = {
 } ]
 }
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 56.0135 )
+
 [node name="Portal" type="Area2D"]
 scale = Vector2( 0.7, 1 )
 script = ExtResource( 1 )
@@ -114,4 +117,10 @@ texture = ExtResource( 5 )
 stream = ExtResource( 6 )
 volume_db = 10.0
 bus = "Player"
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 37.7628, -1.1663 )
+shape = SubResource( 3 )
 [connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]
