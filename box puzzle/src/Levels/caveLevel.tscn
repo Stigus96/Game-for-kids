@@ -447,9 +447,12 @@ __meta__ = {
 modulate = Color( 0.0235294, 0.0235294, 0.0235294, 0.764706 )
 self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 917.563, 546.647 )
-scale = Vector2( 1.51548, 1.34406 )
+scale = Vector2( 1.45, 1.45 )
 z_index = 6
 texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Jump puzzle spikes" type="Node2D" parent="."]
 
@@ -472,7 +475,7 @@ position = Vector2( 209.365, 521.416 )
 rotation = -3.14159
 
 [node name="ladder1" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1640.45, 733.92 )
+position = Vector2( 1640.45, 743.944 )
 scale = Vector2( 0.2, 0.16 )
 
 [node name="LadderMap" type="TileMap" parent="ladder1"]
@@ -506,7 +509,8 @@ z_index = 2
 texture = ExtResource( 18 )
 
 [node name="Portal" parent="." instance=ExtResource( 19 )]
-position = Vector2( 545.005, 121.32 )
+position = Vector2( 545.005, 130.141 )
+rotation = 3.14159
 z_index = 2
 next_scene = ExtResource( 20 )
 
