@@ -23,7 +23,7 @@ outline_size = 2
 outline_color = Color( 0.152941, 0.152941, 0.152941, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10.1677, 230.574 )
 
 [node name="Start_CutScene" type="Node2D"]
@@ -136,7 +136,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortalToNextLevel"]
 position = Vector2( 2267.92, 705.344 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="PortalToNextLevel" to="." method="_on_PortalToNextLevel_body_entered"]

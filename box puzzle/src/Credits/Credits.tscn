@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Game menu Fonts/expressway rg.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://src/Credits/Credit_Screen.gd" type="Script" id=3]
 [ext_resource path="res://assets/Game sounds/Fått deg på hjernen Credits.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 867.162, 10 )
@@ -67,5 +68,11 @@ autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -10.097
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 5 )]
+visible = false
 [connection signal="timeout" from="Credit_Screen/Timer" to="Credit_Screen" method="_on_Timer_timeout"]
