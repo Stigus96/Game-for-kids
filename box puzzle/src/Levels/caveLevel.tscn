@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Tilemaps/CaveTiles.tres" type="TileSet" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/Game sounds/CaveLevel.ogg" type="AudioStream" id=22]
 [ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0.605103, 30.2492, 0.0603428, 20.8842, 18.1872, 15.4579, 40.5138, 11.2717, 54.1888, 14.0625, 62.5612, 30.2492 )
@@ -576,3 +577,9 @@ visible = false
 
 [node name="PauseScreen" parent="CanvasLayer2" instance=ExtResource( 23 )]
 visible = false
+
+[node name="ScoreInterface" parent="." instance=ExtResource( 24 )]
+margin_left = 1939.33
+margin_top = 105.107
+margin_right = 1939.33
+margin_bottom = 105.107

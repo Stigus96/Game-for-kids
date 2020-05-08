@@ -215,7 +215,8 @@ text = "Congratualtions
 on reaching candyland, 
 here is the cake i promised you"
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_use_anchors_": false
 }
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Control/Label"]
@@ -226,6 +227,9 @@ margin_top = -7.0
 margin_right = 232.0
 margin_bottom = 78.0
 texture = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label2" type="Label" parent="Control"]
 visible = false
