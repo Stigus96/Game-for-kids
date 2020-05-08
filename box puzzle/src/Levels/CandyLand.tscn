@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=2]
@@ -27,6 +27,9 @@
 [ext_resource path="res://assets/Birds/Bird_Animation/Fly_6.png" type="Texture" id=25]
 [ext_resource path="res://assets/Birds/Bird_Animation/Fly_7.png" type="Texture" id=26]
 [ext_resource path="res://assets/Birds/Bird_Animation/Fly_8.png" type="Texture" id=27]
+[ext_resource path="res://src/Credits/Credits.tscn" type="PackedScene" id=28]
+[ext_resource path="res://src/Levels/CandyLand.gd" type="Script" id=29]
+[ext_resource path="res://assets/Wizzard/Wizzard.png" type="Texture" id=30]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.6621, 37.3757 )
@@ -79,7 +82,27 @@ animations = [ {
 "speed": 8.0
 } ]
 
+[sub_resource type="Animation" id=7]
+resource_name = "Fly_Away"
+length = 5.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1.8, 2.7, 3.7, 4.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -46.5508, -117.8 ), Vector2( -111.15, -255.549 ), Vector2( -166.684, -407.87 ), Vector2( -274.577, -547.497 ), Vector2( -379.297, -766.457 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 11.501, 166.121 )
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 29 )
 
 [node name="PlayerData" parent="." instance=ExtResource( 1 )]
 
@@ -263,6 +286,7 @@ script = ExtResource( 11 )
 __meta__ = {
 "_edit_group_": true
 }
+next_scene = ExtResource( 28 )
 
 [node name="cake" type="Sprite" parent="FianlCake"]
 texture = ExtResource( 12 )
@@ -330,12 +354,37 @@ bus = "Background music"
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 19 )]
 visible = false
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Bird" type="Sprite" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Sprite"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Bird"]
 position = Vector2( 13709.7, 514.328 )
 scale = Vector2( 0.265892, 0.32304 )
 frames = SubResource( 5 )
-frame = 4
+frame = 7
 playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bird"]
+anims/Fly_Away = SubResource( 7 )
+
+[node name="EndCutscene" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndCutscene"]
+position = Vector2( 13662.3, 492.557 )
+shape = SubResource( 6 )
+
+[node name="BirdFlyAway" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BirdFlyAway"]
+position = Vector2( 13446.2, 486.419 )
+shape = SubResource( 6 )
+
+[node name="Wizzard" type="Sprite" parent="."]
+position = Vector2( 13815, 604.269 )
+scale = Vector2( -0.0736687, 0.0803452 )
+texture = ExtResource( 30 )
 [connection signal="body_entered" from="FianlCake" to="FianlCake" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="EndCutscene" to="." method="_on_EndCutscene_body_entered"]
+[connection signal="body_entered" from="BirdFlyAway" to="." method="_on_BirdFlyAway_body_entered"]

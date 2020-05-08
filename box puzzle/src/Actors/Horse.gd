@@ -5,6 +5,7 @@ export var speed_adjust_right: = 150
 export var speed_adjust_left: = 250
 onready var AnimatedHorse = get_node("AnimatedHorse")
 var timer
+var speedCut = 1
 
 func _ready():
 	#make a timer that is connected on a timeout
@@ -32,31 +33,30 @@ func get_direction () -> Vector2:
 		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() else 1.0)
 		
 		
-		
-
-		
 func calculate_x_speed(
 direction: Vector2
 ):
 	var current_speed = speed.x
-	if direction.x > 0:
-		current_speed = speed.x + speed_adjust_right
-	if direction.x < 0:
-		current_speed = speed.x - speed_adjust_left
+	if speedCut == 0:
+		current_speed = 0
+	elif speedCut != 0:
+		if direction.x > 0:
+			current_speed = speed.x + speed_adjust_right
+		if direction.x < 0:
+			current_speed = speed.x - speed_adjust_left
 	return current_speed
 	
 func _on_timer_timeout():
 	print("Timer timeout")
 	PlayerData.update_player_speed(false)
 
-
-
 func animate_horse():
-	if (is_on_floor() == false):
-		AnimatedHorse.play("jump")
-	else:
-		AnimatedHorse.play("run")
-	
+	if speedCut != 0:
+		if (is_on_floor() == false):
+			AnimatedHorse.play("jump")
+		else:
+			AnimatedHorse.play("run")
+
 func calculate_move_velocity(
 	linear_velocity: Vector2,
 	direction: Vector2,
