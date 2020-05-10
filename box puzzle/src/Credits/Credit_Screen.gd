@@ -23,5 +23,7 @@ func _on_Timer_timeout():
 	if numberOfTimeouts == 2:
 		_velocity.y = 1000
 		credit_Speed = -30
+	elif numberOfTimeouts == 49:
+		get_tree().quit()
 	numberOfTimeouts += 1
 	pass # Replace with function body.
