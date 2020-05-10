@@ -43,9 +43,9 @@ func _on_Timer_timeout():
 	elif numberOfTimeouts == 9:
 		Lable2.hide()
 		Lable3.show()
-	elif numberOfTimeouts == 13:
+	elif numberOfTimeouts == 12:
 		fadeout.play("Fadeout")
-	elif numberOfTimeouts == 16:
+	elif numberOfTimeouts == 15:
 		get_tree().change_scene_to(next_scene)
 	
 	numberOfTimeouts += 1

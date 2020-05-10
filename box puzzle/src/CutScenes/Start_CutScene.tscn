@@ -19,7 +19,6 @@ extents = Vector2( 10, 167.097 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 24
-outline_size = 2
 outline_color = Color( 0.152941, 0.152941, 0.152941, 1 )
 font_data = ExtResource( 7 )
 
@@ -88,28 +87,30 @@ margin_bottom = 595.068
 
 [node name="Label" type="Label" parent="Control"]
 visible = false
-margin_left = 1261.15
-margin_top = 566.407
-margin_right = 1605.15
-margin_bottom = 676.407
+margin_left = 1288.65
+margin_top = 597.657
+margin_right = 1632.65
+margin_bottom = 707.657
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Welcome to Box puzzle!
-Your goal is pass all the levels,
- and reach the cake"
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label2" type="Label" parent="Control"]
 visible = false
-margin_left = 1272.99
-margin_top = 565.486
-margin_right = 1743.99
-margin_bottom = 699.486
+margin_left = 1189.8
+margin_top = 579.706
+margin_right = 1660.8
+margin_bottom = 713.706
 custom_fonts/font = SubResource( 3 )
-text = "But watch out for the
-dangerous crow! I heard it is 
-also looking for the cake!"
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "I have a mission for you!
+Try to get though all the levels
+"
+align = 1
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -117,14 +118,49 @@ __meta__ = {
 
 [node name="Label3" type="Label" parent="Control"]
 visible = false
-margin_left = 1270.16
-margin_top = 564.717
-margin_right = 1641.16
-margin_bottom = 660.717
+margin_left = 1238.17
+margin_top = 581.07
+margin_right = 1609.17
+margin_bottom = 677.07
 custom_fonts/font = SubResource( 3 )
-text = "Hurry! You need to reach
- the cake before the crow! 
-There is no time to lose"
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "and i will have a cake waiting
+for you at the end"
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Control"]
+visible = false
+margin_left = 1237.15
+margin_top = 570.479
+margin_right = 1608.15
+margin_bottom = 666.479
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "But watch out for the dangerous
+ crow, I have heard he is
+ also looking for the cake!"
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Control"]
+visible = false
+margin_left = 1236.02
+margin_top = 568.964
+margin_right = 1599.02
+margin_bottom = 664.964
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Hurry! You need to reach the 
+cake before the crow!
+ There is no time to lose"
+align = 1
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
