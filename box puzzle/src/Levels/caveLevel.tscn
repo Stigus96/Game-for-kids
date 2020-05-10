@@ -516,7 +516,6 @@ z_index = 2
 next_scene = ExtResource( 20 )
 
 [node name="Coins" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 21 )]
 position = Vector2( 334.241, 178.638 )

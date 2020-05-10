@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Fått deg på hjernen Credits.ogg-0194d78bae4d0203eb78483215f99e74.oggstr"
+
+[deps]
+
+source_file="res://assets/Game sounds/Fått deg på hjernen Credits.ogg"
+dest_files=[ "res://.import/Fått deg på hjernen Credits.ogg-0194d78bae4d0203eb78483215f99e74.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

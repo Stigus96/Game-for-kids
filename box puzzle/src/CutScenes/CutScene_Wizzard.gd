@@ -15,6 +15,7 @@ onready var numberOfTimeouts = 0
 var horse_pos = Vector2(233.425, -50.884)
 var wizzard_scale = Vector2(0.075, 0.084)
 
+onready var bobble = get_node("Control/Bobble")
 onready var lable1 = get_node("Control/Label")
 onready var lable2 = get_node("Control/Label2")
 onready var lable3 = get_node("Control/Label3")
@@ -35,6 +36,7 @@ func start_Player() -> void:
 	PlayerNode.CutScene_speed = 1
 	
 func start_cutscene() -> void:
+	bobble.show()
 	lable1.show()
 	timer.start()
 

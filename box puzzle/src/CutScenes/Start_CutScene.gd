@@ -15,6 +15,9 @@ onready var Bobble = get_node("Control/Bobble")
 onready var Lable1 = get_node("Control/Label")
 onready var Lable2 = get_node("Control/Label2")
 onready var Lable3 = get_node("Control/Label3")
+onready var Lable4 = get_node("Control/Label4")
+onready var Lable5 = get_node("Control/Label5")
+
 
 
 func _on_Area2D_body_entered(body):
@@ -28,17 +31,22 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_Timer_timeout():
-	
-	if numberOfTimeouts == 6:
+	if numberOfTimeouts == 2:
 		Lable1.hide()
 		Lable2.show()
-	if numberOfTimeouts == 12:
+	if numberOfTimeouts == 6:
 		Lable2.hide()
 		Lable3.show()
-	if numberOfTimeouts == 14:
+	if numberOfTimeouts == 10:
+		Lable3.hide()
+		Lable4.show()
+	if numberOfTimeouts == 16:
+		Lable4.hide()
+		Lable5.show()
+	if numberOfTimeouts == 21:
 		Stop.queue_free()
 		Player.CutScene_speed = 1
-	if numberOfTimeouts == 15:
+	if numberOfTimeouts == 22:
 		Wizzard.set_scale(wizzard_scale)
 	
 	numberOfTimeouts += 1

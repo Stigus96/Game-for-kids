@@ -7,7 +7,7 @@
 [node name="Bobble" type="NinePatchRect"]
 margin_right = 102.0
 margin_bottom = 40.0
-rect_scale = Vector2( 3.4, 3 )
+rect_scale = Vector2( 3.5, 3.1 )
 texture = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true,
