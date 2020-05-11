@@ -7,6 +7,7 @@ onready var parent = get_parent()
 
 func _on_Spikes_body_entered(body):
 	if body.name == "Player":
+		PlayerData.set_checkpointScore(1)
 		get_tree().reload_current_scene()
 	pass # Replace with function body.
 

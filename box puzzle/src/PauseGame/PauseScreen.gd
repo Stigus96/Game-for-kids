@@ -32,6 +32,7 @@ func _on_Continue_pressed():
 
 func _on_Restart_pressed():
 	get_tree().paused = not get_tree().paused
+	PlayerData.set_checkpointScore(1)
 	get_tree().reload_current_scene()
 
 func _on_Options_pressed():
@@ -49,6 +50,3 @@ func _on_ReturnToMenu_pressed():
 
 func _on_Quit_pressed():
 	get_tree().quit()
-
-
-

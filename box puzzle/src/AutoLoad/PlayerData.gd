@@ -1,6 +1,5 @@
 extends Node
 
-
 signal score_updated
 signal door_updated
 signal ladder_updated
@@ -11,6 +10,7 @@ signal menu_updated
 var player_speed = 1
 
 var score: = 0 setget set_score
+var checkpointScore = 0 setget set_checkpointScore
 
 var door = true setget set_door
 
@@ -28,13 +28,24 @@ func set_score(value: int) -> void:
 func reset() -> void:
 	score = 0
 
-
 func _ready():
 	pass # Replace with function body.
 
 func coin_collected():
 	score += 1
 	pass
+	
+
+func set_checkpointScore(value: int) -> void:
+	score = get_checkpoint_Score()
+	emit_signal("score_updated")
+	return
+
+func get_checkpoint_Score():
+	return checkpointScore
+
+func update_checkpointScore():
+	checkpointScore = score
 
 func set_door(value: bool) -> void:
 	door = value
