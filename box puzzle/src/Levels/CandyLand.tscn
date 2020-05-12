@@ -478,7 +478,6 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Fadeout" type="Sprite" parent="."]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 13718.5, 704.478 )
