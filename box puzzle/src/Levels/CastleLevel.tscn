@@ -891,7 +891,7 @@ scale = Vector2( 0.45, 1 )
 script = ExtResource( 17 )
 
 [node name="Player" parent="." instance=ExtResource( 18 )]
-position = Vector2( 285.587, 974.814 )
+position = Vector2( 159.13, 329.025 )
 
 [node name="Spikes" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1561.16, 1235.58 )
