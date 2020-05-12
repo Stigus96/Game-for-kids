@@ -2,12 +2,10 @@ extends Area2D
 
 var isLadderHiding = false
 
-#checks if the player node has entered the ladder
 func _on_ladder_body_entered(body):
 	if body.name == "Player":
 		PlayerData.set_ladder(true)
 
-#checks if the player node has exited the ladder
 func _on_ladder_body_exited(body):
 	if body.name == "Player":
 		PlayerData.set_ladder(false)

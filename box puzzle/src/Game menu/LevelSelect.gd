@@ -1,7 +1,5 @@
 extends Control
 
-#Changes scene depending on which button is presset
-
 func _on_tutorialBtn_pressed():
 	get_tree().change_scene("res://src/Levels/Tutorial.tscn")
 	pass

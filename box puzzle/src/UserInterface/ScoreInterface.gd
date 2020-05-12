@@ -8,7 +8,6 @@ func _ready():
 	update_interface()
 	pass # Replace with function body.
 	
-#Updates the score text in the level.
 func update_interface() -> void:
 	score.text = "Coins: %s" % PlayerData.score
 	print(score)

@@ -12,7 +12,6 @@ onready var Player = get_node("CutScene_intro/Player")
 func _ready():
 	PlayerData.connect("menu_updated", self, "updateMenu")
 
-#plays cutscene and starts new game
 func _on_newGame_pressed():
 	
 	var minimumVolume = -80
@@ -20,6 +19,16 @@ func _on_newGame_pressed():
 	var myVolume = 0
 	
 	playerNode.CutScene_speed = 1
+
+#	while currentVolume > minimumVolume :
+#		currentVolume = currentVolume - 15
+#		myVolume = music.set_volume_db(currentVolume)
+#		print(currentVolume)
+#		yield(get_tree().create_timer(0.1), "timeout")
+#		if currentVolume <= -80:
+#			music.stop()
+#			get_tree().change_scene("res://src/Levels/Tutorial.tscn")
+
 
 func _on_LevelSelect_pressed():
 	levelSelect.show()
