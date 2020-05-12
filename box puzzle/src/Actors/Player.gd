@@ -43,6 +43,7 @@ func _physics_process(delta: float) -> void:
 				box.push(push_speed * motion) #Sets the box's push speed
 	
 	if Input.is_action_just_pressed("ui_focus_next"):
+		PlayerData.set_checkpointScore(1)
 		get_tree().reload_current_scene()
 		PlayerData.reset_player_speed() #restes the speed of the horse in candyland when the scene is reloaded.
 	

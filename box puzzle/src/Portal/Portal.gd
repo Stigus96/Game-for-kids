@@ -13,6 +13,7 @@ func _on_Portal_body_entered(body):
 	pass # Replace with function body.
 
 func teleport() -> void:
+	PlayerData.update_checkpointScore()
 	get_tree().change_scene_to(next_scene)
 
 func fade_out_music() -> void:
