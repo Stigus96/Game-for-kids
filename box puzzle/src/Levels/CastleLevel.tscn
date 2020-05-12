@@ -872,7 +872,7 @@ scale = Vector2( 0.45, 1 )
 script = ExtResource( 15 )
 
 [node name="PhysicsBox" parent="Box reset button" instance=ExtResource( 16 )]
-position = Vector2( 197.506, -519.029 )
+position = Vector2( 197, -519 )
 scale = Vector2( 1, 0.45 )
 
 [node name="switch wall pressureplate 1" parent="." instance=ExtResource( 13 )]
@@ -891,7 +891,7 @@ scale = Vector2( 0.45, 1 )
 script = ExtResource( 17 )
 
 [node name="Player" parent="." instance=ExtResource( 18 )]
-position = Vector2( 162.471, 356.904 )
+position = Vector2( 285.587, 974.814 )
 
 [node name="Spikes" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1561.16, 1235.58 )
