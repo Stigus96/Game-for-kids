@@ -73,12 +73,14 @@ margin_left = 40.0
 margin_top = 400.0
 margin_right = 311.0
 margin_bottom = 416.0
+ticks_on_borders = true
 
 [node name="ObjectSound" parent="Sliders" instance=ExtResource( 5 )]
 margin_left = 40.0
 margin_top = 500.0
 margin_right = 311.0
 margin_bottom = 516.0
+ticks_on_borders = true
 
 [node name="ObjectVolume" parent="Sliders" instance=ExtResource( 6 )]
 margin_left = -430.793

@@ -14,37 +14,41 @@ var timer = null
 
 onready var CannonSound = get_node("AudioStreamPlayer")
 
-
+#Makes a new timer when it get initialized
 func _ready():
 	timer = Timer.new()
 	timer.set_one_shot(true)
+	#If it set to shood random, it make the timeout time random
 	if RandomShoot == true:
 		timer.set_wait_time(get_random_time())
 	elif RandomShoot == false:
 		timer.set_wait_time(TimeDelay)
 	add_child(timer)
 	timer.start()
-	print("Hei1")
-	print(timer.get_time_left())
 	timer.connect("timeout", self, "on_timeout_complete")
 
+#Makes a random timeout time
 func get_random_time() -> int:
 	time = randi()%3 + 2
 	print(time)
 	return time
 
+#Makes a random timeout time
 func on_timeout_complete():
 	Shoot_cannonBall()
 	CannonSound.play()
 
+#Shoots the cannonball
 func Shoot_cannonBall():
-	print("hei2")
+	#Makes a new cannonball in the level
 	var cannonBall_instance = cannonBall.instance()
 	cannonBall_instance.position = self.get_global_position()
 	get_parent().add_child(cannonBall_instance)
 		
+	#Plays shoot animation
 	animatedSprite.play("Shoot")
 		
+	#Sets next timeout time
 	if RandomShoot == true:
 		timer.set_wait_time(get_random_time())
 	elif RandomShoot == false:
@@ -53,7 +57,7 @@ func Shoot_cannonBall():
 	timer.start()
 		
 
-
+#Stops the animation when its finished
 func _on_AnimatedSprite_animation_finished():
 	animatedSprite.stop()
 	pass # Replace with function body.
