@@ -7,8 +7,8 @@ func push(velocity: Vector2) -> void:
 
 #function for reseting the box in certain scenes
 func reset_box() -> void:
-	position.x = 270
-	position.y = -1344
+	position.x = 197
+	position.y = -519
 
 
 
