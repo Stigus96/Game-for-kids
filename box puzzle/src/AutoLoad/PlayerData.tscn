@@ -18,7 +18,7 @@ margin_bottom = 29.1604
 
 [node name="ScoreInterface" parent="." instance=ExtResource( 3 )]
 margin_left = -46.2653
-margin_top = 42.564
+margin_top = 32.824
 margin_right = -46.2653
-margin_bottom = 42.564
+margin_bottom = 32.824
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

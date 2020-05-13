@@ -2,19 +2,19 @@ extends Node2D
 
 export var next_scene: PackedScene
 
-onready var horse = get_node("Horse")
-onready var AnimatedHorse = get_node("Horse/AnimatedHorse")
+onready var horse = get_node("KinematicBody2D/Horse")
+onready var AnimatedHorse = get_node("KinematicBody2D/Horse/AnimatedHorse")
 onready var killzone = get_node("KinematicBody2D")
-onready var bird = get_node("Bird/AnimationPlayer")
+onready var bird = get_node("KinematicBody2D/Bird/AnimationPlayer")
 
-onready var TalkingBobble = get_node("Sprite")
-onready var Lable1 = get_node("Sprite/Label")
-onready var Lable2 = get_node("Sprite/Label2")
-onready var Lable3 = get_node("Sprite/Label3")
+onready var TalkingBobble = get_node("KinematicBody2D/Sprite")
+onready var Lable1 = get_node("KinematicBody2D/Sprite/Label")
+onready var Lable2 = get_node("KinematicBody2D/Sprite/Label2")
+onready var Lable3 = get_node("KinematicBody2D/Sprite/Label3")
 
-onready var fadeout = get_node("Fadeout/AnimationPlayer")
+onready var fadeout = get_node("KinematicBody2D/Fadeout/AnimationPlayer")
 
-onready var EndTimer = get_node("Timer")
+onready var EndTimer = get_node("KinematicBody2D/Timer")
 
 var numberOfTimeouts = 0
 

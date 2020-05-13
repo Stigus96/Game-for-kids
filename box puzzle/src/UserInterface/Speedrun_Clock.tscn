@@ -4,7 +4,9 @@
 [ext_resource path="res://assets/Game menu Fonts/expressway rg.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
-size = 26
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [node name="Speedrun_Clock" type="Control"]
@@ -17,9 +19,9 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 margin_left = 18.0
-margin_top = 17.0
-margin_right = 112.0
-margin_bottom = 49.0
+margin_top = 20.61
+margin_right = 126.0
+margin_bottom = 57.61
 custom_fonts/font = SubResource( 1 )
 text = "Time %s"
 __meta__ = {
@@ -29,9 +31,9 @@ __meta__ = {
 [node name="Label2" type="Label" parent="."]
 visible = false
 margin_left = 18.0
-margin_top = 47.0
-margin_right = 112.0
-margin_bottom = 79.0
+margin_top = 57.0
+margin_right = 145.0
+margin_bottom = 100.0
 custom_fonts/font = SubResource( 1 )
 text = "Time %s"
 __meta__ = {
@@ -41,9 +43,9 @@ __meta__ = {
 [node name="Label3" type="Label" parent="."]
 visible = false
 margin_left = 18.0
-margin_top = 77.0
-margin_right = 112.0
-margin_bottom = 109.0
+margin_top = 97.0
+margin_right = 145.0
+margin_bottom = 140.0
 custom_fonts/font = SubResource( 1 )
 text = "Time %s"
 __meta__ = {
@@ -53,9 +55,9 @@ __meta__ = {
 [node name="Label4" type="Label" parent="."]
 visible = false
 margin_left = 18.0
-margin_top = 107.0
-margin_right = 112.0
-margin_bottom = 139.0
+margin_top = 137.0
+margin_right = 145.0
+margin_bottom = 180.0
 custom_fonts/font = SubResource( 1 )
 text = "Time %s"
 __meta__ = {
@@ -65,9 +67,9 @@ __meta__ = {
 [node name="Label5" type="Label" parent="."]
 visible = false
 margin_left = 18.0
-margin_top = 137.0
-margin_right = 112.0
-margin_bottom = 169.0
+margin_top = 177.0
+margin_right = 145.0
+margin_bottom = 220.0
 custom_fonts/font = SubResource( 1 )
 text = "Time %s"
 __meta__ = {
@@ -77,21 +79,9 @@ __meta__ = {
 [node name="Label6" type="Label" parent="."]
 visible = false
 margin_left = 18.0
-margin_top = 167.0
-margin_right = 112.0
-margin_bottom = 199.0
-custom_fonts/font = SubResource( 1 )
-text = "Time %s"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label7" type="Label" parent="."]
-visible = false
-margin_left = 18.0
-margin_top = 197.0
-margin_right = 112.0
-margin_bottom = 229.0
+margin_top = 217.0
+margin_right = 145.0
+margin_bottom = 260.0
 custom_fonts/font = SubResource( 1 )
 text = "Time %s"
 __meta__ = {

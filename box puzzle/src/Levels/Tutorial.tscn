@@ -151,6 +151,7 @@ position = Vector2( 173.893, 907.374 )
 anims/Cloud1 = SubResource( 1 )
 
 [node name="Position2D" type="Position2D" parent="."]
+z_index = -1
 
 [node name="bg_cloud6" type="Sprite" parent="Position2D"]
 self_modulate = Color( 0.894118, 0.666667, 0.921569, 0.439216 )
