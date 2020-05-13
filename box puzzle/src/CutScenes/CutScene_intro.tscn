@@ -13,7 +13,6 @@ extents = Vector2( 837.314, 11 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 816.349, 143.31 )
 scale = Vector2( 1, 1 )
-z_index = 1
 script = ExtResource( 2 )
 speed = Vector2( 300, 1000 )
 gravity = 3000.0
