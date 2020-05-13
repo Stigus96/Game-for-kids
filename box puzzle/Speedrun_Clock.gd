@@ -51,12 +51,11 @@ func lap_interface() -> void:
 		time6.show()
 		PlayerData.lap += 1
 		time6.text = "Castle: %s" % PlayerData.time
-		
-	print(PlayerData.lap)
 
 func Game_Started() -> void:
 	self.show()
 	score.show()
+	PlayerData.lap = 1
 
 func time_reset_updated2() -> void:
 		score.hide()

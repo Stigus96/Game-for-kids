@@ -126,7 +126,7 @@ scale = Vector2( 1.1, 1.1 )
 [node name="PlayerStop" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerStop"]
-position = Vector2( 1810.97, 899.756 )
+position = Vector2( 1809.07, 898.806 )
 shape = SubResource( 5 )
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/newGame" to="." method="_on_newGame_pressed"]
 [connection signal="pressed" from="Menu/CenterRow/CenterContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]

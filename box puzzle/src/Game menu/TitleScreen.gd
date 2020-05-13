@@ -1,6 +1,5 @@
 extends Control
 
-onready var playerNode = get_node("CutScene_intro/Player")
 onready var music = get_node("IntroMusic")
 onready var musicVolume = music.volume_db
 onready var levelSelect = get_node("LevelSelect")
@@ -18,17 +17,7 @@ func _on_newGame_pressed():
 	var currentVolume = music.get_volume_db()
 	var myVolume = 0
 	
-	playerNode.CutScene_speed = 1
-
-#	while currentVolume > minimumVolume :
-#		currentVolume = currentVolume - 15
-#		myVolume = music.set_volume_db(currentVolume)
-#		print(currentVolume)
-#		yield(get_tree().create_timer(0.1), "timeout")
-#		if currentVolume <= -80:
-#			music.stop()
-#			get_tree().change_scene("res://src/Levels/Tutorial.tscn")
-
+	Player.CutScene_speed = 1
 
 func _on_LevelSelect_pressed():
 	levelSelect.show()
@@ -50,8 +39,10 @@ func updateMenu():
 	cutScene.show()
 
 
-
 func _on_PlayerStop_body_entered(body):
+	print("hay")
 	if body.name == "Player":
+		print("lay")
 		Player.CutScene_speed = 0
+		print(Player.CutScene_speed)
 	pass # Replace with function body.
