@@ -16,6 +16,8 @@ func update_interface() -> void:
 
 func Game_Started() -> void:
 	self.show()
+	score.show()
 
 func time_reset_updated3() -> void:
+	score.text = "Coins: %s" % PlayerData.score
 	self.hide()
