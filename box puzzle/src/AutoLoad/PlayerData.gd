@@ -14,6 +14,8 @@ onready var parent = get_parent()
 
 signal time_updated
 signal lap_updated
+signal time_reset_updated
+signal Game_Started
 signal score_updated
 signal door_updated
 signal ladder_updated
@@ -36,11 +38,16 @@ var ladder = false setget set_ladder
 func set_score(value: int) -> void:
 	score = value
 	emit_signal("score_updated")
-	print(score)
 	return
-	
+
+func start_levels() -> void:
+	emit_signal("Game_Started")
+
+
 func reset() -> void:
 	score = 0
+	emit_signal("time_reset_updated")
+	
 
 func startTimer() -> void:
 	SpeedrunTimer.start()

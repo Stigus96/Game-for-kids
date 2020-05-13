@@ -14,6 +14,8 @@ onready var faker = get_node("Label2")
 func _ready():
 	PlayerData.connect("time_updated", self, "update_interface")
 	PlayerData.connect("lap_updated", self, "lap_interface")
+	PlayerData.connect("time_reset_updated", self, "time_reset_updated2")
+	PlayerData.connect("Game_Started", self, "Game_Started")
 	update_interface()
 	lap_interface()
 	pass # Replace with function body.
@@ -51,3 +53,26 @@ func lap_interface() -> void:
 		time6.text = "Castle: %s" % PlayerData.time
 		
 	print(PlayerData.lap)
+
+func Game_Started() -> void:
+	self.show()
+	score.show()
+
+func time_reset_updated2() -> void:
+		score.hide()
+		time2.hide()
+		time3.hide()
+		time4.hide()
+		time5.hide()
+		time6.hide()
+		
+		time2.text = "Tutorial:"
+		time3.text = "Grass:"
+		time4.text = "Ice:"
+		time5.text = "Cave:"
+		time6.text = "Castle:"
+		
+		PlayerData.SpeedrunTimer.stop()
+		PlayerData.minutes = 0
+		PlayerData.seconds = 0
+		PlayerData.tenths = 0

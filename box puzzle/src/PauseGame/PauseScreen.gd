@@ -44,6 +44,7 @@ func backtoMenuButtons():
 	mainMenuButtons.show()
 
 func _on_ReturnToMenu_pressed():
+	PlayerData.reset()
 	get_tree().paused = not get_tree().paused
 	get_tree().change_scene("res://src/Game menu/TitleScreen.tscn")
 
