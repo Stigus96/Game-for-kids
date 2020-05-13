@@ -6,5 +6,6 @@ export var next_scene: PackedScene
 func _on_Area2D_body_entered(body):
 	if body.name == "Horse":
 		print("Cake is taken")
+		PlayerData.stop_Time()
 		queue_free()
 	pass # Replace with function body.

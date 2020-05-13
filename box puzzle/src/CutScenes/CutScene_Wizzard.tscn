@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://src/CutScenes/CutScene_Wizzard.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -20,7 +20,6 @@
 [ext_resource path="res://src/CutScenes/CutScene_nextScene.gd" type="Script" id=18]
 [ext_resource path="res://src/Levels/CandyLand.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=20]
-[ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=21]
 [ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=22]
 [ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=23]
 [ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=24]
@@ -105,7 +104,7 @@ tracks/1/keys = {
 [sub_resource type="DynamicFont" id=8]
 font_data = ExtResource( 17 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 10, 145.403 )
 
 [node name="CutScene_Wizzard" type="Node2D"]
@@ -168,7 +167,7 @@ anims/Flying = SubResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Cake/Bird"]
 frames = SubResource( 6 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cake"]
@@ -284,7 +283,7 @@ __meta__ = {
 candyLevel = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="Horse" parent="." instance=ExtResource( 20 )]
 visible = false
@@ -294,8 +293,6 @@ collision_mask = 2
 
 [node name="Timer" type="Timer" parent="Horse"]
 wait_time = 5.0
-
-[node name="PlayerData" parent="." instance=ExtResource( 21 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 22 )

@@ -3,7 +3,7 @@ extends KinematicBody2D
 var motion = Vector2()
 var state = 0
 onready var hay = false
-var speed = -350
+var speed = 350
 
 
 func _ready():
@@ -14,5 +14,3 @@ func _ready():
 func _physics_process(delta):
 		motion.x = speed
 		move_and_slide(motion, Vector2(0,-1))
-	
-

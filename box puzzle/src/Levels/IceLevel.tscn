@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/Tilemaps/IceLevelTileMap.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/Misc assest/CaveOpening.png" type="Texture" id=2]
@@ -16,8 +16,6 @@
 [ext_resource path="res://src/Levels/caveLevel.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=16]
-[ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=17]
-[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=18]
 [ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/Game sounds/IceTheme.ogg" type="AudioStream" id=21]
@@ -84,6 +82,7 @@ speed = 1
 
 [node name="HorisontalMove5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 123.966, 139.152 )
+z_index = -1
 move_to = Vector2( 1300, 0 )
 speed = 6
 
@@ -280,14 +279,6 @@ rotation = 3.14159
 [node name="Area2D2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 968.548, 1154.33 )
 
-[node name="PlayerData" parent="." instance=ExtResource( 17 )]
-
-[node name="ScoreInterface" parent="PlayerData" instance=ExtResource( 18 )]
-margin_left = -458.29
-margin_top = 75.1604
-margin_right = -458.29
-margin_bottom = 75.1604
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 19 )]
@@ -330,9 +321,6 @@ position = Vector2( 546.436, 282.947 )
 
 [node name="Coin8" parent="Coin" instance=ExtResource( 20 )]
 position = Vector2( 289.257, 288.117 )
-
-[node name="Coin9" parent="Coin" instance=ExtResource( 20 )]
-position = Vector2( 183.283, 78.7539 )
 
 [node name="Coin4" parent="Coin" instance=ExtResource( 20 )]
 position = Vector2( 640.003, 549.001 )
