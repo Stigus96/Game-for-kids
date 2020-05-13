@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://src/Tilemaps/IceLevelTileMap.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/Misc assest/CaveOpening.png" type="Texture" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://src/Levels/caveLevel.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=16]
-[ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=17]
 [ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=18]
 [ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=20]
@@ -280,14 +279,6 @@ rotation = 3.14159
 [node name="Area2D2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 968.548, 1154.33 )
 
-[node name="PlayerData" parent="." instance=ExtResource( 17 )]
-
-[node name="ScoreInterface" parent="PlayerData" instance=ExtResource( 18 )]
-margin_left = -458.29
-margin_top = 75.1604
-margin_right = -458.29
-margin_bottom = 75.1604
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 19 )]
@@ -342,3 +333,5 @@ stream = ExtResource( 21 )
 volume_db = -10.0
 autoplay = true
 bus = "Background music"
+
+[node name="ScoreInterface" parent="." instance=ExtResource( 18 )]

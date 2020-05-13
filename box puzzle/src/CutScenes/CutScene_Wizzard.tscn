@@ -105,7 +105,7 @@ tracks/1/keys = {
 [sub_resource type="DynamicFont" id=8]
 font_data = ExtResource( 17 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 10, 145.403 )
 
 [node name="CutScene_Wizzard" type="Node2D"]
@@ -168,7 +168,7 @@ anims/Flying = SubResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Cake/Bird"]
 frames = SubResource( 6 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cake"]
@@ -284,7 +284,7 @@ __meta__ = {
 candyLevel = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="Horse" parent="." instance=ExtResource( 20 )]
 visible = false

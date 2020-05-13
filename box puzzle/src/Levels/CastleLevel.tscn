@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://assets/Backgrounds/castle bacround.png" type="Texture" id=1]
 [ext_resource path="res://assets/Demolevel assets/environment/tiles/castle/tile_castle.png" type="Texture" id=2]
@@ -19,7 +19,6 @@
 [ext_resource path="res://src/Pressureplate/switch_walls_Pressureplate.gd" type="Script" id=17]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=18]
 [ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/UserInterface/ScoreInterface.tscn" type="PackedScene" id=20]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/Game sounds/CastleTheme.ogg" type="AudioStream" id=22]
 [ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=23]
@@ -764,12 +763,14 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [node name="Node2D" type="Node2D"]
 
 [node name="backround" type="TileMap" parent="."]
+z_index = -1
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -65549, 0, 0, -131064, 0, 0, -131043, 0, 0, -131022, 0, 0, 589811, 0, 0, 524296, 0, 0, 524317, 0, 0, 524338, 0, 0, 1114140, 0, 0, 1179677, 0, 0, 1179698, 0, 0, 1769498, 0, 0, 1835035, 0, 0, 1835037, 0, 0, 1835058, 0, 0 )
 
 [node name="Backround tiles" type="TileMap" parent="."]
+z_index = -1
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -786,30 +787,29 @@ tile_data = PoolIntArray( 65540, 0, 0, 65547, 0, 0, 65555, 0, 0, 65562, 0, 0, 65
 position = Vector2( 1076.79, 347.433 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-z_index = 0
 RandomShoot = false
 
 [node name="Cannon3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1076.22, 314.923 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-z_index = 0
 RandomShoot = false
 
 [node name="Cannon4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1077.69, 282.579 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-z_index = 0
 RandomShoot = false
 
 [node name="Cannon2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1805.91, 620.864 )
+z_index = -1
 RandomShoot = false
 TimeDelay = 2
 
 [node name="Main tiles" type="TileMap" parent="."]
 position = Vector2( -2, 0 )
+z_index = -1
 tile_set = SubResource( 17 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -904,12 +904,6 @@ scale = Vector2( -0.096947, 0.947416 )
 [node name="ladder5" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1103.29, 284.419 )
 scale = Vector2( 0.132286, 0.73042 )
-
-[node name="ScoreInterface" parent="." instance=ExtResource( 20 )]
-margin_left = 1938.88
-margin_top = 30.7092
-margin_right = 1938.88
-margin_bottom = 30.7092
 
 [node name="coins" type="Area2D" parent="."]
 position = Vector2( 959.107, 579.313 )

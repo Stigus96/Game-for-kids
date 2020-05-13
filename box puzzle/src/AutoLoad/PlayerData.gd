@@ -8,6 +8,8 @@ var tenths = 0
 
 var time = ""
 
+var lap = 0
+
 onready var parent = get_parent()
 
 signal time_updated
@@ -108,6 +110,9 @@ func set_lap_time() -> void:
 
 func get_lap_time():
 	return time
+
+func stop_Time():
+	SpeedrunTimer.stop()
 
 func _on_Timer_timeout():
 	if seconds > 59:
