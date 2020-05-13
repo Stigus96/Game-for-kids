@@ -55,6 +55,7 @@ func lap_interface() -> void:
 func Game_Started() -> void:
 	self.show()
 	score.show()
+	PlayerData.lap = 1
 
 func time_reset_updated2() -> void:
 		score.hide()
