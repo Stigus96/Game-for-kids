@@ -1,5 +1,17 @@
 extends Node
 
+onready var SpeedrunTimer = get_node("Timer")
+
+var minutes = 0
+var seconds = 0
+var tenths = 0
+
+var time = ""
+
+onready var parent = get_parent()
+
+signal time_updated
+signal lap_updated
 signal score_updated
 signal door_updated
 signal ladder_updated
@@ -28,13 +40,12 @@ func set_score(value: int) -> void:
 func reset() -> void:
 	score = 0
 
-func _ready():
-	pass # Replace with function body.
+func startTimer() -> void:
+	SpeedrunTimer.start()
 
 func coin_collected():
 	score += 1
 	pass
-	
 
 func set_checkpointScore(value: int) -> void:
 	score = get_checkpoint_Score()
@@ -91,3 +102,26 @@ func get_color_door() -> bool:
 func main_menu_update(value: String) -> void:
 	emit_signal("menu_updated")
 
+func set_lap_time() -> void:
+	emit_signal("lap_updated")
+	pass
+
+func get_lap_time():
+	return time
+
+func _on_Timer_timeout():
+	if seconds > 59:
+		seconds = 0
+		minutes += 1
+	elif tenths == 9:
+		tenths = 0
+		seconds += 1
+	else:
+		tenths += 1
+		
+	if seconds < 10:
+		time = str(minutes) + ":0" + str(seconds) + ":" + str(tenths)
+	else:
+		time = str(minutes) + ":" + str(seconds) + ":" + str(tenths)
+	emit_signal("time_updated")
+	pass # Replace with function body.

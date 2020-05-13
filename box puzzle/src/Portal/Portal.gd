@@ -14,6 +14,7 @@ func _on_Portal_body_entered(body):
 
 func teleport() -> void:
 	PlayerData.update_checkpointScore()
+	PlayerData.set_lap_time()
 	get_tree().change_scene_to(next_scene)
 
 func fade_out_music() -> void:
