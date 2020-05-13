@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://src/CutScenes/CutScene_Wizzard.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -16,14 +16,15 @@
 [ext_resource path="res://assets/Birds/Bird_Animation/Fly_7.png" type="Texture" id=14]
 [ext_resource path="res://assets/Birds/Bird_Animation/Fly_8.png" type="Texture" id=15]
 [ext_resource path="res://assets/Backgrounds/CandyLandBG3.png" type="Texture" id=16]
-[ext_resource path="res://assets/Game menu Fonts/expressway rg.ttf" type="DynamicFontData" id=17]
-[ext_resource path="res://src/CutScenes/CutScene_nextScene.gd" type="Script" id=18]
-[ext_resource path="res://src/Levels/CandyLand.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/DialogBox/TalkingBubble .tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/Game menu Fonts/expressway rg.ttf" type="DynamicFontData" id=18]
+[ext_resource path="res://src/CutScenes/CutScene_nextScene.gd" type="Script" id=19]
+[ext_resource path="res://src/Levels/CandyLand.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Actors/Horse.tscn" type="PackedScene" id=21]
 [ext_resource path="res://src/Tilemaps/JungleTilesd.tres" type="TileSet" id=22]
 [ext_resource path="res://assets/Candy/Sprite/lollipop red.png" type="Texture" id=23]
 [ext_resource path="res://assets/Candy/Sprite/lollipop orange.png" type="Texture" id=24]
-[ext_resource path="res://src/DialogBox/TalkingBubble .tscn" type="PackedScene" id=25]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1203.73, 10 )
@@ -102,7 +103,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="DynamicFont" id=8]
-font_data = ExtResource( 17 )
+font_data = ExtResource( 18 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 10, 145.403 )
@@ -200,7 +201,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bobble" parent="Control" instance=ExtResource( 25 )]
+[node name="Bobble" parent="Control" instance=ExtResource( 17 )]
 visible = false
 margin_left = 617.558
 margin_top = 433.158
@@ -219,7 +220,7 @@ custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Congratualtions
 on reaching candyland, 
-here is the cake i promised you"
+here is the cake i promised you."
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -267,7 +268,7 @@ margin_right = 842.112
 margin_bottom = 572.1
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "The crow is getting away, hurry"
+text = "The crow is getting away, hurry!"
 align = 1
 autowrap = true
 __meta__ = {
@@ -276,16 +277,16 @@ __meta__ = {
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 1362.52, -145.434 )
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 __meta__ = {
 "_edit_group_": true
 }
-candyLevel = ExtResource( 19 )
+candyLevel = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 9 )
 
-[node name="Horse" parent="." instance=ExtResource( 20 )]
+[node name="Horse" parent="." instance=ExtResource( 21 )]
 visible = false
 position = Vector2( 233.886, -50.6495 )
 collision_layer = 2
@@ -329,6 +330,10 @@ position = Vector2( 959.358, -57.9109 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -1
 texture = ExtResource( 24 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 25 )]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="StopZone" to="StopZone" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Cake" to="Cake" method="_on_Cake_body_entered"]
