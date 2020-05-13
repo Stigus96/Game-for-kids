@@ -1,6 +1,7 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Levels/Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://src/KillPlayer/KillPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Physics_box/PhysicsBox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=5]
@@ -11,12 +12,11 @@
 [ext_resource path="res://src/Pressureplate/Pressureplate.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Walls/Wall1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/DialogBox/DialogBox.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/Levels/GrassLevel/GrassLevel.tscn" type="PackedScene" id=16]
-[ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=17]
-[ext_resource path="res://assets/Game sounds/Tutorial.ogg" type="AudioStream" id=18]
-[ext_resource path="res://src/Levels/Tutorial.gd" type="Script" id=19]
+[ext_resource path="res://src/DialogBox/DialogBox.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Portal/Portal.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Levels/GrassLevel/GrassLevel.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/KillPlayer/Spikes/Spike.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/Game sounds/Tutorial.ogg" type="AudioStream" id=17]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Cloud1"
@@ -79,9 +79,9 @@ length = 15.0
 loop = true
 
 [node name="Tutorial" type="Node2D"]
-script = ExtResource( 19 )
+script = ExtResource( 1 )
 
-[node name="Death" parent="." instance=ExtResource( 1 )]
+[node name="Death" parent="." instance=ExtResource( 2 )]
 position = Vector2( 714.048, 1240.79 )
 scale = Vector2( 0.45, 0.45 )
 
@@ -194,25 +194,25 @@ scale = Vector2( 1.5, 1 )
 [node name="Coin" parent="." instance=ExtResource( 12 )]
 position = Vector2( 1182.75, 723.019 )
 
-[node name="Polygon2D" parent="." instance=ExtResource( 14 )]
+[node name="Polygon2D" parent="." instance=ExtResource( 13 )]
 position = Vector2( -35.3432, 337.176 )
 scale = Vector2( 0.927254, 0.881211 )
 
-[node name="Portal" parent="." instance=ExtResource( 15 )]
+[node name="Portal" parent="." instance=ExtResource( 14 )]
 position = Vector2( 1800.57, 866.724 )
-next_scene = ExtResource( 16 )
+next_scene = ExtResource( 15 )
 
-[node name="Spike" parent="." instance=ExtResource( 17 )]
+[node name="Spike" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1354.31, 917.373 )
 
-[node name="Spike2" parent="." instance=ExtResource( 17 )]
+[node name="Spike2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1374.14, 917.373 )
 
-[node name="Spike3" parent="." instance=ExtResource( 17 )]
+[node name="Spike3" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1396.62, 918.064 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 18 )
+stream = ExtResource( 17 )
 volume_db = -10.0
 autoplay = true
 bus = "Background music"
