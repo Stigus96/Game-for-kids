@@ -1,8 +1,235 @@
-[gd_scene format=2]
+[gd_scene load_steps=21 format=2]
 
-[node name="Node" type="Node"]
+[ext_resource path="res://src/Game menu/LevelSelect.gd" type="Script" id=1]
+[ext_resource path="res://assets/Game menu assets/Transparent Level.png" type="Texture" id=2]
+[ext_resource path="res://assets/Game menu Fonts/Hysterix-8Wg2.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/Game menu assets/level select.png" type="Texture" id=4]
+[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=5]
+[ext_resource path="res://src/Game menu/ReturnButton.tscn" type="PackedScene" id=6]
 
-[node name="TextEdit" type="TextEdit" parent="."]
-margin_right = 320.0
-margin_bottom = 96.0
-text = "LEVEL SELECT GOES HERE"
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0, 0, 0, 0.27451 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 55
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 250.0
+margin_right = -20.0
+margin_bottom = -20.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 175.0
+margin_top = 48.0
+margin_right = -87.0
+margin_bottom = 1.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tutorial" type="Label" parent="TextureRect"]
+margin_left = 330.0
+margin_top = 200.0
+margin_right = 771.0
+margin_bottom = 297.0
+custom_fonts/font = SubResource( 1 )
+text = "Level One:
+Tutorial island"
+
+[node name="GrassLevel" type="Label" parent="TextureRect"]
+margin_left = 330.0
+margin_top = 350.0
+margin_right = 771.0
+margin_bottom = 447.0
+custom_fonts/font = SubResource( 1 )
+text = "Level Two:
+Grumpy grass"
+
+[node name="CaveLevel" type="Label" parent="TextureRect"]
+margin_left = 330.0
+margin_top = 505.0
+margin_right = 771.0
+margin_bottom = 602.0
+custom_fonts/font = SubResource( 1 )
+text = "Level Three:
+Clumpsy cave"
+
+[node name="IceLevel" type="Label" parent="TextureRect"]
+margin_left = 1022.5
+margin_top = 203.504
+margin_right = 1463.5
+margin_bottom = 300.504
+custom_fonts/font = SubResource( 1 )
+text = "Level four:
+Funky Ice"
+
+[node name="CastleLevel" type="Label" parent="TextureRect"]
+margin_left = 1021.33
+margin_top = 358.176
+margin_right = 1499.33
+margin_bottom = 455.176
+custom_fonts/font = SubResource( 1 )
+text = "Level five:
+Evil Crows Castle"
+
+[node name="CandyLand" type="Label" parent="TextureRect"]
+margin_left = 1026.0
+margin_top = 510.84
+margin_right = 1467.0
+margin_bottom = 607.84
+custom_fonts/font = SubResource( 1 )
+text = "Level six: 
+Candyland"
+
+[node name="tutorialBtn" type="Button" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 75.0
+margin_top = 170.0
+margin_right = -867.0
+margin_bottom = -563.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+flat = true
+
+[node name="grassLevelBtn" type="Button" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 75.0
+margin_top = 330.0
+margin_right = -870.0
+margin_bottom = -403.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+flat = true
+
+[node name="caveLevelBtn" type="Button" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 75.0
+margin_top = 480.0
+margin_right = -869.0
+margin_bottom = -253.0
+custom_styles/hover = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+flat = true
+
+[node name="IceLevelBtn" type="Button" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 760.0
+margin_top = 175.0
+margin_right = -118.0
+margin_bottom = -558.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+flat = true
+
+[node name="CastleLevelBtn" type="Button" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 760.0
+margin_top = 330.0
+margin_right = -117.0
+margin_bottom = -403.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+flat = true
+
+[node name="candylandBtn" type="Button" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 760.0
+margin_top = 480.0
+margin_right = -112.0
+margin_bottom = -253.0
+custom_styles/hover = SubResource( 12 )
+custom_styles/focus = SubResource( 13 )
+flat = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 699.582
+margin_top = -22.6912
+margin_right = 1274.58
+margin_bottom = 35.3088
+custom_fonts/font = SubResource( 14 )
+text = "Level select"
+
+[node name="Heading" type="TextureRect" parent="."]
+margin_left = 235.0
+margin_top = -105.0
+margin_right = 736.0
+margin_bottom = -21.0
+rect_scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 4 )
+stretch_mode = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 1196, 636 )
+scale = Vector2( 1.25, 1.19 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Button" parent="." instance=ExtResource( 6 )]
+margin_left = 72.0
+margin_top = 800.0
+margin_right = -1284.0
+margin_bottom = 388.0
+[connection signal="mouse_entered" from="TextureRect/tutorialBtn" to="." method="_on_tutorialBtn_mouse_entered"]
+[connection signal="pressed" from="TextureRect/tutorialBtn" to="." method="_on_tutorialBtn_pressed"]
+[connection signal="pressed" from="TextureRect/grassLevelBtn" to="." method="_on_grassLevelBtn_pressed"]
+[connection signal="pressed" from="TextureRect/caveLevelBtn" to="." method="_on_caveLevelBtn_pressed"]
+[connection signal="pressed" from="TextureRect/IceLevelBtn" to="." method="_on_IceLevelBtn_pressed"]
+[connection signal="pressed" from="TextureRect/CastleLevelBtn" to="." method="_on_CastleLevelBtn_pressed"]
+[connection signal="pressed" from="TextureRect/candylandBtn" to="." method="_on_candylandBtn_pressed"]

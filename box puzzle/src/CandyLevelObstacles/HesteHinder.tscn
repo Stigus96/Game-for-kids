@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/CandyLevelObstacles/HesteHinder.gd" type="Script" id=1]
+[ext_resource path="res://assets/Misc assest/pixil-frame-0.png" type="Texture" id=2]
+[ext_resource path="res://assets/Misc assest/HinderOdelagt.png" type="Texture" id=3]
+
+[node name="HesteHinder" type="Area2D"]
+position = Vector2( 30.8654, 19.7196 )
+script = ExtResource( 1 )
+
+[node name="pixil-frame-0" type="Sprite" parent="."]
+position = Vector2( -21.543, 8.73468 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -6.88099, -4.48291, -7.28741, 44.1403, 10.9307, 44.3198, 10.3025, -7.28334 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( -21.6441, 8.68611 )
+texture = ExtResource( 3 )
+[connection signal="body_entered" from="." to="." method="_on_HesteHinder_body_entered"]

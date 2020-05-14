@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Fått deg på hjernen Credits.wav-36031e2b93bbed6894a7bb8ce49b9a23.sample"
+
+[deps]
+
+source_file="res://assets/Game sounds/Fått deg på hjernen Credits.wav"
+dest_files=[ "res://.import/Fått deg på hjernen Credits.wav-36031e2b93bbed6894a7bb8ce49b9a23.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

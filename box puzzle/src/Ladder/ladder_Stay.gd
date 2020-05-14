@@ -4,11 +4,12 @@ var isLadderHiding = false
 
 onready var parent = get_parent()
 
+#checks if the player node has entered the ladder
 func _on_ladder_body_entered(body):
 	if body.name == "Player":
 		PlayerData.set_ladder(true)
-		print("Hei")
 
+#checks if the player node has exited the ladder
 func _on_ladder_body_exited(body):
 	if body.name == "Player":
 		PlayerData.set_ladder(false)
@@ -19,7 +20,6 @@ func show_Ladder() -> void:
 		self.visible = true
 		self.set_collision_layer(1)
 		self.set_collision_mask(1)
-		print("hei2")
 		parent.update_pressureplate_child(false)
 
 func hide_Ladder() -> void:

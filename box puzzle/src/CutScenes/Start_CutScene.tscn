@@ -1,0 +1,186 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/CutScenes/Start_CutScene.gd" type="Script" id=1]
+[ext_resource path="res://assets/Game menu assets/Bakgrunn.png" type="Texture" id=2]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Portal/Portal_1.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/CutScene_player.gd" type="Script" id=5]
+[ext_resource path="res://assets/Wizzard/Wizzard.png" type="Texture" id=6]
+[ext_resource path="res://assets/Game menu Fonts/expressway rg.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://src/AutoLoad/PlayerData.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Levels/Tutorial.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/DialogBox/TalkingBubble .tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/Game sounds/IntroTheme.ogg" type="AudioStream" id=11]
+
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1483.46, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 167.097 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+outline_color = Color( 0.152941, 0.152941, 0.152941, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10.1677, 230.574 )
+
+[node name="Start_CutScene" type="Node2D"]
+position = Vector2( 136.324, 241.557 )
+scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 1 )
+next_scene = ExtResource( 9 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 1157.04, 416.51 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -5
+texture = ExtResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 932.667, 933.499 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 194.316, 823.79 )
+scale = Vector2( 1, 1 )
+script = ExtResource( 5 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
+CutScene_speed = 1
+
+[node name="Portal_fake" type="Sprite" parent="."]
+position = Vector2( 78.4542, 778.158 )
+scale = Vector2( 0.611329, 0.611329 )
+z_index = -1
+texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1033.27, 763.139 )
+shape = SubResource( 2 )
+
+[node name="Wizzard" type="Sprite" parent="."]
+position = Vector2( 1269.6, 813.739 )
+scale = Vector2( -0.165986, 0.173915 )
+z_index = -1
+texture = ExtResource( 6 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bobble" parent="Control" instance=ExtResource( 10 )]
+visible = false
+margin_left = 1247.36
+margin_top = 555.068
+margin_right = 1349.36
+margin_bottom = 595.068
+
+[node name="Label" type="Label" parent="Control"]
+visible = false
+margin_left = 1288.65
+margin_top = 597.657
+margin_right = 1632.65
+margin_bottom = 707.657
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Welcome to Box puzzle!
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control"]
+visible = false
+margin_left = 1189.8
+margin_top = 579.706
+margin_right = 1660.8
+margin_bottom = 713.706
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "I have a mission for you!
+Try to get though all the levels
+"
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Control"]
+visible = false
+margin_left = 1238.17
+margin_top = 581.07
+margin_right = 1609.17
+margin_bottom = 677.07
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "and i will have a cake waiting
+for you at the end"
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Control"]
+visible = false
+margin_left = 1237.15
+margin_top = 570.479
+margin_right = 1608.15
+margin_bottom = 666.479
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "But watch out for the dangerous
+ crow, I have heard he is
+ also looking for the cake!"
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Control"]
+visible = false
+margin_left = 1236.02
+margin_top = 568.964
+margin_right = 1599.02
+margin_bottom = 664.964
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Hurry! You need to reach the 
+cake before the crow!
+ There is no time to lose"
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerData" parent="." instance=ExtResource( 8 )]
+
+[node name="PortalToNextLevel" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalToNextLevel"]
+position = Vector2( 2267.92, 705.344 )
+shape = SubResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -10.0
+autoplay = true
+bus = "Background music"
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="PortalToNextLevel" to="." method="_on_PortalToNextLevel_body_entered"]
