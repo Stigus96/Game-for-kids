@@ -6,7 +6,6 @@ onready var time3: Label = get_node("Label3")
 onready var time4: Label = get_node("Label4")
 onready var time5: Label = get_node("Label5")
 onready var time6: Label = get_node("Label6")
-onready var time7: Label = get_node("Label7")
 
 onready var faker = get_node("Label2")
 
