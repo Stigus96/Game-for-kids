@@ -12,7 +12,7 @@ export var next_scene: PackedScene
 var wizzard_scale = Vector2(0.166, 0.174)
 
 #Talking bobble 
-onready var bubble = get_node("Control/bubble")
+onready var bobble = get_node("Control/Bobble")
 onready var Lable1 = get_node("Control/Label")
 onready var Lable2 = get_node("Control/Label2")
 onready var Lable3 = get_node("Control/Label3")
@@ -25,7 +25,7 @@ func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		Player.CutScene_speed = 0 #Stops the player
 		Lable1.show()
-		bubble.show()
+		bobble.show()
 		CutScene_Timer.start()
 		
 	pass # Replace with function body.
