@@ -408,6 +408,18 @@ position = Vector2( 515.274, 905.884 )
 texture = ExtResource( 11 )
 offset = Vector2( 154.493, -494.192 )
 
+[node name="Sprite5" type="Sprite" parent="."]
+material = SubResource( 3 )
+position = Vector2( -27.5134, 726.181 )
+texture = ExtResource( 11 )
+offset = Vector2( 154.493, -494.192 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+material = SubResource( 3 )
+position = Vector2( 1790.01, 664.404 )
+texture = ExtResource( 11 )
+offset = Vector2( 154.493, -494.192 )
+
 [node name="Sprite3" type="Sprite" parent="."]
 material = SubResource( 3 )
 position = Vector2( 398.64, 1647.14 )

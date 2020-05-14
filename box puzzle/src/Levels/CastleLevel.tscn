@@ -19,9 +19,9 @@
 [ext_resource path="res://src/Pressureplate/switch_walls_Pressureplate.gd" type="Script" id=17]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=18]
 [ext_resource path="res://src/KillPlayer/Spikes.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=21]
-[ext_resource path="res://assets/Game sounds/CastleTheme.ogg" type="AudioStream" id=22]
-[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/Collectible_Items/Coin.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/Game sounds/CastleTheme.ogg" type="AudioStream" id=21]
+[ext_resource path="res://src/PauseGame/PauseScreen.tscn" type="PackedScene" id=22]
 
 [sub_resource type="TileSet" id=1]
 0/name = "castle bacround.png 0"
@@ -854,6 +854,7 @@ scale = Vector2( 0.102881, 1.33306 )
 [node name="Portal" parent="." instance=ExtResource( 11 )]
 position = Vector2( 796.801, 1084.3 )
 scale = Vector2( 0.5, 0.6 )
+z_index = -2
 next_scene = ExtResource( 12 )
 
 [node name="door pressureplate" parent="." instance=ExtResource( 13 )]
@@ -912,96 +913,96 @@ scale = Vector2( 0.132286, 0.73042 )
 position = Vector2( 959.107, 579.313 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Coin" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( -0.000244141, -443.21 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin2" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin2" parent="coins" instance=ExtResource( 20 )]
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin3" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin3" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 0, 360.92 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin4" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin4" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 0, 725.051 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin5" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin5" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 2379.34, 1216.89 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin6" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin6" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 1485.14, 905.86 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin7" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin7" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 1684.74, 800.23 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin8" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin8" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 1897.25, 800.89 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin18" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin18" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 2174.92, 661.318 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin19" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin19" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 1927.25, 534.225 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin20" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin20" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 1570.59, 531.09 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin21" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin21" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 1283.92, 654.224 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin9" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin9" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 2075.61, 909.838 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin10" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin10" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 2238.05, 1073.13 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin11" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin11" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 1236.33, -116.634 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin12" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin12" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 1858.38, -124.41 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin13" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin13" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 1678.24, -423.771 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin14" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin14" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 1679.54, -555.957 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin15" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin15" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 839.768, -431.547 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin16" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin16" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( 839.768, -548.181 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Coin17" parent="coins" instance=ExtResource( 21 )]
+[node name="Coin17" parent="coins" instance=ExtResource( 20 )]
 position = Vector2( -2889.15, -33.2322 )
 scale = Vector2( 0.9, 0.9 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 22 )
+stream = ExtResource( 21 )
 volume_db = -10.0
 autoplay = true
 bus = "Background music"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 23 )]
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 22 )]
 visible = false
