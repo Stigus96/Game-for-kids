@@ -5,6 +5,7 @@ func _ready():
 
 onready var parent = get_parent()
 
+#If the player hits the spikes, the scene gets reloaded. (The player dies)
 func _on_Spikes_body_entered(body):
 	if body.name == "Player":
 		PlayerData.set_checkpointScore(1)

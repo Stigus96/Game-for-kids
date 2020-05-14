@@ -15,7 +15,7 @@ func _ready():
 	PlayerData.connect("ladder_updated", self, "update_ladder_on")
 	pass
 
-
+#Main function for the movment and animation for the player
 func _physics_process(delta: float) -> void:
 	var motion : = Vector2()
 	animate_player()
@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
-	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+	_velocity = move_and_slide(_velocity, FLOOR_NORMAL) 
 	CheckLadderAndTakeAction()
 	
 	if left_ray.is_colliding() or right_ray.is_colliding():
@@ -38,11 +38,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_focus_next"):
 		get_tree().reload_current_scene()
 	
-	
+#calculates which x direction the character is moving based on player input. also checks if the player is jumping
 func get_direction () -> Vector2:
 		return Vector2(
 		CutScene_speed,0)
-		
+
+#constantly checks if the player is touching a ladder, if true it will stop all movement and let the player climb up or down
 func CheckLadderAndTakeAction():
 	if ladder_on == true:
 		gravity = 0
@@ -57,6 +58,7 @@ func CheckLadderAndTakeAction():
 		
 		
 		
+#calculates velocity of the player by using speed and direction as inputs returns a vector that has the players current x and y velocity
 func calculate_move_velocity(
 	linear_velocity: Vector2,
 	direction: Vector2,
@@ -77,8 +79,9 @@ func check_box_collision(motion : Vector2) -> void:
 		return
 	var box : = get_slide_collision(0).collider as box
 	if box:
-		box.push(push_speed * motion)
+		box.push(push_speed * motion) #Sets the box's push speed
 		
+#changes the players animation based on what action it's currently doing
 func animate_player():
 	var is_crouching = Input.is_action_pressed("crouch")
 	var direction = get_direction()

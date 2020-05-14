@@ -11,6 +11,7 @@ onready var Player = get_node("CutScene_intro/Player")
 func _ready():
 	PlayerData.connect("menu_updated", self, "updateMenu")
 
+#plays cutscene and starts new game
 func _on_newGame_pressed():
 	
 	var minimumVolume = -80
@@ -38,11 +39,8 @@ func updateMenu():
 	mainMenuButtons.show()
 	cutScene.show()
 
-
+#Stops the player in the cutscene
 func _on_PlayerStop_body_entered(body):
-	print("hay")
 	if body.name == "Player":
-		print("lay")
 		Player.CutScene_speed = 0
-		print(Player.CutScene_speed)
 	pass # Replace with function body.

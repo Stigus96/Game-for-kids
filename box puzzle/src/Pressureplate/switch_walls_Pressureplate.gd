@@ -6,9 +6,7 @@ onready var pressurePlateSound = get_node("AudioStreamPlayer")
 func _ready():
 	PlayerData.connect("color_door_updated", self, "update_color_door")
 
-
-#onready var child = get_child(5)
-
+#When KinematicBody2D enters, it plays sound, changes the pressureplate look, and updates the door 
 func _on_Area2D_body_entered(body):
 	if body is KinematicBody2D:
 		
@@ -24,13 +22,11 @@ func _on_Area2D_body_entered(body):
 		
 	pass # Replace with function body.
 
-
+#When KinematicBody2D enters, it plays sound, changes the pressureplate look, and updates the door 
 func _on_Area2D_body_exited(body):
 	if body is KinematicBody2D:
 		pressurePlateSound.play()
 		Plate.show()
-#		PlayerData.set_door(true)
-#		child.find_door(false)
 	pass # Replace with function body
 
 func hide_pressurePlate():

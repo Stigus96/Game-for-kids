@@ -16,7 +16,7 @@ func _ready():
 	PlayerData.connect("ladder_updated", self, "update_ladder_on")
 	pass
 
-
+#Main function for the movment and animation for the player
 func _physics_process(delta: float) -> void:
 	var motion : = Vector2()
 	animate_player()
@@ -46,13 +46,13 @@ func _physics_process(delta: float) -> void:
 		PlayerData.set_checkpointScore(1)
 		get_tree().reload_current_scene()
 		PlayerData.reset_player_speed() #restes the speed of the horse in candyland when the scene is reloaded.
-	
+
+#calculates which x direction the character is moving based on player input. also checks if the player is jumping
 func get_direction () -> Vector2:
 		return Vector2(Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
 		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor()  else 1.0)
 		
-
-
+#constantly checks if the player is touching a ladder, if true it will stop all movement and let the player climb up or down
 func CheckLadderAndTakeAction():
 	if ladder_on == true:
 		gravity = 0
@@ -65,7 +65,7 @@ func CheckLadderAndTakeAction():
 	else:
 		 gravity = 830
 		
-		
+#calculates velocity of the player by using speed and direction as inputs returns a vector that has the players current x and y velocity
 func calculate_move_velocity(
 	linear_velocity: Vector2,
 	direction: Vector2,
@@ -89,7 +89,8 @@ func check_box_collision(motion : Vector2) -> void:
 	var box : = get_slide_collision(0).collider as box
 	if box:
 		box.push(push_speed * motion) #Sets the box's push speed
-		
+
+#changes the players animation based on what action it's currently doing
 func animate_player():
 	var is_crouching = Input.is_action_pressed("crouch")
 	var start_crouching = Input.is_action_just_pressed("crouch")
@@ -112,6 +113,7 @@ func animate_player():
 	if (ladder_on == true):
 		AnimatedPlayer.play("climb")
 
+#changes hitbox when the player is crouching
 func crouch():
 	var is_crouching = Input.is_action_pressed("crouch")
 	if (is_crouching):

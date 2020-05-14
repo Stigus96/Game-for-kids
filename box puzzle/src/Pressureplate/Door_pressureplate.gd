@@ -5,30 +5,27 @@ onready var pressurePlateSound = get_node("AudioStreamPlayer")
 
 onready var child = get_child(5)
 
-
-func _ready():
-	pass # Replace with function body.
-
+#When KinematicBody2D enters, it plays sound, changes the pressureplate look, and updates the door 
 func _on_Area2D_body_entered(body):
 	if body is KinematicBody2D:
-		pressurePlateSound.play()
-		Plate.hide()
+		pressurePlateSound.play() #Sound
+		Plate.hide() #Changes the pressureplate look
 		child.find_door(true)
-		PlayerData.set_door(false)
-		
-	pass # Replace with function body.
+		PlayerData.set_door(false) #Sets the door value to false (Not showing in the level)
 
-
+#When a KinematicBody2D enters, sound is played, pressureplate is changed and the ladder is hidden
 func _on_Area2D_body_exited(body):
 	if body is KinematicBody2D:
-		pressurePlateSound.play()
-		Plate.show()
-		PlayerData.set_door(true)
-		child.find_door(false)
+		pressurePlateSound.play() #Sound
+		Plate.show() #Changes the pressureplate look
+		PlayerData.set_door(true) #Sets the door value to false (Not showing in the level)
+		child.find_door(false) 
 	pass # Replace with function body
 
+#Pressed presureplate look
 func hide_pressurePlate():
 	Plate.hide()
 	
+#Unpressed pressureplate look
 func show_pressureplate():
 	Plate.show()
