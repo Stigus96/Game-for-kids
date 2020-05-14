@@ -34,7 +34,7 @@ var door = true setget set_door
 var ladder = false setget set_ladder
 
 
-
+#Updates the score
 func set_score(value: int) -> void:
 	score = value
 	emit_signal("score_updated")
@@ -43,14 +43,17 @@ func set_score(value: int) -> void:
 func start_levels() -> void:
 	emit_signal("Game_Started")
 
+#Resets the score and the lap variable. Sends out a signal that the game has been reset
 func reset() -> void:
 	lap = 0
 	score = 0
 	emit_signal("time_reset_updated")
 
+#Starts the timer
 func startTimer() -> void:
 	SpeedrunTimer.start()
 
+#Increase the score
 func coin_collected():
 	score += 1
 	pass

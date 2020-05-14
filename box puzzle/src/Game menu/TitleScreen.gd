@@ -11,6 +11,7 @@ onready var Player = get_node("CutScene_intro/Player")
 func _ready():
 	PlayerData.connect("menu_updated", self, "updateMenu")
 
+#plays cutscene and starts new game
 func _on_newGame_pressed():
 	
 	var minimumVolume = -80
