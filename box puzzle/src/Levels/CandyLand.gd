@@ -18,6 +18,7 @@ onready var EndTimer = get_node("KinematicBody2D/Timer")
 
 var numberOfTimeouts = 0
 
+#Stops the player and the level
 func _on_EndCutscene_body_entered(body):
 	if body.name == "Horse":
 		horse.speedCut = 0
@@ -25,7 +26,7 @@ func _on_EndCutscene_body_entered(body):
 		killzone.speed = 0
 	pass # Replace with function body.
 
-
+#Starts cutscene timer
 func _on_BirdFlyAway_body_entered(body):
 	if body.name == "Horse":
 		bird.play("Fly_Away")
@@ -35,14 +36,14 @@ func _on_BirdFlyAway_body_entered(body):
 
 func _on_Timer_timeout():
 	if numberOfTimeouts == 1:
-		TalkingBobble.show()
-		Lable1.show()
+		TalkingBobble.show() #Dialog
+		Lable1.show() #Dialog
 	elif numberOfTimeouts == 5:
-		Lable1.hide()
-		Lable2.show()
+		Lable1.hide() #Dialog
+		Lable2.show() #Dialog
 	elif numberOfTimeouts == 9:
-		Lable2.hide()
-		Lable3.show()
+		Lable2.hide() #Dialog
+		Lable3.show() #Dialog
 	elif numberOfTimeouts == 12:
 		fadeout.play("Fadeout")
 	elif numberOfTimeouts == 15:

@@ -21,15 +21,12 @@ func teleport() -> void:
 
 #Fades out the music to a certain level, and the runs the teleport function
 func fade_out_music() -> void:
-	print(musicFade)
 	var currentVolume = musicFade.get_volume_db()
 	while currentVolume > minimumVolume :
 		currentVolume = currentVolume - 12
 		myVolume = musicFade.set_volume_db(currentVolume)
-		print(currentVolume)
 		yield(get_tree().create_timer(0.22), "timeout")
 		if currentVolume <= -48:
-			print(currentVolume)
 			musicFade.stop()
 			teleport()
 

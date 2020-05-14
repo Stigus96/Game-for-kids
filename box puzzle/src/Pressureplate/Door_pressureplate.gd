@@ -13,7 +13,7 @@ func _on_Area2D_body_entered(body):
 		child.find_door(true)
 		PlayerData.set_door(false) #Sets the door value to false (Not showing in the level)
 
-
+#When a KinematicBody2D enters, sound is played, pressureplate is changed and the ladder is hidden
 func _on_Area2D_body_exited(body):
 	if body is KinematicBody2D:
 		pressurePlateSound.play() #Sound

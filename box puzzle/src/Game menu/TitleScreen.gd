@@ -39,11 +39,8 @@ func updateMenu():
 	mainMenuButtons.show()
 	cutScene.show()
 
-
+#Stops the player in the cutscene
 func _on_PlayerStop_body_entered(body):
-	print("hay")
 	if body.name == "Player":
-		print("lay")
 		Player.CutScene_speed = 0
-		print(Player.CutScene_speed)
 	pass # Replace with function body.

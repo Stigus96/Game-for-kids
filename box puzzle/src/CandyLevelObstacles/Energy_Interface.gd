@@ -9,7 +9,7 @@ func _ready():
 	update_interface()
 	pass # Replace with function body.
 	
-	
+
+#Updates the energy (Speed) for the player in candyland
 func update_interface() -> void:
 	score.text = "Energy: %s" % PlayerData.player_speed
-	print(score)

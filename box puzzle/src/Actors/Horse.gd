@@ -12,7 +12,8 @@ func _ready():
 	timer = get_node("Timer")
 	timer.connect("timeout",self,"_on_timer_timeout") 
 	pass
-	
+
+#Main function for the movment and animation for the horse
 func _physics_process(delta: float) -> void:
 	animate_horse()
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0

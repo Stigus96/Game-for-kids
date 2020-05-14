@@ -27,6 +27,6 @@ func _input(event):
 		else:
 			set_visible_characters(get_total_character_count())
 
-
+#Each time a timeout is called, a new character is visible
 func _on_Timer_timeout():
 	set_visible_characters(get_visible_characters() + 1)

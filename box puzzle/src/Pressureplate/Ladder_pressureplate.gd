@@ -13,7 +13,6 @@ func _on_Area2D_body_entered(body):
 		pressurePlateSound.play()
 		Plate.hide()
 		child.show_Ladder()
-		print("hei")
 	pass # Replace with function body.
 
 

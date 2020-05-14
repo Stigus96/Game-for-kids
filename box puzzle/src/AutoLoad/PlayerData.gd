@@ -47,6 +47,7 @@ func start_levels() -> void:
 func reset() -> void:
 	lap = 0
 	score = 0
+	update_checkpointScore()
 	emit_signal("time_reset_updated")
 
 #Starts the timer

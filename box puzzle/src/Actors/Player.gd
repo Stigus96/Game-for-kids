@@ -16,7 +16,7 @@ func _ready():
 	PlayerData.connect("ladder_updated", self, "update_ladder_on")
 	pass
 
-
+#Main function for the movment and animation for the player
 func _physics_process(delta: float) -> void:
 	var motion : = Vector2()
 	animate_player()
